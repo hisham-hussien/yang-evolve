@@ -1,0 +1,62 @@
+module ep-extensions {
+  yang-version 1.1;
+  namespace "urn:example:ep-extensions";
+  prefix "ep";
+
+  organization
+    "Example Organization";
+
+  contact
+    "Example Contact";
+
+  description
+    "Defines the 'ep:endpoint' YANG extension introduced in:
+
+       'Model-Driven REST API Generation from YANG Data Models'
+       (https://link.springer.com/article/10.1007/s10270-025-01311-3)
+
+     The extension annotates a YANG schema node with the REST API URI
+     template (path) at which the node is exposed.  Path parameters are
+     enclosed in curly braces and correspond to the key leaf names of
+     enclosing list nodes.
+
+     Example usage:
+       import ep-extensions { prefix ep; }
+       ...
+       container vpn-services {
+         ep:endpoint \"/vpn_services\";
+         ...
+       }
+       list vpn-service {
+         ep:endpoint \"/vpn_services/{vpn_service_vpn_id}\";
+         ...
+       }";
+
+  revision 2025-01-01 {
+    description
+      "Initial version — defines the ep:endpoint extension.";
+    reference
+      "https://link.springer.com/article/10.1007/s10270-025-01311-3";
+  }
+
+  extension endpoint {
+    argument path;
+    description
+      "Annotates a YANG container or list node with the REST API URI
+       template at which the node is exposed.
+
+       The 'path' argument is a URI template string.  Path parameters
+       are enclosed in curly braces and correspond to the key leaf names
+       of enclosing list nodes, e.g.:
+
+         ep:endpoint \"/vpn_services/{vpn_service_vpn_id}/vpn-nodes\";
+
+       The extension may appear on:
+         - container
+         - list
+         - leaf (for scalar resources)
+         - leaf-list";
+    reference
+      "Section 3.2 of https://link.springer.com/article/10.1007/s10270-025-01311-3";
+  }
+}

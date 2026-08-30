@@ -1,0 +1,983 @@
+<?xml version="1.0" ?>
+<rules>
+    <rule>
+        <rule-id>schema-node-rule1</rule-id>
+        <structurals>
+            <structural>module</structural>
+            <structural>submodule</structural>
+            <structural>namespace</structural>
+            <structural>container</structural>
+            <structural>list</structural>
+            <structural>typedef</structural>
+            <structural>choice</structural>
+            <structural>case</structural>
+            <structural>rpc</structural>
+            <structural>action</structural>
+            <structural>notification</structural>
+            <structural>leaf</structural>
+            <structural template="true">grouping</structural>
+            <structural>leaf-list</structural>
+            <structural>anyxml</structural>
+            <structural>anydata</structural>
+            <structural symbolic="true">enum</structural>
+            <structural symbolic="true">bit</structural>
+            <structural>identity</structural>
+            <structural recursive="true">uses</structural>
+            <structural>annotation</structural>
+            <structural>feature</structural>
+            <structural recursive="true">augment</structural>
+            <structural>extension</structural>
+        </structurals>
+        <actions>
+            <action>added</action>
+        </actions>
+        <compatible>backward-compatible</compatible>
+    </rule>
+    <rule>
+        <rule-id>schema-node-rule2</rule-id>
+        <structurals>
+            <structural>module</structural>
+            <structural>submodule</structural>
+            <structural>augment</structural>
+            <structural>namespace</structural>
+            <structural>container</structural>
+            <structural>list</structural>
+            <structural>typedef</structural>
+            <structural>choice</structural>
+            <structural>case</structural>
+            <structural>rpc</structural>
+            <structural>action</structural>
+            <structural>notification</structural>
+            <structural>leaf</structural>
+            <structural template="true">grouping</structural>
+            <structural>leaf-list</structural>
+            <structural>anyxml</structural>
+            <structural>anydata</structural>
+            <structural symbolic="true">enum</structural>
+            <structural symbolic="true">bit</structural>
+            <structural>identity</structural>
+            <structural>uses</structural>
+            <structural>annotation</structural>
+            <structural>feature</structural>
+            <structural>extension</structural>
+            <structural>argument</structural>
+        </structurals>
+        <actions>
+            <action>changed</action>
+        </actions>
+        <compatible>conditional-backward-compatible</compatible>
+    </rule>
+    <rule>
+        <rule-id>schema-node-rule3</rule-id>
+        <structurals>
+            <structural>module</structural>
+            <structural>submodule</structural>
+            <structural>augment</structural>
+            <structural>namespace</structural>
+            <structural>container</structural>
+            <structural>list</structural>
+            <structural>typedef</structural>
+            <structural>choice</structural>
+            <structural>case</structural>
+            <structural>rpc</structural>
+            <structural>action</structural>
+            <structural>input</structural>
+            <structural>output</structural>
+            <structural>notification</structural>
+            <structural>leaf</structural>
+            <structural template="true">grouping</structural>
+            <structural>leaf-list</structural>
+            <structural>anyxml</structural>
+            <structural>anydata</structural>
+            <structural symbolic="true">enum</structural>
+            <structural symbolic="true">bit</structural>
+            <structural>identity</structural>
+            <structural>uses</structural>
+            <structural>annotation</structural>
+            <structural>feature</structural>
+            <structural>extension</structural>
+            <structural>argument</structural>
+        </structurals>
+        <actions>
+            <action>deleted</action>
+        </actions>
+        <compatible>non-backward-compatible</compatible>
+    </rule>
+    <rule>
+        <rule-id>scheme-skip-any-action-rule</rule-id>
+        <structurals>
+            <structural>belongs-to</structural>
+            <structural>revision</structural>
+            <structural>import</structural>
+        </structurals>
+        <actions>
+            <action>added</action>
+            <action>changed</action>
+            <action>deleted</action>
+        </actions>
+        <compatible>backward-compatible</compatible>
+    </rule>
+    <rule>
+        <rule-id>deviation-any-action-rule</rule-id>
+        <structurals>
+            <structural recursive="true">deviation</structural>
+        </structurals>
+        <actions>
+            <action>added</action>
+            <action>changed</action>
+            <action>deleted</action>
+        </actions>
+        <compatible>non-backward-compatible</compatible>
+    </rule>
+    <rule>
+        <rule-id>deviate-any-action-rule</rule-id>
+        <structurals>
+            <structural>deviate</structural>
+        </structurals>
+        <actions>
+            <action>added</action>
+            <action>changed</action>
+            <action>deleted</action>
+        </actions>
+        <compatible>non-backward-compatible</compatible>
+    </rule>
+    <rule>
+        <rule-id>import-change-1-rule</rule-id>
+        <attributes>
+            <attribute parent="import">name</attribute>
+            <attribute parent="import">path</attribute>
+        </attributes>
+        <actions>
+            <action>changed</action>
+        </actions>
+        <compatibles>
+            <compatible>backward-compatible</compatible>
+        </compatibles>
+    </rule>
+    <rule>
+        <rule-id>type-add-union-member-rule</rule-id>
+        <structurals>
+            <structural parent="union">type</structural>
+        </structurals>
+        <actions>
+            <action>added</action>
+        </actions>
+        <compatibles>
+            <compatible>backward-compatible</compatible>
+            <compatible flag="rfc7950">non-backward-compatible</compatible>
+        </compatibles>
+    </rule>
+    <rule>
+        <rule-id>type-add-rule</rule-id>
+        <structurals>
+            <structural>type</structural>
+        </structurals>
+        <actions>
+            <action>added</action>
+        </actions>
+        <compatible>backward-compatible</compatible>
+    </rule>
+    <rule>
+        <rule-id>type-change-keyword-rule</rule-id>
+        <structurals>
+            <structural>type</structural>
+        </structurals>
+        <actions>
+            <action>changed</action>
+        </actions>
+        <compatible>conditional-backward-compatible</compatible>
+    </rule>
+    <rule>
+        <rule-id>type-change-same-definitions-rule</rule-id>
+        <attributes>
+            <attribute parent="type" identical="true">name</attribute>
+        </attributes>
+        <actions>
+            <action>changed</action>
+        </actions>
+        <compatibles>
+            <compatible>backward-compatible</compatible>
+        </compatibles>
+    </rule>
+    <rule>
+        <rule-id>type-change-1-rule</rule-id>
+        <attributes>
+            <attribute parent="type" relaxed="true">name</attribute>
+        </attributes>
+        <actions>
+            <action>changed</action>
+        </actions>
+        <compatibles>
+            <compatible>backward-compatible</compatible>
+            <compatible flag="rfc7950">non-backward-compatible</compatible>
+        </compatibles>
+    </rule>
+    <rule>
+        <rule-id>type-change-2-rule</rule-id>
+        <attributes>
+            <attribute parent="type" relaxed="false">name</attribute>
+        </attributes>
+        <actions>
+            <action>changed</action>
+        </actions>
+        <compatible>non-backward-compatible</compatible>
+    </rule>
+    <rule>
+        <rule-id>type-delete-rule</rule-id>
+        <structurals>
+            <structural>type</structural>
+        </structurals>
+        <actions>
+            <action>deleted</action>
+        </actions>
+        <compatible>non-backward-compatible</compatible>
+    </rule>
+    <rule>
+        <rule-id>leafref-path-delete-rule</rule-id>
+        <attributes>
+            <attribute parent="leafref">path</attribute>
+        </attributes>
+        <actions>
+            <action>deleted</action>
+        </actions>
+        <compatible>backward-compatible</compatible>
+    </rule>
+    <rule>
+        <rule-id>leafref-attr-change-rule</rule-id>
+        <attributes>
+            <attribute parent="leafref">name</attribute>
+        </attributes>
+        <actions>
+            <action>changed</action>
+        </actions>
+        <compatible>non-backward-compatible</compatible>
+    </rule>
+    <rule>
+        <rule-id>path-delete-rule</rule-id>
+        <attributes>
+            <attribute>node-path</attribute>
+            <attribute>path</attribute>
+        </attributes>
+        <actions>
+            <action>deleted</action>
+        </actions>
+        <compatible>non-backward-compatible</compatible>
+    </rule>
+    <rule>
+        <rule-id>path-change-rule-1</rule-id>
+        <attributes>
+            <attribute type="XPath" semantics-preserving="true">path</attribute>
+        </attributes>
+        <actions>
+            <action>changed</action>
+        </actions>
+        <compatible>backward-compatible</compatible>
+    </rule>
+    <rule>
+        <rule-id>path-change-rule-2</rule-id>
+        <attributes>
+            <attribute type="XPath" semantics-preserving="false">path</attribute>
+        </attributes>
+        <actions>
+            <action>changed</action>
+        </actions>
+        <compatible>non-backward-compatible</compatible>
+    </rule>
+    <rule>
+        <rule-id>path-change-rule-3</rule-id>
+        <attributes>
+            <attribute type="XPath" parent="augment|deviation|leafref" assistance="true" semantics-preserving="true">path</attribute>
+        </attributes>
+        <actions>
+            <action>changed</action>
+        </actions>
+        <compatible>backward-compatible</compatible>
+    </rule>
+    <rule>
+        <rule-id>path-change-rule-4</rule-id>
+        <attributes>
+            <attribute type="XPath" parent="augment|deviation|leafref" assistance="true" semantics-preserving="false">path</attribute>
+        </attributes>
+        <actions>
+            <action>changed</action>
+        </actions>
+        <compatible>non-backward-compatible</compatible>
+    </rule>
+    <rule>
+        <rule-id>name-augment-change-rule-1</rule-id>
+        <attributes>
+            <attribute type="XPath" parent="augment|deviation" assistance="true" semantics-preserving="true">name</attribute>
+        </attributes>
+        <actions>
+            <action>changed</action>
+        </actions>
+        <compatible>backward-compatible</compatible>
+    </rule>
+    <rule>
+        <rule-id>name-augment-change-rule-2</rule-id>
+        <attributes>
+            <attribute type="XPath" parent="augment|deviation" assistance="true" semantics-preserving="false">name</attribute>
+        </attributes>
+        <actions>
+            <action>changed</action>
+        </actions>
+        <compatible>non-backward-compatible</compatible>
+    </rule>
+    <rule>
+        <rule-id>schema-ordered-list-rule1</rule-id>
+        <attributes>
+            <attribute type="olist" separator=" ">key</attribute>
+        </attributes>
+        <actions>
+            <action parent="added">added</action>
+        </actions>
+        <compatible>backward-compatible</compatible>
+    </rule>
+    <rule>
+        <rule-id>schema-ordered-list-rule2</rule-id>
+        <attributes>
+            <attribute type="olist" separator=" ">key</attribute>
+        </attributes>
+        <actions>
+            <action parent="changed">added</action>
+            <action>changed</action>
+            <action>deleted</action>
+        </actions>
+        <compatible>non-backward-compatible</compatible>
+    </rule>
+    <rule>
+        <rule-id>schema-unique-ulist-rule1</rule-id>
+        <attributes>
+            <attribute type="ulist" separator=" ">unique</attribute>
+            <attribute type="ulist" separator=" ">privileges</attribute>
+        </attributes>
+        <actions>
+            <action parent="added">added</action>
+            <action>deleted</action>
+        </actions>
+        <compatible>backward-compatible</compatible>
+    </rule>
+    <rule>
+        <rule-id>schema-unique-ulist-rule2</rule-id>
+        <attributes>
+            <attribute type="ulist" separator=" ">unique</attribute>
+            <attribute type="ulist" separator=" ">privileges</attribute>
+        </attributes>
+        <actions>
+            <action parent="changed">added</action>
+            <action>changed</action>
+        </actions>
+        <compatible>non-backward-compatible</compatible>
+    </rule>
+    <rule>
+        <rule-id>schema-unique-narrowed-ulist-rule</rule-id>
+        <attributes>
+            <attribute type="ulist" separator=" " set-change="expanded">unique</attribute>
+            <attribute type="ulist" separator=" " set-change="narrowed">privileges</attribute>
+        </attributes>
+        <actions>
+            <action>changed</action>
+        </actions>
+        <compatible>non-backward-compatible</compatible>
+    </rule>
+    <rule>
+        <rule-id>schema-unique-relaxed-ulist-rule</rule-id>
+        <attributes>
+            <attribute type="ulist" separator=" " set-change="narrowed">unique</attribute>
+            <attribute type="ulist" separator=" " set-change="expanded">privileges</attribute>
+        </attributes>
+        <actions>
+            <action>changed</action>
+        </actions>
+        <compatible>backward-compatible</compatible>
+    </rule>
+    <rule>
+        <rule-id>yang-version-rule1</rule-id>
+        <attributes>
+            <attribute type="version">yang-version</attribute>
+        </attributes>
+        <actions>
+            <action>added</action>
+        </actions>
+        <compatible>backward-compatible</compatible>
+    </rule>
+    <rule>
+        <rule-id>yang-version-rule2</rule-id>
+        <attributes>
+            <attribute type="version">yang-version</attribute>
+        </attributes>
+        <actions>
+            <action>changed</action>
+            <action>deleted</action>
+        </actions>
+        <compatible>non-backward-compatible</compatible>
+    </rule>
+    <rule>
+        <rule-id>presence-rule1</rule-id>
+        <attributes>
+            <attribute>presence</attribute>
+        </attributes>
+        <actions>
+            <action>changed</action>
+        </actions>
+        <compatible>backward-compatible</compatible>
+    </rule>
+    <rule>
+        <rule-id>presence-rule2</rule-id>
+        <attributes>
+            <attribute>presence</attribute>
+        </attributes>
+        <actions>
+            <action>added</action>
+            <action>deleted</action>
+        </actions>
+        <compatible>non-backward-compatible</compatible>
+    </rule>
+    <rule>
+        <rule-id>attribute-skip-any-action-rule</rule-id>
+        <attributes>
+            <attribute>organization</attribute>
+            <attribute>contact</attribute>
+            <attribute>description</attribute>
+            <attribute>export</attribute>
+            <attribute>info</attribute>
+            <attribute>operation-exclude</attribute>
+            <attribute>prefix</attribute>
+            <attribute>include</attribute>
+        </attributes>
+        <actions>
+            <action>added</action>
+            <action>changed</action>
+            <action>deleted</action>
+        </actions>
+        <compatible>backward-compatible</compatible>
+    </rule>
+    <rule>
+        <rule-id>argument-added-rule</rule-id>
+        <structurals>
+            <structural>argument</structural>
+        </structurals>
+        <actions>
+            <action parent="added">added</action>
+        </actions>
+        <compatible>backward-compatible</compatible>
+    </rule>
+    <rule>
+        <rule-id>argument-added-existing-extension-rule</rule-id>
+        <structurals>
+            <structural>argument</structural>
+        </structurals>
+        <actions>
+            <action parent="changed">added</action>
+        </actions>
+        <compatible>non-backward-compatible</compatible>
+    </rule>
+    <rule>
+        <rule-id>units-rule1</rule-id>
+        <attributes>
+            <attribute>units</attribute>
+        </attributes>
+        <actions>
+            <action>added</action>
+        </actions>
+        <compatible>backward-compatible</compatible>
+    </rule>
+    <rule>
+        <rule-id>units-rule2</rule-id>
+        <attributes>
+            <attribute>units</attribute>
+        </attributes>
+        <actions>
+            <action>changed</action>
+            <action>deleted</action>
+        </actions>
+        <compatible>non-backward-compatible</compatible>
+    </rule>
+    <rule>
+        <rule-id>require-instance-false-add-rule</rule-id>
+        <constraints>
+            <constraint type="boolean" value="false">require-instance</constraint>
+        </constraints>
+        <actions>
+            <action>added</action>
+            <action>changed</action>
+        </actions>
+        <compatible>backward-compatible</compatible>
+    </rule>
+    <rule>
+        <rule-id>require-instance-true-add-rule</rule-id>
+        <constraints>
+            <constraint type="boolean" value="true">require-instance</constraint>
+        </constraints>
+        <actions>
+            <action>added</action>
+            <action>changed</action>
+        </actions>
+        <compatible>non-backward-compatible</compatible>
+    </rule>
+    <rule>
+        <rule-id>require-instance-deleted-rule</rule-id>
+        <constraints>
+            <constraint>require-instance</constraint>
+        </constraints>
+        <actions>
+            <action>deleted</action>
+        </actions>
+        <compatible>backward-compatible</compatible>
+    </rule>
+    <rule>
+        <rule-id>default-rule1</rule-id>
+        <constraints>
+            <constraint>default</constraint>
+        </constraints>
+        <actions>
+            <action>added</action>
+        </actions>
+        <compatible>backward-compatible</compatible>
+    </rule>
+    <rule>
+        <rule-id>default-rule2</rule-id>
+        <constraints>
+            <constraint>default</constraint>
+        </constraints>
+        <actions>
+            <action>changed</action>
+            <action>deleted</action>
+        </actions>
+        <compatible>non-backward-compatible</compatible>
+    </rule>
+    <rule>
+        <rule-id>reference-rule1</rule-id>
+        <attributes>
+            <attribute>reference</attribute>
+        </attributes>
+        <actions>
+            <action>added</action>
+            <action>changed</action>
+        </actions>
+        <compatible>backward-compatible</compatible>
+    </rule>
+    <rule>
+        <rule-id>reference-rule2</rule-id>
+        <attributes>
+            <attribute>reference</attribute>
+        </attributes>
+        <actions>
+            <action>deleted</action>
+        </actions>
+        <compatible>non-backward-compatible</compatible>
+    </rule>
+    <rule>
+        <rule-id>node-path-change-rule</rule-id>
+        <attributes>
+            <attribute>node-path</attribute>
+        </attributes>
+        <actions>
+            <action>changed</action>
+        </actions>
+        <compatible>non-backward-compatible</compatible>
+    </rule>
+    <rule>
+        <rule-id>node-path-add-delete-rule</rule-id>
+        <attributes>
+            <attribute>node-path</attribute>
+        </attributes>
+        <actions>
+            <action>added</action>
+            <action>deleted</action>
+        </actions>
+        <compatible>backward-compatible</compatible>
+    </rule>
+    <rule>
+        <rule-id>schema-attribute-rule1</rule-id>
+        <attributes>
+            <attribute>name</attribute>
+            <attribute>path</attribute>
+            <attribute>xpath</attribute>
+            <attribute>value</attribute>
+            <attribute>defval</attribute>
+            <attribute>base</attribute>
+            <attribute>endpoint</attribute>
+        </attributes>
+        <actions>
+            <action>added</action>
+        </actions>
+        <compatible>backward-compatible</compatible>
+    </rule>
+    <rule>
+        <rule-id>schema-attribute-rule2</rule-id>
+        <attributes>
+            <attribute>name</attribute>
+            <attribute>value</attribute>
+            <attribute>defval</attribute>
+            <attribute>base</attribute>
+            <attribute>endpoint</attribute>
+        </attributes>
+        <actions>
+            <action>changed</action>
+            <action>deleted</action>
+        </actions>
+        <compatible>non-backward-compatible</compatible>
+    </rule>
+    <rule>
+        <rule-id>modifiers-add-narrowed-rule1</rule-id>
+        <constraints>
+            <constraint type="condition" relaxed="false">must</constraint>
+            <constraint type="condition" relaxed="false">when</constraint>
+        </constraints>
+        <actions>
+            <action parent="changed">added</action>
+        </actions>
+        <compatible>non-backward-compatible</compatible>
+    </rule>
+    <rule>
+        <rule-id>modifiers-add-relaxed-rule2</rule-id>
+        <constraints>
+            <constraint type="condition" relaxed="true">must</constraint>
+            <constraint type="condition" relaxed="true">when</constraint>
+        </constraints>
+        <actions>
+            <action parent="changed">added</action>
+        </actions>
+        <compatible>backward-compatible</compatible>
+    </rule>
+    <rule>
+        <rule-id>modifiers-changed-narrowed-rule1</rule-id>
+        <constraints>
+            <constraint type="condition" relaxed="false" assistance="true">must</constraint>
+            <constraint type="condition" relaxed="false" assistance="true">when</constraint>
+        </constraints>
+        <actions>
+            <action>changed</action>
+        </actions>
+        <compatible>non-backward-compatible</compatible>
+    </rule>
+    <rule>
+        <rule-id>modifiers-changed-relaxed-rule2</rule-id>
+        <constraints>
+            <constraint type="condition" relaxed="true" assistance="true">must</constraint>
+            <constraint type="condition" relaxed="true" assistance="true">when</constraint>
+        </constraints>
+        <actions>
+            <action>changed</action>
+        </actions>
+        <compatible>backward-compatible</compatible>
+    </rule>
+    <rule>
+        <rule-id>modifiers-rule3</rule-id>
+        <constraints>
+            <constraint>must</constraint>
+            <constraint>when</constraint>
+        </constraints>
+        <actions>
+            <action parent="added">added</action>
+            <action>deleted</action>
+        </actions>
+        <compatible>backward-compatible</compatible>
+    </rule>
+    <rule>
+        <rule-id>constraint-dual-values-add-rule</rule-id>
+        <constraints>
+            <constraint value="current">status</constraint>
+            <constraint value="read-write">max-access</constraint>
+            <constraint value="deprecated">status</constraint>
+        </constraints>
+        <actions>
+            <action>added</action>
+            <action>deleted</action>
+        </actions>
+        <compatible>backward-compatible</compatible>
+    </rule>
+    <rule>
+        <rule-id>constraint-ordered-by-add-rule</rule-id>
+        <constraints>
+            <constraint>ordered-by</constraint>
+        </constraints>
+        <actions>
+            <action parent="added">added</action>
+        </actions>
+        <compatible>backward-compatible</compatible>
+    </rule>
+    <rule>
+        <rule-id>constraint-dual-values-add-rule</rule-id>
+        <constraints>
+            <constraint value="obsolete">status</constraint>
+            <constraint value="read-only">max-access</constraint>
+            <constraint>ordered-by</constraint>
+        </constraints>
+        <actions>
+            <action parent="changed">added</action>
+            <action>deleted</action>
+        </actions>
+        <compatible>non-backward-compatible</compatible>
+    </rule>
+    <rule>
+        <rule-id>constraint-status-soft-change-rule</rule-id>
+        <constraints>
+            <constraint from-value="current" to-value="deprecated">status</constraint>
+            <constraint from-value="read-only" to-value="read-write">max-access</constraint>
+            <constraint from-value="deprecated" to-value="current">status</constraint>
+        </constraints>
+        <actions>
+            <action>changed</action>
+        </actions>
+        <compatible>backward-compatible</compatible>
+    </rule>
+    <rule>
+        <rule-id>constraint-status-break-change-rule</rule-id>
+        <constraints>
+            <constraint from-value="current" to-value="obsolete">status</constraint>
+            <constraint from-value="read-write" to-value="read-only">max-access</constraint>
+            <constraint from-value="deprecated" to-value="obsolete">status</constraint>
+            <constraint from-value="obsolete" to-value="current">status</constraint>
+            <constraint from-value="obsolete" to-value="deprecated">status</constraint>
+        </constraints>
+        <actions>
+            <action>changed</action>
+        </actions>
+        <compatible>non-backward-compatible</compatible>
+    </rule>
+    <rule>
+        <rule-id>constraint-ordered-by-break-change-rule</rule-id>
+        <constraints>
+            <constraint from-value="system" to-value="user">ordered-by</constraint>
+            <constraint from-value="user" to-value="system">ordered-by</constraint>
+        </constraints>
+        <actions>
+            <action>changed</action>
+        </actions>
+        <compatible>non-backward-compatible</compatible>
+    </rule>
+    <rule>
+        <rule-id>constraint-add-rule</rule-id>
+        <constraints>
+            <constraint>range</constraint>
+            <constraint>length</constraint>
+            <constraint>fraction-digits</constraint>
+            <constraint>min-elements</constraint>
+            <constraint>max-elements</constraint>
+            <constraint>pattern</constraint>
+            <constraint>if-feature</constraint>
+            <constraint>hidden</constraint>
+            <constraint>config</constraint>
+        </constraints>
+        <actions>
+            <action parent="added">added</action>
+        </actions>
+        <compatible>backward-compatible</compatible>
+    </rule>
+    <rule>
+        <rule-id>mandatory-false-add-rule</rule-id>
+        <constraints>
+            <constraint type="boolean" value="false">mandatory</constraint>
+        </constraints>
+        <actions>
+            <action>added</action>
+            <action>changed</action>
+        </actions>
+        <compatible>backward-compatible</compatible>
+    </rule>
+    <rule>
+        <rule-id>mandatory-true-add-rule</rule-id>
+        <constraints>
+            <constraint type="boolean" value="true">mandatory</constraint>
+        </constraints>
+        <actions>
+            <action>added</action>
+            <action>changed</action>
+        </actions>
+        <compatible>non-backward-compatible</compatible>
+    </rule>
+    <rule>
+        <rule-id>mandatory-deleted-rule</rule-id>
+        <constraints>
+            <constraint>mandatory</constraint>
+        </constraints>
+        <actions>
+            <action>deleted</action>
+        </actions>
+        <compatible>backward-compatible</compatible>
+    </rule>
+    <rule>
+        <rule-id>constraint-delete-rule</rule-id>
+        <constraints>
+            <constraint>range</constraint>
+            <constraint>length</constraint>
+            <constraint>min-elements</constraint>
+            <constraint>max-elements</constraint>
+            <constraint>pattern</constraint>
+            <constraint>if-feature</constraint>
+            <constraint>hidden</constraint>
+            <constraint>config</constraint>
+        </constraints>
+        <actions>
+            <action>deleted</action>
+        </actions>
+        <compatible>backward-compatible</compatible>
+    </rule>
+    <rule>
+        <rule-id>constraint-fraction-digit-delete-rule</rule-id>
+        <constraints>
+            <constraint>fraction-digits</constraint>
+        </constraints>
+        <actions>
+            <action>deleted</action>
+        </actions>
+        <compatible>non-backward-compatible</compatible>
+    </rule>
+    <rule>
+        <rule-id>constraint-relaxed-change-rule</rule-id>
+        <constraints>
+            <constraint type="numbers" relaxed="true">range</constraint>
+            <constraint type="numbers" relaxed="true">length</constraint>
+            <constraint type="number" relaxed="true">min-elements</constraint>
+            <constraint type="number" relaxed="true">max-elements</constraint>
+            <constraint type="regex" relaxed="true" assistance="true">pattern</constraint>
+            <constraint type="boolean" value="true">config</constraint>
+        </constraints>
+        <actions>
+            <action>changed</action>
+        </actions>
+        <compatible>backward-compatible</compatible>
+    </rule>
+    <rule>
+        <rule-id>constraint-narrowed-add-rule</rule-id>
+        <constraints>
+            <constraint>range</constraint>
+            <constraint>length</constraint>
+            <constraint>fraction-digits</constraint>
+            <constraint>min-elements</constraint>
+            <constraint>max-elements</constraint>
+            <constraint>pattern</constraint>
+            <constraint>if-feature</constraint>
+            <constraint>hidden</constraint>
+            <constraint type="boolean" value="false">config</constraint>
+        </constraints>
+        <actions>
+            <action parent="changed">added</action>
+        </actions>
+        <compatible>non-backward-compatible</compatible>
+    </rule>
+    <rule>
+        <rule-id>constraint-narrowed-change-rule</rule-id>
+        <constraints>
+            <constraint type="numbers" relaxed="false">range</constraint>
+            <constraint type="numbers" relaxed="false">length</constraint>
+            <constraint type="number">fraction-digits</constraint>
+            <constraint type="number" relaxed="false">min-elements</constraint>
+            <constraint type="number" relaxed="false">max-elements</constraint>
+            <constraint type="regex" relaxed="false" assistance="true">pattern</constraint>
+            <constraint type="boolean" value="false">config</constraint>
+            <constraint>if-feature</constraint>
+            <constraint>hidden</constraint>
+        </constraints>
+        <actions>
+            <action>changed</action>
+        </actions>
+        <compatible>non-backward-compatible</compatible>
+    </rule>
+    <rule>
+        <rule-id>yin-element-add-compatible-rule</rule-id>
+        <constraints>
+            <constraint>yin-element</constraint>
+        </constraints>
+        <actions>
+            <action parent="added">added</action>
+        </actions>
+        <compatible>backward-compatible</compatible>
+    </rule>
+    <rule>
+        <rule-id>yin-element-change-delete-compatible-rule</rule-id>
+        <constraints>
+            <constraint type="boolean" value="false">yin-element</constraint>
+        </constraints>
+        <actions>
+            <action parent="changed">added</action>
+            <action>deleted</action>
+        </actions>
+        <compatible>backward-compatible</compatible>
+    </rule>
+    <rule>
+        <rule-id>yin-element-breaking-rule</rule-id>
+        <constraints>
+            <constraint type="boolean" value="true">yin-element</constraint>
+        </constraints>
+        <actions>
+            <action parent="changed">added</action>
+            <action>deleted</action>
+        </actions>
+        <compatible>non-backward-compatible</compatible>
+    </rule>
+    <rule>
+        <rule-id>yin-element-change-breaking-rule</rule-id>
+        <constraints>
+            <constraint type="boolean" value="true">yin-element</constraint>
+            <constraint type="boolean" value="false">yin-element</constraint>
+        </constraints>
+        <actions>
+            <action>changed</action>
+        </actions>
+        <compatible>non-backward-compatible</compatible>
+    </rule>
+    <rule>
+        <rule-id>error-message-breaking-rule</rule-id>
+        <attributes>
+            <attribute>error-message</attribute>
+        </attributes>
+        <actions>
+            <action>deleted</action>
+            <action>changed</action>
+        </actions>
+        <compatible>non-backward-compatible</compatible>
+    </rule>
+    <rule>
+        <rule-id>error-message-compatible-rule</rule-id>
+        <attributes>
+            <attribute>error-message</attribute>
+        </attributes>
+        <actions>
+            <action>added</action>
+        </actions>
+        <compatible>backward-compatible</compatible>
+    </rule>
+    <rule>
+        <rule-id>no-flag-rule#1</rule-id>
+        <attributes>
+            <attribute type="flag">mandatory-flag</attribute>
+        </attributes>
+        <actions>
+            <action>added</action>
+        </actions>
+        <compatible>non-backward-compatible</compatible>
+    </rule>
+    <rule>
+        <rule-id>no-flag-rule#2</rule-id>
+        <attributes>
+            <attribute type="flag">mandatory-flag</attribute>
+        </attributes>
+        <actions>
+            <action>deleted</action>
+        </actions>
+        <compatible>backward-compatible</compatible>
+    </rule>
+    <rule>
+        <rule-id>no-flag-rule#3</rule-id>
+        <attributes>
+            <attribute type="flag">hint-flag</attribute>
+        </attributes>
+        <actions>
+            <action>added</action>
+        </actions>
+        <compatible>backward-compatible</compatible>
+    </rule>
+    <rule>
+        <rule-id>no-flag-rule#4</rule-id>
+        <attributes>
+            <attribute type="flag">hint-flag</attribute>
+        </attributes>
+        <actions>
+            <action>deleted</action>
+        </actions>
+        <compatible>backward-compatible</compatible>
+    </rule>
+</rules>

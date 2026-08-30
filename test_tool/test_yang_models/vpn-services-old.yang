@@ -1,0 +1,399 @@
+module vpn-services {
+  yang-version 1.1;
+  namespace "urn:example:vpn-services";
+  prefix "vpn";
+
+  import ep-extensions {
+    prefix "ep";
+  }
+
+  import pr-extensions {
+    prefix "pr";
+  }
+
+  include old-path;
+  include old-types;
+  include demo-defval;
+
+  organization
+    "Example Organization";
+
+  contact
+    "Example Contact";
+
+  description
+    "YANG module modelling VPN services, annotated with REST API
+     endpoint paths (ep:endpoint) and access privileges (pr:privileges)
+     as introduced in:
+
+       'Model-Driven REST API Generation from YANG Data Models'
+       (https://link.springer.com/article/10.1007/s10270-025-01311-3)
+
+     This is the OLD (baseline) version of the module.
+
+     Differences from the NEW version (vpn-services-new.yang):
+       1. ep:endpoint on 'vpn-services' container:
+            OLD: \"/vpn_services\"
+            NEW: \"/api/v1/vpn_services\"
+       2. ep:endpoint on 'vpn-service' list:
+            OLD: \"/vpn_services/{vpn_service_vpn_id}\"
+            NEW: \"/api/v1/vpn_services/{vpn_service_vpn_id}\"
+       3. ep:endpoint on 'vpn-nodes' container:
+            OLD: \"/vpn_services/{vpn_service_vpn_id}/vpn-nodes\"
+            NEW: \"/api/v1/vpn_services/{vpn_service_vpn_id}/vpn-nodes\"
+       4. ep:endpoint on 'vpn-node' list:
+            OLD: \"/vpn_services/{vpn_service_vpn_id}/vpn-nodes/{vpn_node_vpn_node_id}\"
+            NEW: \"/api/v1/vpn_services/{vpn_service_vpn_id}/vpn-nodes/{vpn_node_vpn_node_id}\"
+       5. pr:privileges on 'vpn-services' container:
+            OLD: \"create\"
+            NEW: \"create delete\"   (Delete privilege added)
+       6. pr:privileges on 'vpn-nodes' container:
+             OLD: \"create update\"
+             NEW: \"create\"   (update privilege removed)";
+
+  revision 2024-01-01 {
+    description
+      "Initial (old) version of the VPN services module with ep/pr extensions.";
+    reference
+      "https://link.springer.com/article/10.1007/s10270-025-01311-3";
+  }
+
+  // ---------------------------------------------------------------
+  // Typedefs
+  // ---------------------------------------------------------------
+
+  typedef vpn-id-type {
+    type string {
+      length "1..64";
+      pattern "[a-zA-Z0-9_\\-]+";
+    }
+    description
+      "Type for VPN service and node identifiers.";
+  }
+
+  typedef vpn-topology-type {
+    type enumeration {
+      enum any-to-any {
+        description "Any-to-any VPN topology.";
+      }
+      enum hub-spoke {
+        description "Hub-and-spoke VPN topology.";
+      }
+      enum hub-spoke-disjoint {
+        description "Hub-and-spoke disjoint VPN topology.";
+      }
+    }
+    description
+      "Enumeration of supported VPN topologies.";
+  }
+
+  typedef vpn-type-enum {
+    type enumeration {
+      enum l3vpn {
+        description "Layer-3 VPN service.";
+      }
+      enum l2vpn {
+        description "Layer-2 VPN service.";
+      }
+      enum evpn {
+        description "Ethernet VPN service.";
+      }
+    }
+    description
+      "Enumeration of supported VPN service types.";
+  }
+
+  // ---------------------------------------------------------------
+  // Groupings
+  // ---------------------------------------------------------------
+
+  grouping vpn-description {
+    description
+      "Common descriptive leaves shared by VPN service nodes.";
+
+    leaf vpn-name {
+      type string {
+        length "1..128";
+      }
+      description
+        "Human-readable name of the VPN service.";
+    }
+
+    leaf vpn-description {
+      type string {
+        length "0..255";
+      }
+      description
+        "Free-text description of the VPN service.";
+    }
+
+    leaf customer-name {
+      type string {
+        length "1..64";
+      }
+      description
+        "Name of the customer owning this VPN service.";
+    }
+  }
+
+  grouping service-status {
+    description
+      "Operational status grouping for VPN services.";
+
+    container status {
+      config false;
+      description
+        "Operational status of the VPN service.";
+
+      leaf admin-status {
+        type enumeration {
+          enum up   { description "Administratively up."; }
+          enum down { description "Administratively down."; }
+        }
+        description "Administrative status.";
+      }
+
+      leaf oper-status {
+        type enumeration {
+          enum up       { description "Operationally up."; }
+          enum down     { description "Operationally down."; }
+          enum degraded { description "Partially operational."; }
+        }
+        description "Operational status.";
+      }
+    }
+  }
+
+  // ---------------------------------------------------------------
+  // Main data tree
+  // ---------------------------------------------------------------
+
+  container vpn-services {
+    // OLD endpoint path — no API versioning prefix
+    ep:endpoint "/vpn_services";
+    // OLD privileges — only 'create'; 'delete' not yet granted
+    pr:privileges "create";
+
+    description
+      "Top-level container for all VPN services managed by this system.";
+
+    list vpn-service {
+      // OLD endpoint path — no API versioning prefix
+      ep:endpoint "/vpn_services/{vpn_service_vpn_id}";
+      // privileges: 'delete update' — unchanged between versions
+      pr:privileges "delete update";
+
+      key "vpn-id";
+      description
+        "List of VPN service instances.  Each entry represents one
+         provisioned VPN service identified by its vpn-id key.";
+
+      uses vpn-description;
+
+      leaf vpn-id {
+        type vpn-id-type;
+        description
+          "Unique identifier for this VPN service instance.
+           Used as the list key and as the URI path parameter
+           {vpn_service_vpn_id} in the REST endpoint.";
+      }
+
+      leaf vpn-type {
+        type vpn-type-enum;
+        description
+          "Type of VPN service (L3VPN, L2VPN, or EVPN).";
+      }
+
+      leaf vpn-service-topology {
+        type vpn-topology-type;
+        default "any-to-any";
+        description
+          "Topology of the VPN service.";
+      }
+
+      uses service-status;
+
+      container vpn-instance-profiles {
+        description
+          "Container for VPN instance profiles associated with this service.";
+
+        list vpn-instance-profile {
+          key "profile-id";
+          description
+            "A named profile that can be applied to VPN nodes.";
+
+          leaf profile-id {
+            type string { length "1..64"; }
+            description "Unique profile identifier.";
+          }
+
+          leaf rd {
+            type string;
+            description "Route Distinguisher for this profile.";
+          }
+
+          leaf-list address-family {
+            type enumeration {
+              enum ipv4 { description "IPv4 address family."; }
+              enum ipv6 { description "IPv6 address family."; }
+            }
+            description "Address families enabled for this profile.";
+          }
+        }
+      }
+
+      container underlay-transport {
+        description
+          "Underlay transport configuration for this VPN service.";
+
+        leaf transport-type {
+          type enumeration {
+            enum mpls  { description "MPLS underlay."; }
+            enum srv6  { description "SRv6 underlay."; }
+            enum vxlan { description "VXLAN underlay."; }
+          }
+          description "Type of underlay transport technology.";
+        }
+
+        leaf signaling-type {
+          type enumeration {
+            enum bgp  { description "BGP-based signaling."; }
+            enum ldp  { description "LDP-based signaling."; }
+            enum rsvp { description "RSVP-based signaling."; }
+          }
+          description "Signaling protocol used for the underlay.";
+        }
+      }
+
+      container external-connectivity {
+        description
+          "External connectivity options for this VPN service.";
+
+        leaf internet-access {
+          type boolean;
+          default "false";
+          description
+            "When true, the VPN service has access to the public internet.";
+        }
+
+        leaf nat-enabled {
+          type boolean;
+          default "false";
+          description
+            "When true, NAT is applied at the internet gateway.";
+        }
+      }
+
+      container vpn-nodes {
+        // OLD endpoint path — no API versioning prefix
+        ep:endpoint "/vpn_services/{vpn_service_vpn_id}/vpn-nodes";
+        // OLD privileges — 'create update'
+        pr:privileges "create update";
+
+        description
+          "Container grouping all VPN nodes that participate in this
+           VPN service instance.";
+
+        list vpn-node {
+          // OLD endpoint path — no API versioning prefix
+          ep:endpoint "/vpn_services/{vpn_service_vpn_id}/vpn-nodes/{vpn_node_vpn_node_id}";
+          // privileges: 'delete update' — unchanged between versions
+          pr:privileges "delete update";
+
+          key "vpn-node-id";
+          description
+            "A single VPN node (PE router attachment point) within the
+             VPN service.  Identified by vpn-node-id, which maps to the
+             URI path parameter {vpn_node_vpn_node_id}.";
+
+          leaf vpn-node-id {
+            type vpn-id-type;
+            description
+              "Unique identifier for this VPN node within the service.";
+          }
+
+          leaf node-role {
+            type enumeration {
+              enum spoke { description "Spoke node in hub-spoke topology."; }
+              enum hub   { description "Hub node in hub-spoke topology."; }
+              enum any   { description "Any-to-any node."; }
+            }
+            description "Role of this node in the VPN topology.";
+          }
+
+          leaf ne-id {
+            type string;
+            description
+              "Network element identifier — references the physical or
+               virtual device hosting this VPN node.";
+          }
+
+          leaf local-as {
+            type uint32;
+            description
+              "Local BGP Autonomous System number for this VPN node.";
+          }
+
+          container vpn-network-accesses {
+            description
+              "Network access points (interfaces / sub-interfaces) on
+               this VPN node.";
+
+            list vpn-network-access {
+              key "id";
+              description
+                "A single network access point on the VPN node.";
+
+              leaf id {
+                type string { length "1..64"; }
+                description "Identifier of the network access point.";
+              }
+
+              leaf interface-id {
+                type string;
+                description
+                  "Reference to the physical or logical interface.";
+              }
+
+              leaf ip-connection-type {
+                type enumeration {
+                  enum point-to-point { description "P2P connection."; }
+                  enum multipoint      { description "Multipoint connection."; }
+                }
+                description "IP connection type for this access.";
+              }
+
+              container ip-connection {
+                description "IP addressing for this network access.";
+
+                container ipv4 {
+                  description "IPv4 addressing.";
+                  leaf local-address {
+                    type string;
+                    description "Local IPv4 address.";
+                  }
+                  leaf prefix-length {
+                    type uint8 { range "0..32"; }
+                    description "IPv4 prefix length.";
+                  }
+                }
+
+                container ipv6 {
+                  description "IPv6 addressing.";
+                  leaf local-address {
+                    type string;
+                    description "Local IPv6 address.";
+                  }
+                  leaf prefix-length {
+                    type uint8 { range "0..128"; }
+                    description "IPv6 prefix length.";
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

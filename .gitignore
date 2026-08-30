@@ -1,0 +1,103 @@
+/.venv
+/output/
+/documents/
+/workspace/
+/results/
+/yang_data/
+/yang_comparator_reports/
+/yang_comparator_reports_default/
+/yang_comparator_reports_flag/
+/comparison_results_concise/
+/component_1_data_scripts_logs/
+/component_2_data_scripts_logs/
+/test_files/
+/yang_rag/data-temp/
+/yang_rag/tests/
+/.pyang_scratch_runs/
+*.log
+*.csv
+__pycache__/
+*.py[cod]
+*.egg-info/
+*.png
+!docs/*.png
+yang_comparator_reports_renamed_entries.txt
+run_type_tests.sh
+/workspace-experiment-2-extensions/
+/workspace_extensions/
+/extension_reports/
+/exp2_extension_reports/
+# Editor folders
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+venv/
+ENV/
+env/
+
+VALIDATION_SUMMARY.md
+filter_zero_pyang_changes.py
+generate_concise_reports.py
+generate_diffrag_first_reports_concise.py
+generate_filtered_matched_unified_reports_concise.py
+generate_filtered_matched_unified_reports.py
+generate_unified_comparison.py
+pyang_vs_diffrag_comparison.ipynb
+report_analysis_utils.py
+monitor_pyang.sh
+compare_dirs.sh
+experiment_rag_candidates.py
+export_all_yang_commits.sh 
+extensions.ipynb
+monitor_pyang.sh
+process_commits_via_pyang.sh
+regenerate_final_reports.py
+regenerate_comparison_report.py
+run_pyang_for_all_commits.py
+run_workspace_extensions_all.py
+check_progress.sh
+run_batch_comparison.sh
+
+# ChromaDB
+data/chroma_db/
+*.db
+*.sqlite
+
+# Timestamps
+data/last_indexed_time.txt
+
+# IDE
+.vscode/settings.json
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Model cache
+.cache/
+models/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Distribution
+dist/
+build/
+*.egg-info/

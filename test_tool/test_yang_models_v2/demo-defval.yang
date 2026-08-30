@@ -1,0 +1,17 @@
+submodule demo-defval {
+  yang-version 1.1;
+  belongs-to vpn-services { prefix main; }
+
+  import smiv2-defs { prefix smiv2; }
+
+  revision "2026-04-15" {
+    description "Updated defval example (changed).";
+  }
+
+  leaf ifMtu {
+    type int32;
+    description "Interface MTU.";
+    smiv2:defval "9000";
+    smiv2:max-access "read-only";
+  }
+}

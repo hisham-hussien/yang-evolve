@@ -1,0 +1,427 @@
+vpn-services-old/2025-06-01
+  1. (revision added) [file: vpn-services-new.yang, line: 54] <backward-compatible>
+     1.1 attribute added: ['description'] -> Updated version: <backward-compatible>
+        - All ep:endpoint paths prefixed with /api/v1 for REST API versioning.
+        - pr:privileges on vpn-services container extended to include 'delete'.
+        - pr:privileges on vpn-nodes container reduced from 'create update' to 'create'.
+     1.2 attribute added: ['name'] -> 2025-06-01 <backward-compatible>
+     1.3 attribute added: ['reference'] -> https://link.springer.com/article/10.1007/s10270-025-01311-3 <backward-compatible>
+vpn-services-old/augment-target/augment-case-b
+  3. (leaf deleted) [file: old-path.yang, line: 400] <non-backward-compatible>
+vpn-services-old/augment-target/augment-case-b/type
+  4. (type deleted) [file: old-path.yang, line: 400, type_name: string] <non-backward-compatible>
+vpn-services-old/config/augment-case-b
+  3. (leaf added) [file: old-path.yang, line: 394] <backward-compatible>
+     3.1 attribute added: ['name'] -> augment-case-b <backward-compatible>
+vpn-services-old/enum-checks/type/Default
+  4. (enum added) [file: old-types.yang, line: 302] <backward-compatible>
+     4.1 attribute added: ['name'] -> Default <backward-compatible>
+     4.2 attribute added: ['value'] -> 3 <backward-compatible>
+vpn-services-old/leafref-grouping
+  1. (grouping added) [file: old-path.yang, line: 270] <backward-compatible>
+     1.1 attribute added: ['description'] -> Grouping with leafref <backward-compatible>
+     1.2 attribute added: ['name'] -> leafref-grouping <backward-compatible>
+vpn-services-old/leafref-grouping/grp-lr-fix
+  3. (leaf added) [file: old-path.yang, line: 278] <backward-compatible>
+     3.1 attribute added: ['description'] -> Grouping leafref was broken, now valid — RELAXED (BC) <backward-compatible>
+     3.2 attribute added: ['name'] -> grp-lr-fix <backward-compatible>
+vpn-services-old/leafref-grouping/grp-lr-unchanged
+  3. (leaf added) [file: old-path.yang, line: 273] <backward-compatible>
+     3.1 attribute added: ['description'] -> Grouping leafref unchanged — EQUIVALENT (BC) <backward-compatible>
+     3.2 attribute added: ['name'] -> grp-lr-unchanged <backward-compatible>
+vpn-services-old/range64
+  1. (leaf deleted) [file: old-types.yang, line: 300] <non-backward-compatible>
+vpn-services-old/range64/type
+  3. (type deleted) [file: old-types.yang, line: 301, type_name: int64] <non-backward-compatible>
+vpn-services-old/uses-tests
+  1. (container added) [file: old-path.yang, line: 284] <backward-compatible>
+     1.1 attribute added: ['description'] -> Uses instantiation of groupings <backward-compatible>
+     1.2 attribute added: ['name'] -> uses-tests <backward-compatible>
+vpn-services-old/uses-tests/grp-cond-fix
+  3. (leaf added) [file: old-path.yang, line: 257] <backward-compatible>
+     3.1 attribute added: ['description'] -> Grouping condition was broken, now valid — RELAXED (BC) <backward-compatible>
+     3.2 attribute added: ['name'] -> grp-cond-fix <backward-compatible>
+     3.3 constraint added: ['when'] -> ../../config/admin-state = 'UP' <backward-compatible>
+vpn-services-old/uses-tests/grp-cond-unchanged
+  3. (leaf added) [file: old-path.yang, line: 251] <backward-compatible>
+     3.1 attribute added: ['description'] -> Grouping condition unchanged — EQUIVALENT (BC) <backward-compatible>
+     3.2 attribute added: ['name'] -> grp-cond-unchanged <backward-compatible>
+     3.3 constraint added: ['when'] -> ../../config/admin-state = 'UP' <backward-compatible>
+vpn-services-old/uses-tests/grp-lr-fix
+  3. (leaf added) [file: old-path.yang, line: 278] <backward-compatible>
+     3.1 attribute added: ['description'] -> Grouping leafref was broken, now valid — RELAXED (BC) <backward-compatible>
+     3.2 attribute added: ['name'] -> grp-lr-fix <backward-compatible>
+vpn-services-old/uses-tests/grp-lr-unchanged
+  3. (leaf added) [file: old-path.yang, line: 273] <backward-compatible>
+     3.1 attribute added: ['description'] -> Grouping leafref unchanged — EQUIVALENT (BC) <backward-compatible>
+     3.2 attribute added: ['name'] -> grp-lr-unchanged <backward-compatible>
+vpn-services-old/uses-when-grouping/grp-cond-break/type
+  4. (type changed) [file: old-path.yang, old_line: 300, new_line: 265, type_name: string] <non-backward-compatible>
+     4.1 attribute changed: ['node-path'] -> condition-grouping/grp-cond-break/type (was uses-when-grouping/grp-cond-break/type) <non-backward-compatible>
+vpn-services-old/uses-when-grouping/uses-when-leaf-d/type
+  4. (type changed) [file: old-path.yang, old_line: 295, new_line: 296, type_name: string] <non-backward-compatible>
+     4.1 attribute changed: ['node-path'] -> uses-when-grouping/uses-when-leaf-c/type (was uses-when-grouping/uses-when-leaf-d/type) <non-backward-compatible>
+vpn-services-old/uses-when-tests-and-narrowed/grp-cond-break
+  3. (leaf deleted) [file: old-path.yang, line: 298] <non-backward-compatible>
+vpn-services-old/uses-when-tests-and-narrowed/grp-cond-break/type
+  4. (type deleted) [file: old-path.yang, line: 300, type_name: string] <non-backward-compatible>
+vpn-services-old/uses-when-tests-and-narrowed/uses-when-leaf-d/type
+  4. (type changed) [file: old-path.yang, old_line: 295, new_line: 296, type_name: string] <non-backward-compatible>
+     4.1 attribute changed: ['node-path'] -> uses-when-tests-and-narrowed/uses-when-leaf-c/type (was uses-when-tests-and-narrowed/uses-when-leaf-d/type) <non-backward-compatible>
+vpn-services-old/uses-when-tests-break/grp-cond-break
+  3. (leaf deleted) [file: old-path.yang, line: 298] <non-backward-compatible>
+vpn-services-old/uses-when-tests-break/grp-cond-break/type
+  4. (type deleted) [file: old-path.yang, line: 300, type_name: string] <non-backward-compatible>
+vpn-services-old/uses-when-tests-break/uses-when-leaf-d/type
+  4. (type changed) [file: old-path.yang, old_line: 295, new_line: 296, type_name: string] <non-backward-compatible>
+     4.1 attribute changed: ['node-path'] -> uses-when-tests-break/uses-when-leaf-c/type (was uses-when-tests-break/uses-when-leaf-d/type) <non-backward-compatible>
+vpn-services-old/uses-when-tests-enum-break/grp-cond-break
+  3. (leaf deleted) [file: old-path.yang, line: 298] <non-backward-compatible>
+vpn-services-old/uses-when-tests-enum-break/grp-cond-break/type
+  4. (type deleted) [file: old-path.yang, line: 300, type_name: string] <non-backward-compatible>
+vpn-services-old/uses-when-tests-enum-break/uses-when-leaf-d/type
+  4. (type changed) [file: old-path.yang, old_line: 295, new_line: 296, type_name: string] <non-backward-compatible>
+     4.1 attribute changed: ['node-path'] -> uses-when-tests-enum-break/uses-when-leaf-c/type (was uses-when-tests-enum-break/uses-when-leaf-d/type) <non-backward-compatible>
+vpn-services-old/uses-when-tests-enum-fix/grp-cond-break
+  3. (leaf deleted) [file: old-path.yang, line: 298] <non-backward-compatible>
+vpn-services-old/uses-when-tests-enum-fix/grp-cond-break/type
+  4. (type deleted) [file: old-path.yang, line: 300, type_name: string] <non-backward-compatible>
+vpn-services-old/uses-when-tests-enum-fix/uses-when-leaf-d/type
+  4. (type changed) [file: old-path.yang, old_line: 295, new_line: 296, type_name: string] <non-backward-compatible>
+     4.1 attribute changed: ['node-path'] -> uses-when-tests-enum-fix/uses-when-leaf-c/type (was uses-when-tests-enum-fix/uses-when-leaf-d/type) <non-backward-compatible>
+vpn-services-old/uses-when-tests-fix/grp-cond-break
+  3. (leaf deleted) [file: old-path.yang, line: 298] <non-backward-compatible>
+vpn-services-old/uses-when-tests-fix/grp-cond-break/type
+  4. (type deleted) [file: old-path.yang, line: 300, type_name: string] <non-backward-compatible>
+vpn-services-old/uses-when-tests-fix/uses-when-leaf-d/type
+  4. (type changed) [file: old-path.yang, old_line: 295, new_line: 296, type_name: string] <non-backward-compatible>
+     4.1 attribute changed: ['node-path'] -> uses-when-tests-fix/uses-when-leaf-c/type (was uses-when-tests-fix/uses-when-leaf-d/type) <non-backward-compatible>
+vpn-services-old/uses-when-tests-or-narrowed/grp-cond-break
+  3. (leaf deleted) [file: old-path.yang, line: 298] <non-backward-compatible>
+vpn-services-old/uses-when-tests-or-narrowed/grp-cond-break/type
+  4. (type deleted) [file: old-path.yang, line: 300, type_name: string] <non-backward-compatible>
+vpn-services-old/uses-when-tests-or-narrowed/uses-when-leaf-d/type
+  4. (type changed) [file: old-path.yang, old_line: 295, new_line: 296, type_name: string] <non-backward-compatible>
+     4.1 attribute changed: ['node-path'] -> uses-when-tests-or-narrowed/uses-when-leaf-c/type (was uses-when-tests-or-narrowed/uses-when-leaf-d/type) <non-backward-compatible>
+vpn-services-old/uses-when-tests-or-relaxed/grp-cond-break
+  3. (leaf deleted) [file: old-path.yang, line: 298] <non-backward-compatible>
+vpn-services-old/uses-when-tests-or-relaxed/grp-cond-break/type
+  4. (type deleted) [file: old-path.yang, line: 300, type_name: string] <non-backward-compatible>
+vpn-services-old/uses-when-tests-or-relaxed/uses-when-leaf-d/type
+  4. (type changed) [file: old-path.yang, old_line: 295, new_line: 296, type_name: string] <non-backward-compatible>
+     4.1 attribute changed: ['node-path'] -> uses-when-tests-or-relaxed/uses-when-leaf-c/type (was uses-when-tests-or-relaxed/uses-when-leaf-d/type) <non-backward-compatible>
+vpn-services-old/uses-when-tests/grp-cond-break/type
+  4. (type changed) [file: old-path.yang, old_line: 300, new_line: 265, type_name: string] <non-backward-compatible>
+     4.1 attribute changed: ['node-path'] -> uses-tests/grp-cond-break/type (was uses-when-tests/grp-cond-break/type) <non-backward-compatible>
+vpn-services-old/uses-when-tests/uses-when-leaf-d/type
+  4. (type changed) [file: old-path.yang, old_line: 295, new_line: 296, type_name: string] <non-backward-compatible>
+     4.1 attribute changed: ['node-path'] -> uses-when-tests/uses-when-leaf-c/type (was uses-when-tests/uses-when-leaf-d/type) <non-backward-compatible>
+vpn-services-old/vpn-services-new/op:config
+  3. (augment added) [file: old-path.yang, line: 392] <backward-compatible>
+     3.1 attribute added: ['description'] -> Augment case B: path changes to different target — INCOMPARABLE (NBC) <backward-compatible>
+     3.2 attribute added: ['name'] -> /op:config <backward-compatible>
+vpn-services-old/2024-01-01
+  2. (revision changed) [old_file: vpn-services-old.yang, new_file: vpn-services-new.yang, old_line: 54, new_line: 64] <backward-compatible>
+     2.1 attribute changed: ['description'] -> Initial version of the VPN services module with ep/pr extensions. (was Initial (old) version of the VPN services module with ep/pr extensions.) <backward-compatible>
+vpn-services-old/condition-grouping
+  2. (grouping changed) [file: old-path.yang, old_line: 264, new_line: 248] <backward-compatible>
+     2.1 attribute changed: ['description'] -> Grouping with when conditions (was Grouping with when conditions — evaluated at instantiation point) <backward-compatible>
+vpn-services-old/condition-grouping/grp-cond-fix
+  3. (leaf changed) [file: old-path.yang, old_line: 275, new_line: 257] <backward-compatible>
+     3.1 constraint changed: ['when'] -> ../../config/admin-state = 'UP' (was ../../nonexistent/admin-state = 'UP') <backward-compatible>
+vpn-services-old/condition-tests/cond-and-narrowed
+  3. (leaf changed) [file: old-path.yang, old_line: 215, new_line: 203] <non-backward-compatible>
+     3.1 constraint changed: ['when'] -> ../../config/index > 0 and ../../config/index < 100 and ../../config/index != 50 (was ../../config/index > 0 and ../../config/index < 100) <non-backward-compatible>
+vpn-services-old/condition-tests/cond-and-relaxed
+  3. (leaf changed) [file: old-path.yang, old_line: 222, new_line: 210] <backward-compatible>
+     3.1 constraint changed: ['when'] -> ../../config/index > 0 (was ../../config/index > 0 and ../../config/index < 50) <backward-compatible>
+vpn-services-old/condition-tests/cond-lhs-break-valid
+  3. (leaf changed) [file: old-path.yang, old_line: 138, new_line: 126] <non-backward-compatible>
+     3.1 constraint changed: ['when'] -> ../../nonexistent/admin-state = 'DOWN' (was ../../config/admin-state = 'DOWN') <non-backward-compatible>
+vpn-services-old/condition-tests/cond-lhs-different-node
+  3. (leaf changed) [file: old-path.yang, old_line: 124, new_line: 112] <non-backward-compatible>
+     3.1 constraint changed: ['when'] -> ../../config/protocol-type = 'BGP' (was ../../config/admin-state = 'UP') <non-backward-compatible>
+vpn-services-old/condition-tests/cond-lhs-fix-broken
+  3. (leaf changed) [file: old-path.yang, old_line: 131, new_line: 119] <backward-compatible>
+     3.1 constraint changed: ['when'] -> ../../config/admin-state = 'UP' (was ../../nonexistent/admin-state = 'UP') <backward-compatible>
+vpn-services-old/condition-tests/cond-must-break
+  3. (leaf changed) [file: old-path.yang, old_line: 247, new_line: 235] <non-backward-compatible>
+     3.1 constraint changed: ['must'] -> ../../nonexistent3/index = 99 (was ../../config/index = 99) <non-backward-compatible> <needs-deep-analysis>
+vpn-services-old/condition-tests/cond-must-fix
+  3. (leaf changed) [file: old-path.yang, old_line: 238, new_line: 226] <backward-compatible>
+     3.1 constraint changed: ['must'] -> ../../config/admin-state = 'UP' (was ../../nonexistent2/admin-state = 'UP') <backward-compatible>
+vpn-services-old/condition-tests/cond-or-narrowed
+  3. (leaf changed) [file: old-path.yang, old_line: 208, new_line: 196] <non-backward-compatible>
+     3.1 constraint changed: ['when'] -> ../../config/index > 0 (was ../../config/index > 0 or ../../config/index < 100) <non-backward-compatible>
+vpn-services-old/condition-tests/cond-or-relaxed
+  3. (leaf changed) [file: old-path.yang, old_line: 201, new_line: 189] <backward-compatible>
+     3.1 constraint changed: ['when'] -> ../../config/index > 0 or ../../config/index < 1000 (was ../../config/index > 0) <backward-compatible>
+vpn-services-old/condition-tests/cond-rhs-enum-break
+  3. (leaf changed) [file: old-path.yang, old_line: 166, new_line: 154] <non-backward-compatible>
+     3.1 constraint changed: ['when'] -> ../../config/protocol-type = 'INVALID_PROTO' (was ../../config/protocol-type = 'ISIS') <non-backward-compatible>
+vpn-services-old/condition-tests/cond-rhs-enum-change
+  3. (leaf changed) [file: old-path.yang, old_line: 152, new_line: 140] <non-backward-compatible>
+     3.1 constraint changed: ['when'] -> ../../config/protocol-type = 'ISIS' (was ../../config/protocol-type = 'OSPF') <non-backward-compatible>
+vpn-services-old/condition-tests/cond-rhs-enum-fix
+  3. (leaf changed) [file: old-path.yang, old_line: 159, new_line: 147] <backward-compatible>
+     3.1 constraint changed: ['when'] -> ../../config/admin-state = 'UP' (was ../../config/admin-state = 'INVALID_ENUM') <backward-compatible>
+vpn-services-old/condition-tests/cond-rhs-identity-change
+  3. (leaf changed) [file: old-path.yang, old_line: 180, new_line: 168] <non-backward-compatible>
+     3.1 constraint changed: ['when'] -> ../../config/admin-state = 'UP' and ../../config/index = 7 (was ../../config/admin-state = 'UP' and ../../config/index = 5) <non-backward-compatible> <needs-deep-analysis>
+vpn-services-old/config
+  2. (container deleted) [file: old-path.yang, line: 19] <non-backward-compatible>
+vpn-services-old/config-narrowed
+  2. (container changed) [file: old-types.yang, old_line: 167, new_line: 170] <non-backward-compatible>
+     2.1 constraint changed: ['config'] -> false (was true) <non-backward-compatible>
+vpn-services-old/config-relaxed
+  2. (container changed) [file: old-types.yang, old_line: 160, new_line: 163] <backward-compatible>
+     2.1 constraint changed: ['config'] -> true (was false) <backward-compatible>
+vpn-services-old/enum-checks/type/GAMMA
+  4. (enum changed) [file: old-types.yang, old_line: 295, new_line: 300] <non-backward-compatible>
+     4.1 attribute changed: ['value'] -> 1 (was 2) <non-backward-compatible>
+vpn-services-old/enum-checks/type/enum/CETA
+  5. (enum changed) [file: old-types.yang, old_line: 294, new_line: 301] <non-backward-compatible>
+     5.1 attribute changed: ['name'] -> CETA (was BETA) <non-backward-compatible>
+     5.2 attribute changed: ['value'] -> 2 (was 1) <non-backward-compatible>
+vpn-services-old/fraction-digits-changed/type
+  3. (type changed) [file: old-types.yang, old_line: 105, new_line: 107, type_name: decimal64] <non-backward-compatible>
+     3.1 constraint changed: ['fraction-digits'] -> 4 (was 2) <non-backward-compatible>
+vpn-services-old/fraction-digits-decreased/type
+  3. (type changed) [file: old-types.yang, old_line: 175, new_line: 178, type_name: decimal64] <non-backward-compatible>
+     3.1 constraint changed: ['fraction-digits'] -> 1 (was 18) <non-backward-compatible>
+vpn-services-old/if-feature-added
+  2. (leaf changed) [file: old-types.yang, old_line: 154, new_line: 156] <non-backward-compatible>
+     2.1 constraint added: ['if-feature'] -> my-feature <non-backward-compatible>
+vpn-services-old/ifMtu
+  2. (leaf changed) [file: demo-defval.yang, line: 11] <non-backward-compatible>
+     2.1 attribute changed: ['defval'] -> 9000 (was 1500) <non-backward-compatible>
+     2.2 constraint changed: ['max-access'] -> read-only (was read-write) <non-backward-compatible>
+vpn-services-old/int32-to-int8/type/int8
+  4. (type changed) [file: old-types.yang, old_line: 37, new_line: 41, old_type_name: int32, new_type_name: int8] <non-backward-compatible>
+     4.1 attribute changed: ['name'] -> int8 (was int32) <non-backward-compatible>
+vpn-services-old/int8-to-int16/type/int16
+  4. (type changed) [file: old-types.yang, old_line: 31, new_line: 35, old_type_name: int8, new_type_name: int16] <backward-compatible>
+     4.1 attribute changed: ['name'] -> int16 (was int8) <backward-compatible>
+vpn-services-old/int8-to-string/type/string
+  4. (type changed) [file: old-types.yang, old_line: 43, new_line: 47, old_type_name: int8, new_type_name: string] <non-backward-compatible>
+     4.1 attribute changed: ['name'] -> string (was int8) <non-backward-compatible>
+vpn-services-old/leafref-tests/case-a-rewritten/type
+  4. (type changed) [file: old-path.yang, old_line: 58, new_line: 51, type_name: leafref] <backward-compatible>
+     4.1 attribute changed: ['path'] -> /op:config/op:name (was ../../config/name) <backward-compatible>
+vpn-services-old/leafref-tests/case-b-different-container/type
+  4. (type changed) [file: old-path.yang, old_line: 70, new_line: 63, type_name: leafref] <non-backward-compatible>
+     4.1 attribute changed: ['path'] -> ../../state/name (was ../../config/name) <non-backward-compatible>
+vpn-services-old/leafref-tests/case-b-different-target/type
+  4. (type changed) [file: old-path.yang, old_line: 64, new_line: 57, type_name: leafref] <non-backward-compatible>
+     4.1 attribute changed: ['path'] -> ../../config/index (was ../../config/name) <non-backward-compatible>
+vpn-services-old/leafref-tests/case-c-fix-broken-path/type
+  4. (type changed) [file: old-path.yang, old_line: 76, new_line: 69, type_name: leafref] <backward-compatible>
+     4.1 attribute changed: ['path'] -> ../../config/name (was ../../nonexistent-container/name) <backward-compatible>
+vpn-services-old/leafref-tests/case-d-break-valid-path/type
+  4. (type changed) [file: old-path.yang, old_line: 82, new_line: 75, type_name: leafref] <non-backward-compatible>
+     4.1 attribute changed: ['path'] -> ../../nonexistent-container/name (was ../../config/name) <non-backward-compatible>
+vpn-services-old/leafref-tests/case-e-both-invalid/type
+  4. (type changed) [file: old-path.yang, old_line: 88, new_line: 81, type_name: leafref] <non-backward-compatible>
+     4.1 attribute changed: ['path'] -> ../../nonexistent-b/name (was ../../nonexistent-a/name) <non-backward-compatible>
+vpn-services-old/leafref-tests/case-leafref-to-string/type/string
+  5. (type changed) [file: old-path.yang, old_line: 94, new_line: 87, old_type_name: leafref, new_type_name: string] <backward-compatible>
+     5.1 attribute changed: ['name'] -> string (was leafref) <backward-compatible>
+     5.2 attribute deleted: ['path'] -> ../../config/name <backward-compatible>
+vpn-services-old/leafref-tests/case-string-to-leafref/type/leafref
+  5. (type changed) [file: old-path.yang, old_line: 100, new_line: 93, old_type_name: string, new_type_name: leafref] <non-backward-compatible>
+     5.1 attribute changed: ['name'] -> leafref (was string) <non-backward-compatible>
+     5.2 attribute added: ['path'] -> ../../config/name <backward-compatible>
+vpn-services-old/leafref-to-int/type/int32
+  4. (type changed) [file: old-types.yang, old_line: 49, new_line: 53, old_type_name: leafref, new_type_name: int32] <backward-compatible>
+     4.1 attribute changed: ['name'] -> int32 (was leafref) <backward-compatible>
+     4.2 attribute deleted: ['path'] -> /int8-to-int16 <backward-compatible>
+vpn-services-old/leafref-to-leafref-incompatible/type
+  3. (type changed) [file: old-types.yang, old_line: 262, new_line: 266, type_name: leafref] <non-backward-compatible>
+     3.1 attribute changed: ['path'] -> /ref-string (was /ref-int8) <non-backward-compatible>
+vpn-services-old/leafref-to-leafref-narrower/type
+  3. (type changed) [file: old-types.yang, old_line: 253, new_line: 257, type_name: leafref] <non-backward-compatible>
+     3.1 attribute changed: ['path'] -> /ref-int8 (was /ref-int32) <non-backward-compatible>
+vpn-services-old/leafref-to-leafref-wider/type
+  3. (type changed) [file: old-types.yang, old_line: 244, new_line: 248, type_name: leafref] <non-backward-compatible>
+     3.1 attribute changed: ['path'] -> /ref-int32 (was /ref-int8) <non-backward-compatible>
+vpn-services-old/leafref-to-string/type/string
+  4. (type changed) [file: old-types.yang, old_line: 57, new_line: 59, old_type_name: leafref, new_type_name: string] <non-backward-compatible>
+     4.1 attribute changed: ['name'] -> string (was leafref) <non-backward-compatible>
+     4.2 attribute deleted: ['path'] -> /int8-to-int16 <backward-compatible>
+vpn-services-old/length-narrowed/type
+  3. (type changed) [file: old-types.yang, old_line: 97, new_line: 99, type_name: string] <non-backward-compatible>
+     3.1 constraint changed: ['length'] -> 1..10 (was 1..20) <non-backward-compatible>
+vpn-services-old/length-relaxed/type
+  3. (type changed) [file: old-types.yang, old_line: 89, new_line: 91, type_name: string] <backward-compatible>
+     3.1 constraint changed: ['length'] -> 1..20 (was 1..10) <backward-compatible>
+vpn-services-old/mandatory-deleted
+  2. (leaf changed) [file: old-types.yang, old_line: 219, new_line: 224] <backward-compatible>
+     2.1 constraint deleted: ['mandatory'] -> false <backward-compatible>
+vpn-services-old/mandatory-false-added
+  2. (leaf changed) [file: old-types.yang, old_line: 207, new_line: 210] <backward-compatible>
+     2.1 constraint added: ['mandatory'] -> false <backward-compatible>
+vpn-services-old/mandatory-false-to-true
+  2. (leaf changed) [file: old-types.yang, old_line: 233, new_line: 237] <non-backward-compatible>
+     2.1 constraint changed: ['mandatory'] -> true (was false) <non-backward-compatible>
+vpn-services-old/mandatory-true-added
+  2. (leaf changed) [file: old-types.yang, old_line: 213, new_line: 217] <non-backward-compatible>
+     2.1 constraint added: ['mandatory'] -> true <non-backward-compatible>
+vpn-services-old/mandatory-true-to-false
+  2. (leaf changed) [file: old-types.yang, old_line: 226, new_line: 230] <backward-compatible>
+     2.1 constraint changed: ['mandatory'] -> false (was true) <backward-compatible>
+vpn-services-old/max-elements-narrowed
+  2. (list changed) [file: old-types.yang, old_line: 128, new_line: 130] <non-backward-compatible>
+     2.1 constraint changed: ['max-elements'] -> 10 (was 20) <non-backward-compatible>
+vpn-services-old/max-elements-relaxed
+  2. (list changed) [file: old-types.yang, old_line: 120, new_line: 122] <backward-compatible>
+     2.1 constraint changed: ['max-elements'] -> 20 (was 10) <backward-compatible>
+vpn-services-old/min-elements-relaxed
+  2. (list changed) [file: old-types.yang, old_line: 112, new_line: 114] <backward-compatible>
+     2.1 constraint changed: ['min-elements'] -> 2 (was 5) <backward-compatible>
+vpn-services-old/op:augment-target
+  2. (augment changed) [file: old-path.yang, old_line: 398, new_line: 387] <backward-compatible>
+     2.1 attribute changed: ['description'] -> Augment case A: path unchanged — EQUIVALENT (BC) (was Augment case B: path changes to different target — INCOMPARABLE (NBC)) <backward-compatible>
+vpn-services-old/pattern-narrowed/type
+  3. (type changed) [file: old-types.yang, old_line: 145, new_line: 147, type_name: string] <non-backward-compatible>
+     3.1 constraint changed: ['pattern'] -> [0-9]+ (was [a-zA-Z0-9]+) <non-backward-compatible>
+vpn-services-old/pattern-relaxed/type
+  3. (type changed) [file: old-types.yang, old_line: 137, new_line: 139, type_name: string] <backward-compatible>
+     3.1 constraint changed: ['pattern'] -> [a-zA-Z0-9]+ (was [0-9]+) <backward-compatible>
+vpn-services-old/range-narrowed/type
+  3. (type changed) [file: old-types.yang, old_line: 81, new_line: 83, type_name: int32] <non-backward-compatible>
+     3.1 constraint changed: ['range'] -> 0..100 (was 0..200) <non-backward-compatible>
+vpn-services-old/range-relaxed/type
+  3. (type changed) [file: old-types.yang, old_line: 73, new_line: 75, type_name: int32] <backward-compatible>
+     3.1 constraint changed: ['range'] -> 0..200 (was 0..100) <backward-compatible>
+vpn-services-old/status-current-to-deprecated
+  2. (leaf changed) [file: old-types.yang, old_line: 184, new_line: 187] <backward-compatible>
+     2.1 constraint changed: ['status'] -> deprecated (was current) <backward-compatible>
+vpn-services-old/status-current-to-obsolete
+  2. (leaf changed) [file: old-types.yang, old_line: 191, new_line: 194] <non-backward-compatible>
+     2.1 constraint changed: ['status'] -> obsolete (was current) <non-backward-compatible>
+vpn-services-old/status-deprecated-to-obsolete
+  2. (leaf changed) [file: old-types.yang, old_line: 198, new_line: 201] <non-backward-compatible>
+     2.1 constraint changed: ['status'] -> obsolete (was deprecated) <non-backward-compatible>
+vpn-services-old/string-to-leafref/type/leafref
+  4. (type changed) [file: old-types.yang, line: 65, old_type_name: string, new_type_name: leafref] <non-backward-compatible>
+     4.1 attribute changed: ['name'] -> leafref (was string) <non-backward-compatible>
+     4.2 attribute added: ['path'] -> /int8-to-int16 <backward-compatible>
+vpn-services-old/union-member-added/type/union/boolean
+  5. (type added) [file: old-types.yang, line: 279] <backward-compatible>
+     5.1.1 attribute added: ['name'] -> boolean <backward-compatible>
+vpn-services-old/union-member-added/type/type/boolean
+  5. (type changed) [file: old-types.yang, old_line: 274, new_line: 279, old_type_name: string, new_type_name: boolean] <non-backward-compatible>
+     5.1 attribute changed: ['name'] -> boolean (was string) <non-backward-compatible>
+vpn-services-old/union-member-deleted/type/union/string
+  5. (type deleted) [file: old-types.yang, line: 283] <non-backward-compatible>
+     5.1.1 attribute deleted: ['name'] -> string <non-backward-compatible>
+vpn-services-old/union-member-deleted/type/type/int8
+  5. (type changed) [file: old-types.yang, old_line: 283, new_line: 287, old_type_name: string, new_type_name: int8] <non-backward-compatible>
+     5.1 attribute changed: ['name'] -> int8 (was string) <non-backward-compatible>
+vpn-services-old/uses-when-grouping/grp-cond-break
+  3. (leaf changed) [file: old-path.yang, old_line: 298, new_line: 263] <non-backward-compatible>
+     3.1 attribute changed: ['node-path'] -> condition-grouping/grp-cond-break (was uses-when-grouping/grp-cond-break) <non-backward-compatible>
+     3.2 constraint changed: ['when'] -> ../../nonexistent/admin-state = 'DOWN' (was ../../config/admin-state = 'DOWN') <non-backward-compatible>
+vpn-services-old/uses-when-grouping/leaf/uses-when-leaf-c
+  4. (leaf changed) [file: old-path.yang, old_line: 295, new_line: 296] <non-backward-compatible>
+     4.1 attribute changed: ['description'] -> Leaf C in grouping (was Leaf D in grouping) <backward-compatible>
+     4.2 attribute changed: ['name'] -> uses-when-leaf-c (was uses-when-leaf-d) <non-backward-compatible>
+vpn-services-old/uses-when-tests-and-narrowed/leaf/uses-when-leaf-c
+  4. (leaf changed) [file: old-path.yang, old_line: 295, new_line: 296] <non-backward-compatible>
+     4.1 attribute changed: ['description'] -> Leaf C in grouping (was Leaf D in grouping) <backward-compatible>
+     4.2 attribute changed: ['name'] -> uses-when-leaf-c (was uses-when-leaf-d) <non-backward-compatible>
+     4.3 constraint changed: ['when'] -> ../config/protocol-type = 'BGP' and ../config/admin-state = 'UP' (was ../config/protocol-type = 'BGP') <non-backward-compatible>
+vpn-services-old/uses-when-tests-and-narrowed/uses-when-leaf-a
+  3. (leaf changed) [file: old-path.yang, old_line: 293, new_line: 294] <non-backward-compatible>
+     3.1 constraint changed: ['when'] -> ../config/protocol-type = 'BGP' and ../config/admin-state = 'UP' (was ../config/protocol-type = 'BGP') <non-backward-compatible>
+vpn-services-old/uses-when-tests-and-narrowed/uses-when-leaf-b
+  3. (leaf changed) [file: old-path.yang, old_line: 294, new_line: 295] <non-backward-compatible>
+     3.1 constraint changed: ['when'] -> ../config/protocol-type = 'BGP' and ../config/admin-state = 'UP' (was ../config/protocol-type = 'BGP') <non-backward-compatible>
+vpn-services-old/uses-when-tests-break/leaf/uses-when-leaf-c
+  4. (leaf changed) [file: old-path.yang, old_line: 295, new_line: 296] <non-backward-compatible>
+     4.1 attribute changed: ['description'] -> Leaf C in grouping (was Leaf D in grouping) <backward-compatible>
+     4.2 attribute changed: ['name'] -> uses-when-leaf-c (was uses-when-leaf-d) <non-backward-compatible>
+     4.3 constraint changed: ['when'] -> ../nonexistent-uses-new/admin-state = 'DOWN' (was ../config/admin-state = 'DOWN') <non-backward-compatible>
+vpn-services-old/uses-when-tests-break/uses-when-leaf-a
+  3. (leaf changed) [file: old-path.yang, old_line: 293, new_line: 294] <non-backward-compatible>
+     3.1 constraint changed: ['when'] -> ../nonexistent-uses-new/admin-state = 'DOWN' (was ../config/admin-state = 'DOWN') <non-backward-compatible>
+vpn-services-old/uses-when-tests-break/uses-when-leaf-b
+  3. (leaf changed) [file: old-path.yang, old_line: 294, new_line: 295] <non-backward-compatible>
+     3.1 constraint changed: ['when'] -> ../nonexistent-uses-new/admin-state = 'DOWN' (was ../config/admin-state = 'DOWN') <non-backward-compatible>
+vpn-services-old/uses-when-tests-enum-break/leaf/uses-when-leaf-c
+  4. (leaf changed) [file: old-path.yang, old_line: 295, new_line: 296] <non-backward-compatible>
+     4.1 attribute changed: ['description'] -> Leaf C in grouping (was Leaf D in grouping) <backward-compatible>
+     4.2 attribute changed: ['name'] -> uses-when-leaf-c (was uses-when-leaf-d) <non-backward-compatible>
+     4.3 constraint changed: ['when'] -> ../config/admin-state = 'INVALID_USES_NEW' (was ../config/admin-state = 'UP') <non-backward-compatible>
+vpn-services-old/uses-when-tests-enum-break/uses-when-leaf-a
+  3. (leaf changed) [file: old-path.yang, old_line: 293, new_line: 294] <non-backward-compatible>
+     3.1 constraint changed: ['when'] -> ../config/admin-state = 'INVALID_USES_NEW' (was ../config/admin-state = 'UP') <non-backward-compatible>
+vpn-services-old/uses-when-tests-enum-break/uses-when-leaf-b
+  3. (leaf changed) [file: old-path.yang, old_line: 294, new_line: 295] <non-backward-compatible>
+     3.1 constraint changed: ['when'] -> ../config/admin-state = 'INVALID_USES_NEW' (was ../config/admin-state = 'UP') <non-backward-compatible>
+vpn-services-old/uses-when-tests-enum-fix/leaf/uses-when-leaf-c
+  4. (leaf changed) [file: old-path.yang, old_line: 295, new_line: 296] <non-backward-compatible>
+     4.1 attribute changed: ['description'] -> Leaf C in grouping (was Leaf D in grouping) <backward-compatible>
+     4.2 attribute changed: ['name'] -> uses-when-leaf-c (was uses-when-leaf-d) <non-backward-compatible>
+     4.3 constraint changed: ['when'] -> ../config/admin-state = 'UP' (was ../config/admin-state = 'INVALID_USES') <backward-compatible>
+vpn-services-old/uses-when-tests-enum-fix/uses-when-leaf-a
+  3. (leaf changed) [file: old-path.yang, old_line: 293, new_line: 294] <backward-compatible>
+     3.1 constraint changed: ['when'] -> ../config/admin-state = 'UP' (was ../config/admin-state = 'INVALID_USES') <backward-compatible>
+vpn-services-old/uses-when-tests-enum-fix/uses-when-leaf-b
+  3. (leaf changed) [file: old-path.yang, old_line: 294, new_line: 295] <backward-compatible>
+     3.1 constraint changed: ['when'] -> ../config/admin-state = 'UP' (was ../config/admin-state = 'INVALID_USES') <backward-compatible>
+vpn-services-old/uses-when-tests-fix/leaf/uses-when-leaf-c
+  4. (leaf changed) [file: old-path.yang, old_line: 295, new_line: 296] <non-backward-compatible>
+     4.1 attribute changed: ['description'] -> Leaf C in grouping (was Leaf D in grouping) <backward-compatible>
+     4.2 attribute changed: ['name'] -> uses-when-leaf-c (was uses-when-leaf-d) <non-backward-compatible>
+     4.3 constraint changed: ['when'] -> ../config/protocol-type = 'ISIS' (was ../../config/protocol-type = 'ISIS') <backward-compatible>
+vpn-services-old/uses-when-tests-fix/uses-when-leaf-a
+  3. (leaf changed) [file: old-path.yang, old_line: 293, new_line: 294] <backward-compatible>
+     3.1 constraint changed: ['when'] -> ../config/protocol-type = 'ISIS' (was ../../config/protocol-type = 'ISIS') <backward-compatible>
+vpn-services-old/uses-when-tests-fix/uses-when-leaf-b
+  3. (leaf changed) [file: old-path.yang, old_line: 294, new_line: 295] <backward-compatible>
+     3.1 constraint changed: ['when'] -> ../config/protocol-type = 'ISIS' (was ../../config/protocol-type = 'ISIS') <backward-compatible>
+vpn-services-old/uses-when-tests-or-narrowed/leaf/uses-when-leaf-c
+  4. (leaf changed) [file: old-path.yang, old_line: 295, new_line: 296] <non-backward-compatible>
+     4.1 attribute changed: ['description'] -> Leaf C in grouping (was Leaf D in grouping) <backward-compatible>
+     4.2 attribute changed: ['name'] -> uses-when-leaf-c (was uses-when-leaf-d) <non-backward-compatible>
+     4.3 constraint changed: ['when'] -> ../config/protocol-type = 'BGP' (was ../config/protocol-type = 'BGP' or ../config/protocol-type = 'OSPF') <non-backward-compatible>
+vpn-services-old/uses-when-tests-or-narrowed/uses-when-leaf-a
+  3. (leaf changed) [file: old-path.yang, old_line: 293, new_line: 294] <non-backward-compatible>
+     3.1 constraint changed: ['when'] -> ../config/protocol-type = 'BGP' (was ../config/protocol-type = 'BGP' or ../config/protocol-type = 'OSPF') <non-backward-compatible>
+vpn-services-old/uses-when-tests-or-narrowed/uses-when-leaf-b
+  3. (leaf changed) [file: old-path.yang, old_line: 294, new_line: 295] <non-backward-compatible>
+     3.1 constraint changed: ['when'] -> ../config/protocol-type = 'BGP' (was ../config/protocol-type = 'BGP' or ../config/protocol-type = 'OSPF') <non-backward-compatible>
+vpn-services-old/uses-when-tests-or-relaxed/leaf/uses-when-leaf-c
+  4. (leaf changed) [file: old-path.yang, old_line: 295, new_line: 296] <non-backward-compatible>
+     4.1 attribute changed: ['description'] -> Leaf C in grouping (was Leaf D in grouping) <backward-compatible>
+     4.2 attribute changed: ['name'] -> uses-when-leaf-c (was uses-when-leaf-d) <non-backward-compatible>
+     4.3 constraint changed: ['when'] -> ../config/protocol-type = 'BGP' or ../config/protocol-type = 'OSPF' (was ../config/protocol-type = 'BGP') <backward-compatible>
+vpn-services-old/uses-when-tests-or-relaxed/uses-when-leaf-a
+  3. (leaf changed) [file: old-path.yang, old_line: 293, new_line: 294] <backward-compatible>
+     3.1 constraint changed: ['when'] -> ../config/protocol-type = 'BGP' or ../config/protocol-type = 'OSPF' (was ../config/protocol-type = 'BGP') <backward-compatible>
+vpn-services-old/uses-when-tests-or-relaxed/uses-when-leaf-b
+  3. (leaf changed) [file: old-path.yang, old_line: 294, new_line: 295] <backward-compatible>
+     3.1 constraint changed: ['when'] -> ../config/protocol-type = 'BGP' or ../config/protocol-type = 'OSPF' (was ../config/protocol-type = 'BGP') <backward-compatible>
+vpn-services-old/uses-when-tests/grp-cond-break
+  3. (leaf changed) [file: old-path.yang, old_line: 298, new_line: 263] <non-backward-compatible>
+     3.1 attribute changed: ['node-path'] -> uses-tests/grp-cond-break (was uses-when-tests/grp-cond-break) <non-backward-compatible>
+     3.2 constraint changed: ['when'] -> ../../nonexistent/admin-state = 'DOWN' (was ../config/admin-state = 'UP') <non-backward-compatible>
+vpn-services-old/uses-when-tests/leaf/uses-when-leaf-c
+  4. (leaf changed) [file: old-path.yang, old_line: 295, new_line: 296] <non-backward-compatible>
+     4.1 attribute changed: ['description'] -> Leaf C in grouping (was Leaf D in grouping) <backward-compatible>
+     4.2 attribute changed: ['name'] -> uses-when-leaf-c (was uses-when-leaf-d) <non-backward-compatible>
+vpn-services-old/vpn-services
+  2. (container changed) [old_file: vpn-services-old.yang, new_file: vpn-services-new.yang, old_line: 171, new_line: 181] <non-backward-compatible>
+     2.1 attribute changed: ['endpoint'] -> /api/v1/vpn_services (was /vpn_services) <non-backward-compatible>
+     2.2 attribute changed: ['privileges'] -> delete create (was create) <backward-compatible>
+vpn-services-old/vpn-services/vpn-service
+  3. (list changed) [old_file: vpn-services-old.yang, new_file: vpn-services-new.yang, old_line: 180, new_line: 190] <non-backward-compatible>
+     3.1 attribute changed: ['endpoint'] -> /api/v1/vpn_services/{vpn_service_vpn_id} (was /vpn_services/{vpn_service_vpn_id}) <non-backward-compatible>
+vpn-services-old/vpn-services/vpn-service/vpn-nodes
+  4. (container changed) [old_file: vpn-services-old.yang, new_file: vpn-services-new.yang, old_line: 287, new_line: 297] <non-backward-compatible>
+     4.1 attribute changed: ['endpoint'] -> /api/v1/vpn_services/{vpn_service_vpn_id}/vpn-nodes (was /vpn_services/{vpn_service_vpn_id}/vpn-nodes) <non-backward-compatible>
+     4.2 attribute changed: ['privileges'] -> create (was create update) <non-backward-compatible>
+vpn-services-old/vpn-services/vpn-service/vpn-nodes/vpn-node
+  5. (list changed) [old_file: vpn-services-old.yang, new_file: vpn-services-new.yang, old_line: 297, new_line: 307] <non-backward-compatible>
+     5.1 attribute changed: ['endpoint'] -> /api/v1/vpn_services/{vpn_service_vpn_id}/vpn-nodes/{vpn_node_vpn_node_id} (was /vpn_services/{vpn_service_vpn_id}/vpn-nodes/{vpn_node_vpn_node_id}) <non-backward-compatible>

@@ -1,0 +1,2687 @@
+{
+  "compatible": [
+    {
+      "level": "2.",
+      "path": "vpn-services-old/2024-01-01",
+      "keyword": "revision",
+      "action": "changed",
+      "line_number_old": 54,
+      "line_number_new": 64,
+      "old_file": "vpn-services-old.yang",
+      "new_file": "vpn-services-new.yang",
+      "attributes": [
+        {
+          "level": "2.1",
+          "action": "changed",
+          "attribute": "description",
+          "old_file": "vpn-services-old.yang",
+          "new_file": "vpn-services-new.yang",
+          "line_number_new": 65,
+          "new_value": "Initial version of the VPN services module with ep/pr extensions",
+          "old_value": "Initial (old) version of the VPN services module with ep/pr extensions."
+        }
+      ]
+    },
+    {
+      "level": "1.",
+      "path": "vpn-services-old/2025-06-01",
+      "keyword": "revision",
+      "action": "added",
+      "line_number": 54,
+      "file": "vpn-services-new.yang",
+      "attributes": [
+        {
+          "level": "1.2",
+          "action": "added",
+          "attribute": "name",
+          "file": "vpn-services-new.yang",
+          "line_number": 54,
+          "value": "2025-06-01"
+        },
+        {
+          "level": "1.1",
+          "action": "added",
+          "attribute": "description",
+          "file": "vpn-services-new.yang",
+          "line_number": 55,
+          "value": "Updated version: - All ep:endpoint paths prefixed with /api/v1 for REST API versioning. - pr:privileges on vpn-services container extended to include 'delete'. - pr:privileges on vpn-nodes container reduced from 'create update' to 'create'."
+        },
+        {
+          "level": "1.3",
+          "action": "added",
+          "attribute": "reference",
+          "file": "vpn-services-new.yang",
+          "line_number": 60,
+          "value": "https://link.springer.com/article/10.1007/s10270-025-01311-3"
+        }
+      ]
+    },
+    {
+      "level": "2.",
+      "path": "vpn-services-old/condition-grouping",
+      "keyword": "grouping",
+      "action": "changed",
+      "line_number_old": 264,
+      "line_number_new": 248,
+      "file": "old-path.yang",
+      "attributes": [
+        {
+          "level": "2.1",
+          "action": "changed",
+          "attribute": "description",
+          "file": "old-path.yang",
+          "line_number_old": 265,
+          "line_number_new": 249,
+          "new_value": "Grouping with when conditions",
+          "old_value": "Grouping with when conditions — evaluated at instantiation point"
+        }
+      ]
+    },
+    {
+      "level": "3.",
+      "path": "vpn-services-old/condition-grouping/grp-cond-fix",
+      "keyword": "leaf",
+      "action": "changed",
+      "line_number_old": 275,
+      "line_number_new": 257,
+      "file": "old-path.yang",
+      "constraints": [
+        {
+          "level": "3.1",
+          "action": "changed",
+          "constraint": "when",
+          "file": "old-path.yang",
+          "line_number_old": 276,
+          "line_number_new": 258,
+          "new_value": "../../config/admin-state = 'UP'",
+          "old_value": "../../nonexistent/admin-state = 'UP'"
+        }
+      ]
+    },
+    {
+      "level": "3.",
+      "path": "vpn-services-old/condition-tests/cond-lhs-fix-broken",
+      "keyword": "leaf",
+      "action": "changed",
+      "line_number_old": 131,
+      "line_number_new": 119,
+      "file": "old-path.yang",
+      "constraints": [
+        {
+          "level": "3.1",
+          "action": "changed",
+          "constraint": "when",
+          "file": "old-path.yang",
+          "line_number_old": 132,
+          "line_number_new": 120,
+          "new_value": "../../config/admin-state = 'UP'",
+          "old_value": "../../nonexistent/admin-state = 'UP'"
+        }
+      ]
+    },
+    {
+      "level": "3.",
+      "path": "vpn-services-old/condition-tests/cond-must-fix",
+      "keyword": "leaf",
+      "action": "changed",
+      "line_number_old": 238,
+      "line_number_new": 226,
+      "file": "old-path.yang",
+      "constraints": [
+        {
+          "level": "3.1",
+          "action": "changed",
+          "constraint": "must",
+          "file": "old-path.yang",
+          "line_number_old": 240,
+          "line_number_new": 228,
+          "new_value": "../../config/admin-state = 'UP'",
+          "old_value": "../../nonexistent2/admin-state = 'UP'"
+        }
+      ]
+    },
+    {
+      "level": "3.",
+      "path": "vpn-services-old/condition-tests/cond-rhs-enum-fix",
+      "keyword": "leaf",
+      "action": "changed",
+      "line_number_old": 159,
+      "line_number_new": 147,
+      "file": "old-path.yang",
+      "constraints": [
+        {
+          "level": "3.1",
+          "action": "changed",
+          "constraint": "when",
+          "file": "old-path.yang",
+          "line_number_old": 160,
+          "line_number_new": 148,
+          "new_value": "../../config/admin-state = 'UP'",
+          "old_value": "../../config/admin-state = 'INVALID_ENUM'"
+        }
+      ]
+    },
+    {
+      "level": "2.",
+      "path": "vpn-services-old/config-relaxed",
+      "keyword": "container",
+      "action": "changed",
+      "line_number_old": 160,
+      "line_number_new": 163,
+      "file": "old-types.yang",
+      "constraints": [
+        {
+          "level": "2.1",
+          "action": "changed",
+          "constraint": "config",
+          "file": "old-types.yang",
+          "line_number_old": 161,
+          "line_number_new": 164,
+          "new_value": "true",
+          "old_value": "false"
+        }
+      ]
+    },
+    {
+      "level": "3.",
+      "path": "vpn-services-old/config/augment-case-b",
+      "keyword": "leaf",
+      "action": "added",
+      "line_number": 394,
+      "file": "old-path.yang",
+      "attributes": [
+        {
+          "level": "3.1",
+          "action": "added",
+          "attribute": "name",
+          "file": "old-path.yang",
+          "line_number": 394,
+          "value": "augment-case-b"
+        }
+      ]
+    },
+    {
+      "level": "4.",
+      "path": "vpn-services-old/enum-checks/type/Default",
+      "keyword": "enum",
+      "action": "added",
+      "line_number": 302,
+      "file": "old-types.yang",
+      "attributes": [
+        {
+          "level": "4.1",
+          "action": "added",
+          "attribute": "name",
+          "file": "old-types.yang",
+          "line_number": 302,
+          "value": "Default"
+        },
+        {
+          "level": "4.2",
+          "action": "added",
+          "attribute": "value",
+          "file": "old-types.yang",
+          "line_number": 302,
+          "value": "3"
+        }
+      ]
+    },
+    {
+      "level": "4.",
+      "path": "vpn-services-old/int8-to-int16/type/int16",
+      "keyword": "type",
+      "action": "changed",
+      "line_number_old": 31,
+      "line_number_new": 35,
+      "file": "old-types.yang",
+      "attributes": [
+        {
+          "level": "4.1",
+          "action": "changed",
+          "attribute": "name",
+          "file": "old-types.yang",
+          "line_number_old": 31,
+          "line_number_new": 35,
+          "new_value": "int16",
+          "old_value": "int8"
+        }
+      ]
+    },
+    {
+      "level": "1.",
+      "path": "vpn-services-old/leafref-grouping",
+      "keyword": "grouping",
+      "action": "added",
+      "line_number": 270,
+      "file": "old-path.yang",
+      "attributes": [
+        {
+          "level": "1.2",
+          "action": "added",
+          "attribute": "name",
+          "file": "old-path.yang",
+          "line_number": 270,
+          "value": "leafref-grouping"
+        },
+        {
+          "level": "1.1",
+          "action": "added",
+          "attribute": "description",
+          "file": "old-path.yang",
+          "line_number": 271,
+          "value": "Grouping with leafref"
+        }
+      ]
+    },
+    {
+      "level": [
+        "3.",
+        "3."
+      ],
+      "path": [
+        "vpn-services-old/leafref-grouping/grp-lr-fix",
+        "vpn-services-old/uses-tests/grp-lr-fix"
+      ],
+      "keyword": "leaf",
+      "action": "added",
+      "line_number": 278,
+      "file": "old-path.yang",
+      "attributes": [
+        {
+          "level": [
+            "3.2",
+            "3.2"
+          ],
+          "action": "added",
+          "attribute": "name",
+          "file": "old-path.yang",
+          "line_number": 278,
+          "value": "grp-lr-fix"
+        },
+        {
+          "level": [
+            "3.1",
+            "3.1"
+          ],
+          "action": "added",
+          "attribute": "description",
+          "file": "old-path.yang",
+          "line_number": 280,
+          "value": "Grouping leafref was broken, now valid — RELAXED (BC)"
+        }
+      ]
+    },
+    {
+      "level": [
+        "3.",
+        "3."
+      ],
+      "path": [
+        "vpn-services-old/leafref-grouping/grp-lr-unchanged",
+        "vpn-services-old/uses-tests/grp-lr-unchanged"
+      ],
+      "keyword": "leaf",
+      "action": "added",
+      "line_number": 273,
+      "file": "old-path.yang",
+      "attributes": [
+        {
+          "level": [
+            "3.2",
+            "3.2"
+          ],
+          "action": "added",
+          "attribute": "name",
+          "file": "old-path.yang",
+          "line_number": 273,
+          "value": "grp-lr-unchanged"
+        },
+        {
+          "level": [
+            "3.1",
+            "3.1"
+          ],
+          "action": "added",
+          "attribute": "description",
+          "file": "old-path.yang",
+          "line_number": 275,
+          "value": "Grouping leafref unchanged — EQUIVALENT (BC)"
+        }
+      ]
+    },
+    {
+      "level": "4.",
+      "path": "vpn-services-old/leafref-tests/case-a-rewritten/type",
+      "keyword": "type",
+      "action": "changed",
+      "line_number_old": 58,
+      "line_number_new": 51,
+      "file": "old-path.yang",
+      "attributes": [
+        {
+          "level": "4.1",
+          "action": "changed",
+          "attribute": "path",
+          "file": "old-path.yang",
+          "line_number_old": 58,
+          "line_number_new": 51,
+          "new_value": "/op:config/op:name",
+          "old_value": "../../config/name"
+        }
+      ]
+    },
+    {
+      "level": "4.",
+      "path": "vpn-services-old/leafref-tests/case-c-fix-broken-path/type",
+      "keyword": "type",
+      "action": "changed",
+      "line_number_old": 76,
+      "line_number_new": 69,
+      "file": "old-path.yang",
+      "attributes": [
+        {
+          "level": "4.1",
+          "action": "changed",
+          "attribute": "path",
+          "file": "old-path.yang",
+          "line_number_old": 76,
+          "line_number_new": 69,
+          "new_value": "../../config/name",
+          "old_value": "../../nonexistent-container/name"
+        }
+      ]
+    },
+    {
+      "level": "5.",
+      "path": "vpn-services-old/leafref-tests/case-leafref-to-string/type/string",
+      "keyword": "type",
+      "action": "changed",
+      "line_number_old": 94,
+      "line_number_new": 87,
+      "file": "old-path.yang",
+      "attributes": [
+        {
+          "level": "5.1",
+          "action": "changed",
+          "attribute": "name",
+          "file": "old-path.yang",
+          "line_number_old": 94,
+          "line_number_new": 87,
+          "new_value": "string",
+          "old_value": "leafref"
+        },
+        {
+          "level": "5.2",
+          "action": "deleted",
+          "attribute": "path",
+          "file": "old-path.yang",
+          "line_number": 94,
+          "value": "../../config/name"
+        }
+      ]
+    },
+    {
+      "level": "5.",
+      "path": "vpn-services-old/leafref-tests/case-string-to-leafref/type/leafref",
+      "keyword": "type",
+      "action": "added",
+      "attributes": [
+        {
+          "level": "5.2",
+          "action": "added",
+          "attribute": "path",
+          "file": "old-path.yang",
+          "line_number": 93,
+          "value": "../../config/name"
+        }
+      ],
+      "file": "old-path.yang"
+    },
+    {
+      "level": "4.",
+      "path": "vpn-services-old/leafref-to-int/type/int32",
+      "keyword": "type",
+      "action": "changed",
+      "line_number_old": 49,
+      "line_number_new": 53,
+      "file": "old-types.yang",
+      "attributes": [
+        {
+          "level": "4.2",
+          "action": "deleted",
+          "attribute": "path",
+          "file": "old-types.yang",
+          "line_number": 50,
+          "value": "/int8-to-int16"
+        },
+        {
+          "level": "4.1",
+          "action": "changed",
+          "attribute": "name",
+          "file": "old-types.yang",
+          "line_number_old": 49,
+          "line_number_new": 53,
+          "new_value": "int32",
+          "old_value": "leafref"
+        }
+      ]
+    },
+    {
+      "level": "4.",
+      "path": "vpn-services-old/leafref-to-string/type/string",
+      "keyword": "type",
+      "action": "deleted",
+      "attributes": [
+        {
+          "level": "4.2",
+          "action": "deleted",
+          "attribute": "path",
+          "file": "old-types.yang",
+          "line_number": 58,
+          "value": "/int8-to-int16"
+        }
+      ],
+      "file": "old-types.yang"
+    },
+    {
+      "level": "3.",
+      "path": "vpn-services-old/length-relaxed/type",
+      "keyword": "type",
+      "action": "changed",
+      "line_number_old": 89,
+      "line_number_new": 91,
+      "file": "old-types.yang",
+      "constraints": [
+        {
+          "level": "3.1",
+          "action": "changed",
+          "constraint": "length",
+          "file": "old-types.yang",
+          "line_number_old": 90,
+          "line_number_new": 92,
+          "new_value": "1..20",
+          "old_value": "1..10"
+        }
+      ]
+    },
+    {
+      "level": "2.",
+      "path": "vpn-services-old/mandatory-deleted",
+      "keyword": "leaf",
+      "action": "changed",
+      "line_number_old": 219,
+      "line_number_new": 224,
+      "file": "old-types.yang",
+      "constraints": [
+        {
+          "level": "2.1",
+          "action": "deleted",
+          "constraint": "mandatory",
+          "file": "old-types.yang",
+          "line_number": 221,
+          "value": "false"
+        }
+      ]
+    },
+    {
+      "level": "2.",
+      "path": "vpn-services-old/mandatory-false-added",
+      "keyword": "leaf",
+      "action": "changed",
+      "line_number_old": 207,
+      "line_number_new": 210,
+      "file": "old-types.yang",
+      "constraints": [
+        {
+          "level": "2.1",
+          "action": "added",
+          "constraint": "mandatory",
+          "file": "old-types.yang",
+          "line_number": 212,
+          "value": "false"
+        }
+      ]
+    },
+    {
+      "level": "2.",
+      "path": "vpn-services-old/mandatory-true-to-false",
+      "keyword": "leaf",
+      "action": "changed",
+      "line_number_old": 226,
+      "line_number_new": 230,
+      "file": "old-types.yang",
+      "constraints": [
+        {
+          "level": "2.1",
+          "action": "changed",
+          "constraint": "mandatory",
+          "file": "old-types.yang",
+          "line_number_old": 228,
+          "line_number_new": 232,
+          "new_value": "false",
+          "old_value": "true"
+        }
+      ]
+    },
+    {
+      "level": "2.",
+      "path": "vpn-services-old/max-elements-relaxed",
+      "keyword": "list",
+      "action": "changed",
+      "line_number_old": 120,
+      "line_number_new": 122,
+      "file": "old-types.yang",
+      "constraints": [
+        {
+          "level": "2.1",
+          "action": "changed",
+          "constraint": "max-elements",
+          "file": "old-types.yang",
+          "line_number_old": 122,
+          "line_number_new": 124,
+          "new_value": "20",
+          "old_value": "10"
+        }
+      ]
+    },
+    {
+      "level": "2.",
+      "path": "vpn-services-old/min-elements-relaxed",
+      "keyword": "list",
+      "action": "changed",
+      "line_number_old": 112,
+      "line_number_new": 114,
+      "file": "old-types.yang",
+      "constraints": [
+        {
+          "level": "2.1",
+          "action": "changed",
+          "constraint": "min-elements",
+          "file": "old-types.yang",
+          "line_number_old": 114,
+          "line_number_new": 116,
+          "new_value": "2",
+          "old_value": "5"
+        }
+      ]
+    },
+    {
+      "level": "2.",
+      "path": "vpn-services-old/op:augment-target",
+      "keyword": "augment",
+      "action": "changed",
+      "line_number_old": 398,
+      "line_number_new": 387,
+      "file": "old-path.yang",
+      "attributes": [
+        {
+          "level": "2.1",
+          "action": "changed",
+          "attribute": "description",
+          "file": "old-path.yang",
+          "line_number_old": 399,
+          "line_number_new": 388,
+          "new_value": "Augment case A: path unchanged — EQUIVALENT (BC)",
+          "old_value": "Augment case B: path changes to different target — INCOMPARABLE (NBC)"
+        }
+      ]
+    },
+    {
+      "level": "3.",
+      "path": "vpn-services-old/pattern-relaxed/type",
+      "keyword": "type",
+      "action": "changed",
+      "line_number_old": 137,
+      "line_number_new": 139,
+      "file": "old-types.yang",
+      "constraints": [
+        {
+          "level": "3.1",
+          "action": "changed",
+          "constraint": "pattern",
+          "file": "old-types.yang",
+          "line_number_old": 138,
+          "line_number_new": 140,
+          "new_value": "[a-zA-Z0-9]+",
+          "old_value": "[0-9]+"
+        }
+      ]
+    },
+    {
+      "level": "3.",
+      "path": "vpn-services-old/range-relaxed/type",
+      "keyword": "type",
+      "action": "changed",
+      "line_number_old": 73,
+      "line_number_new": 75,
+      "file": "old-types.yang",
+      "constraints": [
+        {
+          "level": "3.1",
+          "action": "changed",
+          "constraint": "range",
+          "file": "old-types.yang",
+          "line_number_old": 74,
+          "line_number_new": 76,
+          "new_value": "0..200",
+          "old_value": "0..100"
+        }
+      ]
+    },
+    {
+      "level": "2.",
+      "path": "vpn-services-old/status-current-to-deprecated",
+      "keyword": "leaf",
+      "action": "changed",
+      "line_number_old": 184,
+      "line_number_new": 187,
+      "file": "old-types.yang",
+      "constraints": [
+        {
+          "level": "2.1",
+          "action": "changed",
+          "constraint": "status",
+          "file": "old-types.yang",
+          "line_number_old": 186,
+          "line_number_new": 189,
+          "new_value": "deprecated",
+          "old_value": "current"
+        }
+      ]
+    },
+    {
+      "level": "4.",
+      "path": "vpn-services-old/string-to-leafref/type/leafref",
+      "keyword": "type",
+      "action": "added",
+      "attributes": [
+        {
+          "level": "4.2",
+          "action": "added",
+          "attribute": "path",
+          "file": "old-types.yang",
+          "line_number": 66,
+          "value": "/int8-to-int16"
+        }
+      ],
+      "file": "old-types.yang"
+    },
+    {
+      "level": "5.",
+      "path": "vpn-services-old/union-member-added/type/union/boolean",
+      "keyword": "type",
+      "action": "added",
+      "line_number": 279,
+      "file": "old-types.yang",
+      "attributes": [
+        {
+          "level": "5.1.1",
+          "action": "added",
+          "attribute": "name",
+          "file": "old-types.yang",
+          "line_number": 279,
+          "value": "boolean"
+        }
+      ]
+    },
+    {
+      "level": "1.",
+      "path": "vpn-services-old/uses-tests",
+      "keyword": "container",
+      "action": "added",
+      "line_number": 284,
+      "file": "old-path.yang",
+      "attributes": [
+        {
+          "level": "1.2",
+          "action": "added",
+          "attribute": "name",
+          "file": "old-path.yang",
+          "line_number": 284,
+          "value": "uses-tests"
+        },
+        {
+          "level": "1.1",
+          "action": "added",
+          "attribute": "description",
+          "file": "old-path.yang",
+          "line_number": 285,
+          "value": "Uses instantiation of groupings"
+        }
+      ]
+    },
+    {
+      "level": "3.",
+      "path": "vpn-services-old/uses-tests/grp-cond-fix",
+      "keyword": "leaf",
+      "action": "added",
+      "line_number": 257,
+      "file": "old-path.yang",
+      "attributes": [
+        {
+          "level": "3.2",
+          "action": "added",
+          "attribute": "name",
+          "file": "old-path.yang",
+          "line_number": 257,
+          "value": "grp-cond-fix"
+        },
+        {
+          "level": "3.1",
+          "action": "added",
+          "attribute": "description",
+          "file": "old-path.yang",
+          "line_number": 260,
+          "value": "Grouping condition was broken, now valid — RELAXED (BC)"
+        }
+      ],
+      "constraints": [
+        {
+          "level": "3.3",
+          "action": "added",
+          "constraint": "when",
+          "file": "old-path.yang",
+          "line_number": 258,
+          "value": "../../config/admin-state = 'UP'"
+        }
+      ]
+    },
+    {
+      "level": "3.",
+      "path": "vpn-services-old/uses-tests/grp-cond-unchanged",
+      "keyword": "leaf",
+      "action": "added",
+      "line_number": 251,
+      "file": "old-path.yang",
+      "attributes": [
+        {
+          "level": "3.2",
+          "action": "added",
+          "attribute": "name",
+          "file": "old-path.yang",
+          "line_number": 251,
+          "value": "grp-cond-unchanged"
+        },
+        {
+          "level": "3.1",
+          "action": "added",
+          "attribute": "description",
+          "file": "old-path.yang",
+          "line_number": 254,
+          "value": "Grouping condition unchanged — EQUIVALENT (BC)"
+        }
+      ],
+      "constraints": [
+        {
+          "level": "3.3",
+          "action": "added",
+          "constraint": "when",
+          "file": "old-path.yang",
+          "line_number": 252,
+          "value": "../../config/admin-state = 'UP'"
+        }
+      ]
+    },
+    {
+      "level": [
+        "4.",
+        "4.",
+        "4.",
+        "4.",
+        "4.",
+        "4."
+      ],
+      "path": [
+        "vpn-services-old/uses-when-grouping/leaf/uses-when-leaf-c",
+        "vpn-services-old/uses-when-tests-and-narrowed/leaf/uses-when-leaf-c",
+        "vpn-services-old/uses-when-tests-break/leaf/uses-when-leaf-c",
+        "vpn-services-old/uses-when-tests-enum-break/leaf/uses-when-leaf-c",
+        "vpn-services-old/uses-when-tests-or-narrowed/leaf/uses-when-leaf-c",
+        "vpn-services-old/uses-when-tests/leaf/uses-when-leaf-c"
+      ],
+      "keyword": "leaf",
+      "action": "changed",
+      "attributes": [
+        {
+          "level": [
+            "4.1",
+            "4.1",
+            "4.1",
+            "4.1",
+            "4.1",
+            "4.1"
+          ],
+          "action": "changed",
+          "attribute": "description",
+          "file": "old-path.yang",
+          "line_number_old": 301,
+          "new_value": "Leaf C in grouping",
+          "old_value": "Leaf D in grouping"
+        }
+      ],
+      "file": "old-path.yang"
+    },
+    {
+      "level": "4.",
+      "path": "vpn-services-old/uses-when-tests-enum-fix/leaf/uses-when-leaf-c",
+      "keyword": "leaf",
+      "action": "changed",
+      "attributes": [
+        {
+          "level": "4.1",
+          "action": "changed",
+          "attribute": "description",
+          "file": "old-path.yang",
+          "line_number_old": 301,
+          "new_value": "Leaf C in grouping",
+          "old_value": "Leaf D in grouping"
+        }
+      ],
+      "constraints": [
+        {
+          "level": "4.3",
+          "action": "changed",
+          "constraint": "when",
+          "file": "old-path.yang",
+          "line_number_old": 299,
+          "new_value": "../config/admin-state = 'UP'",
+          "old_value": "../config/admin-state = 'INVALID_USES'"
+        }
+      ],
+      "file": "old-path.yang"
+    },
+    {
+      "level": "3.",
+      "path": "vpn-services-old/uses-when-tests-enum-fix/uses-when-leaf-a",
+      "keyword": "leaf",
+      "action": "changed",
+      "line_number_old": 293,
+      "line_number_new": 294,
+      "file": "old-path.yang",
+      "constraints": [
+        {
+          "level": "3.1",
+          "action": "changed",
+          "constraint": "when",
+          "file": "old-path.yang",
+          "line_number_old": 299,
+          "new_value": "../config/admin-state = 'UP'",
+          "old_value": "../config/admin-state = 'INVALID_USES'"
+        }
+      ]
+    },
+    {
+      "level": "3.",
+      "path": "vpn-services-old/uses-when-tests-enum-fix/uses-when-leaf-b",
+      "keyword": "leaf",
+      "action": "changed",
+      "line_number_old": 294,
+      "line_number_new": 295,
+      "file": "old-path.yang",
+      "constraints": [
+        {
+          "level": "3.1",
+          "action": "changed",
+          "constraint": "when",
+          "file": "old-path.yang",
+          "line_number_old": 299,
+          "new_value": "../config/admin-state = 'UP'",
+          "old_value": "../config/admin-state = 'INVALID_USES'"
+        }
+      ]
+    },
+    {
+      "level": "4.",
+      "path": "vpn-services-old/uses-when-tests-fix/leaf/uses-when-leaf-c",
+      "keyword": "leaf",
+      "action": "changed",
+      "attributes": [
+        {
+          "level": "4.1",
+          "action": "changed",
+          "attribute": "description",
+          "file": "old-path.yang",
+          "line_number_old": 301,
+          "new_value": "Leaf C in grouping",
+          "old_value": "Leaf D in grouping"
+        }
+      ],
+      "constraints": [
+        {
+          "level": "4.3",
+          "action": "changed",
+          "constraint": "when",
+          "file": "old-path.yang",
+          "line_number_old": 299,
+          "new_value": "../config/protocol-type = 'ISIS'",
+          "old_value": "../../config/protocol-type = 'ISIS'"
+        }
+      ],
+      "file": "old-path.yang"
+    },
+    {
+      "level": "3.",
+      "path": "vpn-services-old/uses-when-tests-fix/uses-when-leaf-a",
+      "keyword": "leaf",
+      "action": "changed",
+      "line_number_old": 293,
+      "line_number_new": 294,
+      "file": "old-path.yang",
+      "constraints": [
+        {
+          "level": "3.1",
+          "action": "changed",
+          "constraint": "when",
+          "file": "old-path.yang",
+          "line_number_old": 299,
+          "new_value": "../config/protocol-type = 'ISIS'",
+          "old_value": "../../config/protocol-type = 'ISIS'"
+        }
+      ]
+    },
+    {
+      "level": "3.",
+      "path": "vpn-services-old/uses-when-tests-fix/uses-when-leaf-b",
+      "keyword": "leaf",
+      "action": "changed",
+      "line_number_old": 294,
+      "line_number_new": 295,
+      "file": "old-path.yang",
+      "constraints": [
+        {
+          "level": "3.1",
+          "action": "changed",
+          "constraint": "when",
+          "file": "old-path.yang",
+          "line_number_old": 299,
+          "new_value": "../config/protocol-type = 'ISIS'",
+          "old_value": "../../config/protocol-type = 'ISIS'"
+        }
+      ]
+    },
+    {
+      "level": "4.",
+      "path": "vpn-services-old/uses-when-tests-or-relaxed/leaf/uses-when-leaf-c",
+      "keyword": "leaf",
+      "action": "changed",
+      "attributes": [
+        {
+          "level": "4.1",
+          "action": "changed",
+          "attribute": "description",
+          "file": "old-path.yang",
+          "line_number_old": 301,
+          "new_value": "Leaf C in grouping",
+          "old_value": "Leaf D in grouping"
+        }
+      ],
+      "constraints": [
+        {
+          "level": "4.3",
+          "action": "changed",
+          "constraint": "when",
+          "file": "old-path.yang",
+          "line_number_old": 299,
+          "new_value": "../config/protocol-type = 'BGP' or ../config/protocol-type = 'OSPF'",
+          "old_value": "../config/protocol-type = 'BGP'"
+        }
+      ],
+      "file": "old-path.yang"
+    },
+    {
+      "level": "3.",
+      "path": "vpn-services-old/uses-when-tests-or-relaxed/uses-when-leaf-a",
+      "keyword": "leaf",
+      "action": "changed",
+      "line_number_old": 293,
+      "line_number_new": 294,
+      "file": "old-path.yang",
+      "constraints": [
+        {
+          "level": "3.1",
+          "action": "changed",
+          "constraint": "when",
+          "file": "old-path.yang",
+          "line_number_old": 299,
+          "new_value": "../config/protocol-type = 'BGP' or ../config/protocol-type = 'OSPF'",
+          "old_value": "../config/protocol-type = 'BGP'"
+        }
+      ]
+    },
+    {
+      "level": "3.",
+      "path": "vpn-services-old/uses-when-tests-or-relaxed/uses-when-leaf-b",
+      "keyword": "leaf",
+      "action": "changed",
+      "line_number_old": 294,
+      "line_number_new": 295,
+      "file": "old-path.yang",
+      "constraints": [
+        {
+          "level": "3.1",
+          "action": "changed",
+          "constraint": "when",
+          "file": "old-path.yang",
+          "line_number_old": 299,
+          "new_value": "../config/protocol-type = 'BGP' or ../config/protocol-type = 'OSPF'",
+          "old_value": "../config/protocol-type = 'BGP'"
+        }
+      ]
+    },
+    {
+      "level": "2.",
+      "path": "vpn-services-old/vpn-services",
+      "keyword": "container",
+      "action": "changed",
+      "attributes": [
+        {
+          "level": "2.2",
+          "action": "changed",
+          "attribute": "privileges",
+          "old_file": "vpn-services-old.yang",
+          "new_file": "vpn-services-new.yang",
+          "line_number_old": 171,
+          "line_number_new": 181,
+          "new_value": "delete create",
+          "old_value": "create"
+        }
+      ]
+    },
+    {
+      "level": "3.",
+      "path": "vpn-services-old/vpn-services-new/op:config",
+      "keyword": "augment",
+      "action": "added",
+      "line_number": 392,
+      "file": "old-path.yang",
+      "attributes": [
+        {
+          "level": "3.2",
+          "action": "added",
+          "attribute": "name",
+          "file": "old-path.yang",
+          "line_number": 392,
+          "value": "/op:config"
+        },
+        {
+          "level": "3.1",
+          "action": "added",
+          "attribute": "description",
+          "file": "old-path.yang",
+          "line_number": 393,
+          "value": "Augment case B: path changes to different target — INCOMPARABLE (NBC)"
+        }
+      ]
+    }
+  ],
+  "non_compatible": [
+    {
+      "level": "3.",
+      "path": "vpn-services-old/augment-target/augment-case-b",
+      "keyword": "leaf",
+      "action": "deleted",
+      "line_number": 400,
+      "file": "old-path.yang"
+    },
+    {
+      "level": "4.",
+      "path": "vpn-services-old/augment-target/augment-case-b/type",
+      "keyword": "type",
+      "action": "deleted",
+      "line_number": 400,
+      "file": "old-path.yang"
+    },
+    {
+      "level": "3.",
+      "path": "vpn-services-old/condition-tests/cond-lhs-break-valid",
+      "keyword": "leaf",
+      "action": "changed",
+      "line_number_old": 138,
+      "line_number_new": 126,
+      "file": "old-path.yang",
+      "constraints": [
+        {
+          "level": "3.1",
+          "action": "changed",
+          "constraint": "when",
+          "file": "old-path.yang",
+          "line_number_old": 138,
+          "line_number_new": 126,
+          "new_value": "../../nonexistent/admin-state = 'DOWN'",
+          "old_value": "../../config/admin-state = 'DOWN'"
+        }
+      ]
+    },
+    {
+      "level": "3.",
+      "path": "vpn-services-old/condition-tests/cond-lhs-different-node",
+      "keyword": "leaf",
+      "action": "changed",
+      "line_number_old": 124,
+      "line_number_new": 112,
+      "file": "old-path.yang",
+      "constraints": [
+        {
+          "level": "3.1",
+          "action": "changed",
+          "constraint": "when",
+          "file": "old-path.yang",
+          "line_number_old": 124,
+          "line_number_new": 112,
+          "new_value": "../../config/protocol-type = 'BGP'",
+          "old_value": "../../config/admin-state = 'UP'"
+        }
+      ]
+    },
+    {
+      "level": "3.",
+      "path": "vpn-services-old/condition-tests/cond-must-break",
+      "keyword": "leaf",
+      "action": "changed",
+      "line_number_old": 247,
+      "line_number_new": 235,
+      "file": "old-path.yang",
+      "constraints": [
+        {
+          "level": "3.1",
+          "action": "changed",
+          "constraint": "must",
+          "file": "old-path.yang",
+          "line_number_old": 247,
+          "line_number_new": 235,
+          "new_value": "../../nonexistent3/index = 99",
+          "old_value": "../../config/index = 99"
+        }
+      ]
+    },
+    {
+      "level": "3.",
+      "path": "vpn-services-old/condition-tests/cond-rhs-enum-break",
+      "keyword": "leaf",
+      "action": "changed",
+      "line_number_old": 166,
+      "line_number_new": 154,
+      "file": "old-path.yang",
+      "constraints": [
+        {
+          "level": "3.1",
+          "action": "changed",
+          "constraint": "when",
+          "file": "old-path.yang",
+          "line_number_old": 166,
+          "line_number_new": 154,
+          "new_value": "../../config/protocol-type = 'INVALID_PROTO'",
+          "old_value": "../../config/protocol-type = 'ISIS'"
+        }
+      ]
+    },
+    {
+      "level": "3.",
+      "path": "vpn-services-old/condition-tests/cond-rhs-enum-change",
+      "keyword": "leaf",
+      "action": "changed",
+      "line_number_old": 152,
+      "line_number_new": 140,
+      "file": "old-path.yang",
+      "constraints": [
+        {
+          "level": "3.1",
+          "action": "changed",
+          "constraint": "when",
+          "file": "old-path.yang",
+          "line_number_old": 152,
+          "line_number_new": 140,
+          "new_value": "../../config/protocol-type = 'ISIS'",
+          "old_value": "../../config/protocol-type = 'OSPF'"
+        }
+      ]
+    },
+    {
+      "level": "3.",
+      "path": "vpn-services-old/condition-tests/cond-rhs-identity-change",
+      "keyword": "leaf",
+      "action": "changed",
+      "line_number_old": 180,
+      "line_number_new": 168,
+      "file": "old-path.yang",
+      "constraints": [
+        {
+          "level": "3.1",
+          "action": "changed",
+          "constraint": "when",
+          "file": "old-path.yang",
+          "line_number_old": 180,
+          "line_number_new": 168,
+          "new_value": "../../config/admin-state = 'UP' and ../../config/index = 7",
+          "old_value": "../../config/admin-state = 'UP' and ../../config/index = 5"
+        }
+      ]
+    },
+    {
+      "level": "2.",
+      "path": "vpn-services-old/config",
+      "keyword": "container",
+      "action": "deleted",
+      "line_number": 19,
+      "file": "old-path.yang"
+    },
+    {
+      "level": "2.",
+      "path": "vpn-services-old/config-narrowed",
+      "keyword": "container",
+      "action": "changed",
+      "line_number_old": 167,
+      "line_number_new": 170,
+      "file": "old-types.yang",
+      "constraints": [
+        {
+          "level": "2.1",
+          "action": "changed",
+          "constraint": "config",
+          "file": "old-types.yang",
+          "line_number_old": 167,
+          "line_number_new": 170,
+          "new_value": "false",
+          "old_value": "true"
+        }
+      ]
+    },
+    {
+      "level": "4.",
+      "path": "vpn-services-old/enum-checks/type/GAMMA",
+      "keyword": "enum",
+      "action": "changed",
+      "line_number_old": 295,
+      "line_number_new": 300,
+      "file": "old-types.yang",
+      "attributes": [
+        {
+          "level": "4.1",
+          "action": "changed",
+          "attribute": "value",
+          "line_number_old": 295,
+          "line_number_new": 300,
+          "new_value": "1",
+          "old_value": "2"
+        }
+      ]
+    },
+    {
+      "level": "5.",
+      "path": "vpn-services-old/enum-checks/type/enum/CETA",
+      "keyword": "enum",
+      "action": "changed",
+      "line_number_old": 294,
+      "line_number_new": 301,
+      "file": "old-types.yang",
+      "attributes": [
+        {
+          "level": "5.1",
+          "action": "changed",
+          "attribute": "name",
+          "line_number_old": 294,
+          "line_number_new": 301,
+          "new_value": "CETA",
+          "old_value": "BETA"
+        },
+        {
+          "level": "5.2",
+          "action": "changed",
+          "attribute": "value",
+          "line_number_old": 294,
+          "line_number_new": 301,
+          "new_value": "2",
+          "old_value": "1"
+        }
+      ]
+    },
+    {
+      "level": "3.",
+      "path": "vpn-services-old/fraction-digits-changed/type",
+      "keyword": "type",
+      "action": "changed",
+      "line_number_old": 105,
+      "line_number_new": 107,
+      "file": "old-types.yang",
+      "constraints": [
+        {
+          "level": "3.1",
+          "action": "changed",
+          "constraint": "fraction-digits",
+          "file": "old-types.yang",
+          "line_number_old": 105,
+          "line_number_new": 107,
+          "new_value": "4",
+          "old_value": "2"
+        }
+      ]
+    },
+    {
+      "level": "3.",
+      "path": "vpn-services-old/fraction-digits-decreased/type",
+      "keyword": "type",
+      "action": "changed",
+      "line_number_old": 175,
+      "line_number_new": 178,
+      "file": "old-types.yang",
+      "constraints": [
+        {
+          "level": "3.1",
+          "action": "changed",
+          "constraint": "fraction-digits",
+          "file": "old-types.yang",
+          "line_number_old": 175,
+          "line_number_new": 178,
+          "new_value": "1",
+          "old_value": "18"
+        }
+      ]
+    },
+    {
+      "level": "2.",
+      "path": "vpn-services-old/if-feature-added",
+      "keyword": "leaf",
+      "action": "changed",
+      "line_number_old": 154,
+      "line_number_new": 156,
+      "file": "old-types.yang",
+      "constraints": [
+        {
+          "level": "2.1",
+          "action": "added",
+          "constraint": "if-feature",
+          "file": "old-types.yang",
+          "line_number": 156,
+          "value": "my-feature"
+        }
+      ]
+    },
+    {
+      "level": "2.",
+      "path": "vpn-services-old/ifMtu",
+      "keyword": "leaf",
+      "action": "changed",
+      "line_number": 11,
+      "file": "demo-defval.yang",
+      "attributes": [
+        {
+          "level": "2.1",
+          "action": "changed",
+          "attribute": "defval",
+          "line_number": 11,
+          "new_value": "9000",
+          "old_value": "1500"
+        }
+      ],
+      "constraints": [
+        {
+          "level": "2.2",
+          "action": "changed",
+          "constraint": "max-access",
+          "file": "demo-defval.yang",
+          "line_number": 11,
+          "new_value": "read-only",
+          "old_value": "read-write"
+        }
+      ]
+    },
+    {
+      "level": "4.",
+      "path": "vpn-services-old/int32-to-int8/type/int8",
+      "keyword": "type",
+      "action": "changed",
+      "line_number_old": 37,
+      "line_number_new": 41,
+      "file": "old-types.yang",
+      "attributes": [
+        {
+          "level": "4.1",
+          "action": "changed",
+          "attribute": "name",
+          "line_number_old": 37,
+          "line_number_new": 41,
+          "new_value": "int8",
+          "old_value": "int32"
+        }
+      ]
+    },
+    {
+      "level": "4.",
+      "path": "vpn-services-old/int8-to-string/type/string",
+      "keyword": "type",
+      "action": "changed",
+      "line_number_old": 43,
+      "line_number_new": 47,
+      "file": "old-types.yang",
+      "attributes": [
+        {
+          "level": "4.1",
+          "action": "changed",
+          "attribute": "name",
+          "line_number_old": 43,
+          "line_number_new": 47,
+          "new_value": "string",
+          "old_value": "int8"
+        }
+      ]
+    },
+    {
+      "level": "4.",
+      "path": "vpn-services-old/leafref-tests/case-b-different-container/type",
+      "keyword": "type",
+      "action": "changed",
+      "line_number_old": 70,
+      "line_number_new": 63,
+      "file": "old-path.yang",
+      "attributes": [
+        {
+          "level": "4.1",
+          "action": "changed",
+          "attribute": "path",
+          "line_number_old": 70,
+          "line_number_new": 63,
+          "new_value": "../../state/name",
+          "old_value": "../../config/name"
+        }
+      ]
+    },
+    {
+      "level": "4.",
+      "path": "vpn-services-old/leafref-tests/case-b-different-target/type",
+      "keyword": "type",
+      "action": "changed",
+      "line_number_old": 64,
+      "line_number_new": 57,
+      "file": "old-path.yang",
+      "attributes": [
+        {
+          "level": "4.1",
+          "action": "changed",
+          "attribute": "path",
+          "line_number_old": 64,
+          "line_number_new": 57,
+          "new_value": "../../config/index",
+          "old_value": "../../config/name"
+        }
+      ]
+    },
+    {
+      "level": "4.",
+      "path": "vpn-services-old/leafref-tests/case-d-break-valid-path/type",
+      "keyword": "type",
+      "action": "changed",
+      "line_number_old": 82,
+      "line_number_new": 75,
+      "file": "old-path.yang",
+      "attributes": [
+        {
+          "level": "4.1",
+          "action": "changed",
+          "attribute": "path",
+          "line_number_old": 82,
+          "line_number_new": 75,
+          "new_value": "../../nonexistent-container/name",
+          "old_value": "../../config/name"
+        }
+      ]
+    },
+    {
+      "level": "4.",
+      "path": "vpn-services-old/leafref-tests/case-e-both-invalid/type",
+      "keyword": "type",
+      "action": "changed",
+      "line_number_old": 88,
+      "line_number_new": 81,
+      "file": "old-path.yang",
+      "attributes": [
+        {
+          "level": "4.1",
+          "action": "changed",
+          "attribute": "path",
+          "line_number_old": 88,
+          "line_number_new": 81,
+          "new_value": "../../nonexistent-b/name",
+          "old_value": "../../nonexistent-a/name"
+        }
+      ]
+    },
+    {
+      "level": "5.",
+      "path": "vpn-services-old/leafref-tests/case-string-to-leafref/type/leafref",
+      "keyword": "type",
+      "action": "changed",
+      "line_number_old": 100,
+      "line_number_new": 93,
+      "file": "old-path.yang",
+      "attributes": [
+        {
+          "level": "5.1",
+          "action": "changed",
+          "attribute": "name",
+          "line_number_old": 100,
+          "line_number_new": 93,
+          "new_value": "leafref",
+          "old_value": "string"
+        }
+      ]
+    },
+    {
+      "level": "3.",
+      "path": "vpn-services-old/leafref-to-leafref-incompatible/type",
+      "keyword": "type",
+      "action": "changed",
+      "line_number_old": 262,
+      "line_number_new": 266,
+      "file": "old-types.yang",
+      "attributes": [
+        {
+          "level": "3.1",
+          "action": "changed",
+          "attribute": "path",
+          "line_number_old": 262,
+          "line_number_new": 266,
+          "new_value": "/ref-string",
+          "old_value": "/ref-int8"
+        }
+      ]
+    },
+    {
+      "level": "3.",
+      "path": "vpn-services-old/leafref-to-leafref-narrower/type",
+      "keyword": "type",
+      "action": "changed",
+      "line_number_old": 253,
+      "line_number_new": 257,
+      "file": "old-types.yang",
+      "attributes": [
+        {
+          "level": "3.1",
+          "action": "changed",
+          "attribute": "path",
+          "line_number_old": 253,
+          "line_number_new": 257,
+          "new_value": "/ref-int8",
+          "old_value": "/ref-int32"
+        }
+      ]
+    },
+    {
+      "level": "3.",
+      "path": "vpn-services-old/leafref-to-leafref-wider/type",
+      "keyword": "type",
+      "action": "changed",
+      "line_number_old": 244,
+      "line_number_new": 248,
+      "file": "old-types.yang",
+      "attributes": [
+        {
+          "level": "3.1",
+          "action": "changed",
+          "attribute": "path",
+          "line_number_old": 244,
+          "line_number_new": 248,
+          "new_value": "/ref-int32",
+          "old_value": "/ref-int8"
+        }
+      ]
+    },
+    {
+      "level": "4.",
+      "path": "vpn-services-old/leafref-to-string/type/string",
+      "keyword": "type",
+      "action": "changed",
+      "line_number_old": 57,
+      "line_number_new": 59,
+      "file": "old-types.yang",
+      "attributes": [
+        {
+          "level": "4.1",
+          "action": "changed",
+          "attribute": "name",
+          "line_number_old": 57,
+          "line_number_new": 59,
+          "new_value": "string",
+          "old_value": "leafref"
+        }
+      ]
+    },
+    {
+      "level": "3.",
+      "path": "vpn-services-old/length-narrowed/type",
+      "keyword": "type",
+      "action": "changed",
+      "line_number_old": 97,
+      "line_number_new": 99,
+      "file": "old-types.yang",
+      "constraints": [
+        {
+          "level": "3.1",
+          "action": "changed",
+          "constraint": "length",
+          "file": "old-types.yang",
+          "line_number_new": 126,
+          "new_value": "1..10",
+          "old_value": "1..20"
+        }
+      ]
+    },
+    {
+      "level": "2.",
+      "path": "vpn-services-old/mandatory-false-to-true",
+      "keyword": "leaf",
+      "action": "changed",
+      "line_number_old": 233,
+      "line_number_new": 237,
+      "file": "old-types.yang",
+      "constraints": [
+        {
+          "level": "2.1",
+          "action": "changed",
+          "constraint": "mandatory",
+          "file": "old-types.yang",
+          "line_number_old": 233,
+          "line_number_new": 237,
+          "new_value": "true",
+          "old_value": "false"
+        }
+      ]
+    },
+    {
+      "level": "2.",
+      "path": "vpn-services-old/mandatory-true-added",
+      "keyword": "leaf",
+      "action": "changed",
+      "line_number_old": 213,
+      "line_number_new": 217,
+      "file": "old-types.yang",
+      "constraints": [
+        {
+          "level": "2.1",
+          "action": "added",
+          "constraint": "mandatory",
+          "file": "old-types.yang",
+          "line_number": 217,
+          "value": "true"
+        }
+      ]
+    },
+    {
+      "level": "2.",
+      "path": "vpn-services-old/max-elements-narrowed",
+      "keyword": "list",
+      "action": "changed",
+      "line_number_old": 128,
+      "line_number_new": 130,
+      "file": "old-types.yang",
+      "constraints": [
+        {
+          "level": "2.1",
+          "action": "changed",
+          "constraint": "max-elements",
+          "file": "old-types.yang",
+          "line_number_old": 128,
+          "line_number_new": 130,
+          "new_value": "10",
+          "old_value": "20"
+        }
+      ]
+    },
+    {
+      "level": "3.",
+      "path": "vpn-services-old/pattern-narrowed/type",
+      "keyword": "type",
+      "action": "changed",
+      "line_number_old": 145,
+      "line_number_new": 147,
+      "file": "old-types.yang",
+      "constraints": [
+        {
+          "level": "3.1",
+          "action": "changed",
+          "constraint": "pattern",
+          "file": "old-types.yang",
+          "line_number_old": 145,
+          "line_number_new": 147,
+          "new_value": "[0-9]+",
+          "old_value": "[a-zA-Z0-9]+"
+        }
+      ]
+    },
+    {
+      "level": "3.",
+      "path": "vpn-services-old/range-narrowed/type",
+      "keyword": "type",
+      "action": "changed",
+      "line_number_old": 81,
+      "line_number_new": 83,
+      "file": "old-types.yang",
+      "constraints": [
+        {
+          "level": "3.1",
+          "action": "changed",
+          "constraint": "range",
+          "file": "old-types.yang",
+          "line_number_old": 81,
+          "line_number_new": 83,
+          "new_value": "0..100",
+          "old_value": "0..200"
+        }
+      ]
+    },
+    {
+      "level": "1.",
+      "path": "vpn-services-old/range64",
+      "keyword": "leaf",
+      "action": "deleted",
+      "line_number": 300,
+      "file": "old-types.yang"
+    },
+    {
+      "level": "3.",
+      "path": "vpn-services-old/range64/type",
+      "keyword": "type",
+      "action": "deleted",
+      "line_number": 301,
+      "file": "old-types.yang"
+    },
+    {
+      "level": "2.",
+      "path": "vpn-services-old/status-current-to-obsolete",
+      "keyword": "leaf",
+      "action": "changed",
+      "line_number_old": 191,
+      "line_number_new": 194,
+      "file": "old-types.yang",
+      "constraints": [
+        {
+          "level": "2.1",
+          "action": "changed",
+          "constraint": "status",
+          "file": "old-types.yang",
+          "line_number_old": 191,
+          "line_number_new": 194,
+          "new_value": "obsolete",
+          "old_value": "current"
+        }
+      ]
+    },
+    {
+      "level": "2.",
+      "path": "vpn-services-old/status-deprecated-to-obsolete",
+      "keyword": "leaf",
+      "action": "changed",
+      "line_number_old": 198,
+      "line_number_new": 201,
+      "file": "old-types.yang",
+      "constraints": [
+        {
+          "level": "2.1",
+          "action": "changed",
+          "constraint": "status",
+          "file": "old-types.yang",
+          "line_number_old": 198,
+          "line_number_new": 201,
+          "new_value": "obsolete",
+          "old_value": "deprecated"
+        }
+      ]
+    },
+    {
+      "level": "4.",
+      "path": "vpn-services-old/string-to-leafref/type/leafref",
+      "keyword": "type",
+      "action": "changed",
+      "line_number": 65,
+      "file": "old-types.yang",
+      "attributes": [
+        {
+          "level": "4.1",
+          "action": "changed",
+          "attribute": "name",
+          "line_number": 65,
+          "new_value": "leafref",
+          "old_value": "string"
+        }
+      ]
+    },
+    {
+      "level": "5.",
+      "path": "vpn-services-old/union-member-added/type/type/boolean",
+      "keyword": "type",
+      "action": "changed",
+      "line_number_old": 274,
+      "line_number_new": 279,
+      "file": "old-types.yang",
+      "attributes": [
+        {
+          "level": "5.1",
+          "action": "changed",
+          "attribute": "name",
+          "line_number_old": 274,
+          "line_number_new": 279,
+          "new_value": "boolean",
+          "old_value": "string"
+        }
+      ]
+    },
+    {
+      "level": "5.",
+      "path": "vpn-services-old/union-member-deleted/type/type/int8",
+      "keyword": "type",
+      "action": "changed",
+      "line_number_old": 283,
+      "line_number_new": 287,
+      "file": "old-types.yang",
+      "attributes": [
+        {
+          "level": "5.1",
+          "action": "changed",
+          "attribute": "name",
+          "line_number_old": 283,
+          "line_number_new": 287,
+          "new_value": "int8",
+          "old_value": "string"
+        }
+      ]
+    },
+    {
+      "level": "5.",
+      "path": "vpn-services-old/union-member-deleted/type/union/string",
+      "keyword": "type",
+      "action": "deleted",
+      "line_number": 283,
+      "file": "old-types.yang",
+      "attributes": [
+        {
+          "level": "5.1.1",
+          "action": "deleted",
+          "attribute": "name",
+          "line_number": 283,
+          "value": "string"
+        }
+      ]
+    },
+    {
+      "level": "3.",
+      "path": "vpn-services-old/uses-when-grouping/grp-cond-break",
+      "keyword": "leaf",
+      "action": "changed",
+      "line_number_old": 298,
+      "line_number_new": 263,
+      "file": "old-path.yang",
+      "attributes": [
+        {
+          "level": "3.1",
+          "action": "changed",
+          "attribute": "node-path",
+          "line_number_old": 298,
+          "line_number_new": 263,
+          "new_value": "condition-grouping/grp-cond-break",
+          "old_value": "uses-when-grouping/grp-cond-break"
+        }
+      ],
+      "constraints": [
+        {
+          "level": "3.2",
+          "action": "changed",
+          "constraint": "when",
+          "file": "old-path.yang",
+          "line_number_old": 298,
+          "line_number_new": 263,
+          "new_value": "../../nonexistent/admin-state = 'DOWN'",
+          "old_value": "../../config/admin-state = 'DOWN'"
+        }
+      ]
+    },
+    {
+      "level": "4.",
+      "path": "vpn-services-old/uses-when-grouping/grp-cond-break/type",
+      "keyword": "type",
+      "action": "changed",
+      "line_number_old": 300,
+      "line_number_new": 265,
+      "file": "old-path.yang",
+      "attributes": [
+        {
+          "level": "4.1",
+          "action": "changed",
+          "attribute": "node-path",
+          "line_number_old": 300,
+          "line_number_new": 265,
+          "new_value": "condition-grouping/grp-cond-break/type",
+          "old_value": "uses-when-grouping/grp-cond-break/type"
+        }
+      ]
+    },
+    {
+      "level": [
+        "4.",
+        "4.",
+        "4.",
+        "4.",
+        "4."
+      ],
+      "path": [
+        "vpn-services-old/uses-when-grouping/leaf/uses-when-leaf-c",
+        "vpn-services-old/uses-when-tests-enum-fix/leaf/uses-when-leaf-c",
+        "vpn-services-old/uses-when-tests-fix/leaf/uses-when-leaf-c",
+        "vpn-services-old/uses-when-tests-or-relaxed/leaf/uses-when-leaf-c",
+        "vpn-services-old/uses-when-tests/leaf/uses-when-leaf-c"
+      ],
+      "keyword": "leaf",
+      "action": "changed",
+      "line_number_old": 295,
+      "line_number_new": 296,
+      "file": "old-path.yang",
+      "attributes": [
+        {
+          "level": [
+            "4.2",
+            "4.2",
+            "4.2",
+            "4.2",
+            "4.2"
+          ],
+          "action": "changed",
+          "attribute": "name",
+          "line_number_old": 295,
+          "line_number_new": 296,
+          "new_value": "uses-when-leaf-c",
+          "old_value": "uses-when-leaf-d"
+        }
+      ]
+    },
+    {
+      "level": "4.",
+      "path": "vpn-services-old/uses-when-grouping/uses-when-leaf-d/type",
+      "keyword": "type",
+      "action": "changed",
+      "line_number_old": 295,
+      "line_number_new": 296,
+      "file": "old-path.yang",
+      "attributes": [
+        {
+          "level": "4.1",
+          "action": "changed",
+          "attribute": "node-path",
+          "line_number_old": 295,
+          "line_number_new": 296,
+          "new_value": "uses-when-grouping/uses-when-leaf-c/type",
+          "old_value": "uses-when-grouping/uses-when-leaf-d/type"
+        }
+      ]
+    },
+    {
+      "level": [
+        "3.",
+        "3.",
+        "3.",
+        "3.",
+        "3.",
+        "3.",
+        "3."
+      ],
+      "path": [
+        "vpn-services-old/uses-when-tests-and-narrowed/grp-cond-break",
+        "vpn-services-old/uses-when-tests-break/grp-cond-break",
+        "vpn-services-old/uses-when-tests-enum-break/grp-cond-break",
+        "vpn-services-old/uses-when-tests-enum-fix/grp-cond-break",
+        "vpn-services-old/uses-when-tests-fix/grp-cond-break",
+        "vpn-services-old/uses-when-tests-or-narrowed/grp-cond-break",
+        "vpn-services-old/uses-when-tests-or-relaxed/grp-cond-break"
+      ],
+      "keyword": "leaf",
+      "action": "deleted",
+      "line_number": 298,
+      "file": "old-path.yang"
+    },
+    {
+      "level": [
+        "4.",
+        "4.",
+        "4.",
+        "4.",
+        "4.",
+        "4.",
+        "4."
+      ],
+      "path": [
+        "vpn-services-old/uses-when-tests-and-narrowed/grp-cond-break/type",
+        "vpn-services-old/uses-when-tests-break/grp-cond-break/type",
+        "vpn-services-old/uses-when-tests-enum-break/grp-cond-break/type",
+        "vpn-services-old/uses-when-tests-enum-fix/grp-cond-break/type",
+        "vpn-services-old/uses-when-tests-fix/grp-cond-break/type",
+        "vpn-services-old/uses-when-tests-or-narrowed/grp-cond-break/type",
+        "vpn-services-old/uses-when-tests-or-relaxed/grp-cond-break/type"
+      ],
+      "keyword": "type",
+      "action": "deleted",
+      "line_number": 300,
+      "file": "old-path.yang"
+    },
+    {
+      "level": "4.",
+      "path": "vpn-services-old/uses-when-tests-and-narrowed/leaf/uses-when-leaf-c",
+      "keyword": "leaf",
+      "action": "changed",
+      "line_number_old": 295,
+      "line_number_new": 296,
+      "file": "old-path.yang",
+      "attributes": [
+        {
+          "level": "4.2",
+          "action": "changed",
+          "attribute": "name",
+          "line_number_old": 295,
+          "line_number_new": 296,
+          "new_value": "uses-when-leaf-c",
+          "old_value": "uses-when-leaf-d"
+        }
+      ],
+      "constraints": [
+        {
+          "level": "4.3",
+          "action": "changed",
+          "constraint": "when",
+          "file": "old-path.yang",
+          "line_number_old": 295,
+          "line_number_new": 296,
+          "new_value": "../config/protocol-type = 'BGP' and ../config/admin-state = 'UP'",
+          "old_value": "../config/protocol-type = 'BGP'"
+        }
+      ]
+    },
+    {
+      "level": "3.",
+      "path": "vpn-services-old/uses-when-tests-and-narrowed/uses-when-leaf-a",
+      "keyword": "leaf",
+      "action": "changed",
+      "line_number_old": 293,
+      "line_number_new": 294,
+      "file": "old-path.yang",
+      "constraints": [
+        {
+          "level": "3.1",
+          "action": "changed",
+          "constraint": "when",
+          "file": "old-path.yang",
+          "line_number_old": 293,
+          "line_number_new": 294,
+          "new_value": "../config/protocol-type = 'BGP' and ../config/admin-state = 'UP'",
+          "old_value": "../config/protocol-type = 'BGP'"
+        }
+      ]
+    },
+    {
+      "level": "3.",
+      "path": "vpn-services-old/uses-when-tests-and-narrowed/uses-when-leaf-b",
+      "keyword": "leaf",
+      "action": "changed",
+      "line_number_old": 294,
+      "line_number_new": 295,
+      "file": "old-path.yang",
+      "constraints": [
+        {
+          "level": "3.1",
+          "action": "changed",
+          "constraint": "when",
+          "file": "old-path.yang",
+          "line_number_old": 294,
+          "line_number_new": 295,
+          "new_value": "../config/protocol-type = 'BGP' and ../config/admin-state = 'UP'",
+          "old_value": "../config/protocol-type = 'BGP'"
+        }
+      ]
+    },
+    {
+      "level": "4.",
+      "path": "vpn-services-old/uses-when-tests-and-narrowed/uses-when-leaf-d/type",
+      "keyword": "type",
+      "action": "changed",
+      "line_number_old": 295,
+      "line_number_new": 296,
+      "file": "old-path.yang",
+      "attributes": [
+        {
+          "level": "4.1",
+          "action": "changed",
+          "attribute": "node-path",
+          "line_number_old": 295,
+          "line_number_new": 296,
+          "new_value": "uses-when-tests-and-narrowed/uses-when-leaf-c/type",
+          "old_value": "uses-when-tests-and-narrowed/uses-when-leaf-d/type"
+        }
+      ]
+    },
+    {
+      "level": "4.",
+      "path": "vpn-services-old/uses-when-tests-break/leaf/uses-when-leaf-c",
+      "keyword": "leaf",
+      "action": "changed",
+      "line_number_old": 295,
+      "line_number_new": 296,
+      "file": "old-path.yang",
+      "attributes": [
+        {
+          "level": "4.2",
+          "action": "changed",
+          "attribute": "name",
+          "line_number_old": 295,
+          "line_number_new": 296,
+          "new_value": "uses-when-leaf-c",
+          "old_value": "uses-when-leaf-d"
+        }
+      ],
+      "constraints": [
+        {
+          "level": "4.3",
+          "action": "changed",
+          "constraint": "when",
+          "file": "old-path.yang",
+          "line_number_old": 295,
+          "line_number_new": 296,
+          "new_value": "../nonexistent-uses-new/admin-state = 'DOWN'",
+          "old_value": "../config/admin-state = 'DOWN'"
+        }
+      ]
+    },
+    {
+      "level": "3.",
+      "path": "vpn-services-old/uses-when-tests-break/uses-when-leaf-a",
+      "keyword": "leaf",
+      "action": "changed",
+      "line_number_old": 293,
+      "line_number_new": 294,
+      "file": "old-path.yang",
+      "constraints": [
+        {
+          "level": "3.1",
+          "action": "changed",
+          "constraint": "when",
+          "file": "old-path.yang",
+          "line_number_old": 293,
+          "line_number_new": 294,
+          "new_value": "../nonexistent-uses-new/admin-state = 'DOWN'",
+          "old_value": "../config/admin-state = 'DOWN'"
+        }
+      ]
+    },
+    {
+      "level": "3.",
+      "path": "vpn-services-old/uses-when-tests-break/uses-when-leaf-b",
+      "keyword": "leaf",
+      "action": "changed",
+      "line_number_old": 294,
+      "line_number_new": 295,
+      "file": "old-path.yang",
+      "constraints": [
+        {
+          "level": "3.1",
+          "action": "changed",
+          "constraint": "when",
+          "file": "old-path.yang",
+          "line_number_old": 294,
+          "line_number_new": 295,
+          "new_value": "../nonexistent-uses-new/admin-state = 'DOWN'",
+          "old_value": "../config/admin-state = 'DOWN'"
+        }
+      ]
+    },
+    {
+      "level": "4.",
+      "path": "vpn-services-old/uses-when-tests-break/uses-when-leaf-d/type",
+      "keyword": "type",
+      "action": "changed",
+      "line_number_old": 295,
+      "line_number_new": 296,
+      "file": "old-path.yang",
+      "attributes": [
+        {
+          "level": "4.1",
+          "action": "changed",
+          "attribute": "node-path",
+          "line_number_old": 295,
+          "line_number_new": 296,
+          "new_value": "uses-when-tests-break/uses-when-leaf-c/type",
+          "old_value": "uses-when-tests-break/uses-when-leaf-d/type"
+        }
+      ]
+    },
+    {
+      "level": "4.",
+      "path": "vpn-services-old/uses-when-tests-enum-break/leaf/uses-when-leaf-c",
+      "keyword": "leaf",
+      "action": "changed",
+      "line_number_old": 295,
+      "line_number_new": 296,
+      "file": "old-path.yang",
+      "attributes": [
+        {
+          "level": "4.2",
+          "action": "changed",
+          "attribute": "name",
+          "line_number_old": 295,
+          "line_number_new": 296,
+          "new_value": "uses-when-leaf-c",
+          "old_value": "uses-when-leaf-d"
+        }
+      ],
+      "constraints": [
+        {
+          "level": "4.3",
+          "action": "changed",
+          "constraint": "when",
+          "file": "old-path.yang",
+          "line_number_old": 295,
+          "line_number_new": 296,
+          "new_value": "../config/admin-state = 'INVALID_USES_NEW'",
+          "old_value": "../config/admin-state = 'UP'"
+        }
+      ]
+    },
+    {
+      "level": "3.",
+      "path": "vpn-services-old/uses-when-tests-enum-break/uses-when-leaf-a",
+      "keyword": "leaf",
+      "action": "changed",
+      "line_number_old": 293,
+      "line_number_new": 294,
+      "file": "old-path.yang",
+      "constraints": [
+        {
+          "level": "3.1",
+          "action": "changed",
+          "constraint": "when",
+          "file": "old-path.yang",
+          "line_number_old": 293,
+          "line_number_new": 294,
+          "new_value": "../config/admin-state = 'INVALID_USES_NEW'",
+          "old_value": "../config/admin-state = 'UP'"
+        }
+      ]
+    },
+    {
+      "level": "3.",
+      "path": "vpn-services-old/uses-when-tests-enum-break/uses-when-leaf-b",
+      "keyword": "leaf",
+      "action": "changed",
+      "line_number_old": 294,
+      "line_number_new": 295,
+      "file": "old-path.yang",
+      "constraints": [
+        {
+          "level": "3.1",
+          "action": "changed",
+          "constraint": "when",
+          "file": "old-path.yang",
+          "line_number_old": 294,
+          "line_number_new": 295,
+          "new_value": "../config/admin-state = 'INVALID_USES_NEW'",
+          "old_value": "../config/admin-state = 'UP'"
+        }
+      ]
+    },
+    {
+      "level": "4.",
+      "path": "vpn-services-old/uses-when-tests-enum-break/uses-when-leaf-d/type",
+      "keyword": "type",
+      "action": "changed",
+      "line_number_old": 295,
+      "line_number_new": 296,
+      "file": "old-path.yang",
+      "attributes": [
+        {
+          "level": "4.1",
+          "action": "changed",
+          "attribute": "node-path",
+          "line_number_old": 295,
+          "line_number_new": 296,
+          "new_value": "uses-when-tests-enum-break/uses-when-leaf-c/type",
+          "old_value": "uses-when-tests-enum-break/uses-when-leaf-d/type"
+        }
+      ]
+    },
+    {
+      "level": "4.",
+      "path": "vpn-services-old/uses-when-tests-enum-fix/uses-when-leaf-d/type",
+      "keyword": "type",
+      "action": "changed",
+      "line_number_old": 295,
+      "line_number_new": 296,
+      "file": "old-path.yang",
+      "attributes": [
+        {
+          "level": "4.1",
+          "action": "changed",
+          "attribute": "node-path",
+          "line_number_old": 295,
+          "line_number_new": 296,
+          "new_value": "uses-when-tests-enum-fix/uses-when-leaf-c/type",
+          "old_value": "uses-when-tests-enum-fix/uses-when-leaf-d/type"
+        }
+      ]
+    },
+    {
+      "level": "4.",
+      "path": "vpn-services-old/uses-when-tests-fix/uses-when-leaf-d/type",
+      "keyword": "type",
+      "action": "changed",
+      "line_number_old": 295,
+      "line_number_new": 296,
+      "file": "old-path.yang",
+      "attributes": [
+        {
+          "level": "4.1",
+          "action": "changed",
+          "attribute": "node-path",
+          "line_number_old": 295,
+          "line_number_new": 296,
+          "new_value": "uses-when-tests-fix/uses-when-leaf-c/type",
+          "old_value": "uses-when-tests-fix/uses-when-leaf-d/type"
+        }
+      ]
+    },
+    {
+      "level": "4.",
+      "path": "vpn-services-old/uses-when-tests-or-narrowed/leaf/uses-when-leaf-c",
+      "keyword": "leaf",
+      "action": "changed",
+      "line_number_old": 295,
+      "line_number_new": 296,
+      "file": "old-path.yang",
+      "attributes": [
+        {
+          "level": "4.2",
+          "action": "changed",
+          "attribute": "name",
+          "line_number_old": 295,
+          "line_number_new": 296,
+          "new_value": "uses-when-leaf-c",
+          "old_value": "uses-when-leaf-d"
+        }
+      ],
+      "constraints": [
+        {
+          "level": "4.3",
+          "action": "changed",
+          "constraint": "when",
+          "file": "old-path.yang",
+          "line_number_old": 295,
+          "line_number_new": 296,
+          "new_value": "../config/protocol-type = 'BGP'",
+          "old_value": "../config/protocol-type = 'BGP' or ../config/protocol-type = 'OSPF'"
+        }
+      ]
+    },
+    {
+      "level": "3.",
+      "path": "vpn-services-old/uses-when-tests-or-narrowed/uses-when-leaf-a",
+      "keyword": "leaf",
+      "action": "changed",
+      "line_number_old": 293,
+      "line_number_new": 294,
+      "file": "old-path.yang",
+      "constraints": [
+        {
+          "level": "3.1",
+          "action": "changed",
+          "constraint": "when",
+          "file": "old-path.yang",
+          "line_number_old": 293,
+          "line_number_new": 294,
+          "new_value": "../config/protocol-type = 'BGP'",
+          "old_value": "../config/protocol-type = 'BGP' or ../config/protocol-type = 'OSPF'"
+        }
+      ]
+    },
+    {
+      "level": "3.",
+      "path": "vpn-services-old/uses-when-tests-or-narrowed/uses-when-leaf-b",
+      "keyword": "leaf",
+      "action": "changed",
+      "line_number_old": 294,
+      "line_number_new": 295,
+      "file": "old-path.yang",
+      "constraints": [
+        {
+          "level": "3.1",
+          "action": "changed",
+          "constraint": "when",
+          "file": "old-path.yang",
+          "line_number_old": 294,
+          "line_number_new": 295,
+          "new_value": "../config/protocol-type = 'BGP'",
+          "old_value": "../config/protocol-type = 'BGP' or ../config/protocol-type = 'OSPF'"
+        }
+      ]
+    },
+    {
+      "level": "4.",
+      "path": "vpn-services-old/uses-when-tests-or-narrowed/uses-when-leaf-d/type",
+      "keyword": "type",
+      "action": "changed",
+      "line_number_old": 295,
+      "line_number_new": 296,
+      "file": "old-path.yang",
+      "attributes": [
+        {
+          "level": "4.1",
+          "action": "changed",
+          "attribute": "node-path",
+          "line_number_old": 295,
+          "line_number_new": 296,
+          "new_value": "uses-when-tests-or-narrowed/uses-when-leaf-c/type",
+          "old_value": "uses-when-tests-or-narrowed/uses-when-leaf-d/type"
+        }
+      ]
+    },
+    {
+      "level": "4.",
+      "path": "vpn-services-old/uses-when-tests-or-relaxed/uses-when-leaf-d/type",
+      "keyword": "type",
+      "action": "changed",
+      "line_number_old": 295,
+      "line_number_new": 296,
+      "file": "old-path.yang",
+      "attributes": [
+        {
+          "level": "4.1",
+          "action": "changed",
+          "attribute": "node-path",
+          "line_number_old": 295,
+          "line_number_new": 296,
+          "new_value": "uses-when-tests-or-relaxed/uses-when-leaf-c/type",
+          "old_value": "uses-when-tests-or-relaxed/uses-when-leaf-d/type"
+        }
+      ]
+    },
+    {
+      "level": "3.",
+      "path": "vpn-services-old/uses-when-tests/grp-cond-break",
+      "keyword": "leaf",
+      "action": "changed",
+      "line_number_old": 298,
+      "line_number_new": 263,
+      "file": "old-path.yang",
+      "attributes": [
+        {
+          "level": "3.1",
+          "action": "changed",
+          "attribute": "node-path",
+          "line_number_old": 298,
+          "line_number_new": 263,
+          "new_value": "uses-tests/grp-cond-break",
+          "old_value": "uses-when-tests/grp-cond-break"
+        }
+      ],
+      "constraints": [
+        {
+          "level": "3.2",
+          "action": "changed",
+          "constraint": "when",
+          "file": "old-path.yang",
+          "line_number_old": 298,
+          "line_number_new": 263,
+          "new_value": "../../nonexistent/admin-state = 'DOWN'",
+          "old_value": "../config/admin-state = 'UP'"
+        }
+      ]
+    },
+    {
+      "level": "4.",
+      "path": "vpn-services-old/uses-when-tests/grp-cond-break/type",
+      "keyword": "type",
+      "action": "changed",
+      "line_number_old": 300,
+      "line_number_new": 265,
+      "file": "old-path.yang",
+      "attributes": [
+        {
+          "level": "4.1",
+          "action": "changed",
+          "attribute": "node-path",
+          "line_number_old": 300,
+          "line_number_new": 265,
+          "new_value": "uses-tests/grp-cond-break/type",
+          "old_value": "uses-when-tests/grp-cond-break/type"
+        }
+      ]
+    },
+    {
+      "level": "4.",
+      "path": "vpn-services-old/uses-when-tests/uses-when-leaf-d/type",
+      "keyword": "type",
+      "action": "changed",
+      "line_number_old": 295,
+      "line_number_new": 296,
+      "file": "old-path.yang",
+      "attributes": [
+        {
+          "level": "4.1",
+          "action": "changed",
+          "attribute": "node-path",
+          "line_number_old": 295,
+          "line_number_new": 296,
+          "new_value": "uses-when-tests/uses-when-leaf-c/type",
+          "old_value": "uses-when-tests/uses-when-leaf-d/type"
+        }
+      ]
+    },
+    {
+      "level": "2.",
+      "path": "vpn-services-old/vpn-services",
+      "keyword": "container",
+      "action": "changed",
+      "line_number_old": 171,
+      "line_number_new": 181,
+      "old_file": "vpn-services-old.yang",
+      "new_file": "vpn-services-new.yang",
+      "attributes": [
+        {
+          "level": "2.1",
+          "action": "changed",
+          "attribute": "endpoint",
+          "old_file": "vpn-services-old.yang",
+          "new_file": "vpn-services-new.yang",
+          "line_number_old": 171,
+          "line_number_new": 181,
+          "new_value": "/api/v1/vpn_services",
+          "old_value": "/vpn_services"
+        }
+      ]
+    },
+    {
+      "level": "3.",
+      "path": "vpn-services-old/vpn-services/vpn-service",
+      "keyword": "list",
+      "action": "changed",
+      "line_number_old": 180,
+      "line_number_new": 190,
+      "old_file": "vpn-services-old.yang",
+      "new_file": "vpn-services-new.yang",
+      "attributes": [
+        {
+          "level": "3.1",
+          "action": "changed",
+          "attribute": "endpoint",
+          "old_file": "vpn-services-old.yang",
+          "new_file": "vpn-services-new.yang",
+          "line_number_old": 180,
+          "line_number_new": 190,
+          "new_value": "/api/v1/vpn_services/{vpn_service_vpn_id}",
+          "old_value": "/vpn_services/{vpn_service_vpn_id}"
+        }
+      ]
+    },
+    {
+      "level": "4.",
+      "path": "vpn-services-old/vpn-services/vpn-service/vpn-nodes",
+      "keyword": "container",
+      "action": "changed",
+      "line_number_old": 287,
+      "line_number_new": 297,
+      "old_file": "vpn-services-old.yang",
+      "new_file": "vpn-services-new.yang",
+      "attributes": [
+        {
+          "level": "4.1",
+          "action": "changed",
+          "attribute": "endpoint",
+          "old_file": "vpn-services-old.yang",
+          "new_file": "vpn-services-new.yang",
+          "line_number_old": 287,
+          "line_number_new": 297,
+          "new_value": "/api/v1/vpn_services/{vpn_service_vpn_id}/vpn-nodes",
+          "old_value": "/vpn_services/{vpn_service_vpn_id}/vpn-nodes"
+        },
+        {
+          "level": "4.2",
+          "action": "changed",
+          "attribute": "privileges",
+          "old_file": "vpn-services-old.yang",
+          "new_file": "vpn-services-new.yang",
+          "line_number_old": 287,
+          "line_number_new": 297,
+          "new_value": "create",
+          "old_value": "create update"
+        }
+      ]
+    },
+    {
+      "level": "5.",
+      "path": "vpn-services-old/vpn-services/vpn-service/vpn-nodes/vpn-node",
+      "keyword": "list",
+      "action": "changed",
+      "line_number_old": 297,
+      "line_number_new": 307,
+      "old_file": "vpn-services-old.yang",
+      "new_file": "vpn-services-new.yang",
+      "attributes": [
+        {
+          "level": "5.1",
+          "action": "changed",
+          "attribute": "endpoint",
+          "old_file": "vpn-services-old.yang",
+          "new_file": "vpn-services-new.yang",
+          "line_number_old": 297,
+          "line_number_new": 307,
+          "new_value": "/api/v1/vpn_services/{vpn_service_vpn_id}/vpn-nodes/{vpn_node_vpn_node_id}",
+          "old_value": "/vpn_services/{vpn_service_vpn_id}/vpn-nodes/{vpn_node_vpn_node_id}"
+        }
+      ]
+    }
+  ],
+  "other-errors": [],
+  "unmarked": [],
+  "llm_verification_summary": {
+    "enabled": false,
+    "requested": false,
+    "executed": false,
+    "success": false,
+    "model": null,
+    "stats": {
+      "total": 0,
+      "verified": 0
+    }
+  }
+}

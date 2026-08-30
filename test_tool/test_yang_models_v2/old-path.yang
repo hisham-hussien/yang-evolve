@@ -1,0 +1,396 @@
+submodule old-path {
+  yang-version 1.1;
+  belongs-to vpn-services { prefix main; }
+  namespace "urn:test:old-path";
+  prefix op;
+
+  revision 2024-02-01 {
+    description "New version — XPath comparison test cases (after state, pyang-validated)";
+  }
+
+  revision 2024-01-01 {
+    description "Old version";
+  }
+
+  container config {
+    leaf name { type string; }
+    leaf index { type uint32; }
+    leaf admin-state {
+      type enumeration {
+        enum UP   { value 1; }
+        enum DOWN { value 2; }
+      }
+    }
+    leaf protocol-type {
+      type enumeration {
+        enum BGP   { value 1; }
+        enum OSPF  { value 2; }
+        enum ISIS  { value 3; }
+      }
+    }
+  }
+
+  container state {
+    leaf name { type string; }
+  }
+
+  // ═══════════════════════════════════════════════════════════════════════════
+  // LEAFREF TESTS (after state)
+  // ═══════════════════════════════════════════════════════════════════════════
+
+  container leafref-tests {
+
+    // Case A: path unchanged — EQUIVALENT (BC)
+    leaf case-a-unchanged {
+      type leafref { path "../../config/name"; }
+      description "Case A: path unchanged — EQUIVALENT (BC)";
+    }
+
+    // Case A: path rewritten to absolute form — same target (BC)
+    leaf case-a-rewritten {
+      type leafref { path "/op:config/op:name"; }
+      description "Case A: path rewritten to absolute — EQUIVALENT (BC)";
+    }
+
+    // Case B: path changes to different node (name → index) — NBC
+    leaf case-b-different-target {
+      type leafref { path "../../config/index"; }
+      description "Case B: old=config/name, new=config/index — INCOMPARABLE (NBC)";
+    }
+
+    // Case B: path changes to different container (config → state) — NBC
+    leaf case-b-different-container {
+      type leafref { path "../../state/name"; }
+      description "Case B: old=config/name, new=state/name — INCOMPARABLE (NBC)";
+    }
+
+    // Case C: old path was broken, new is valid — BC
+    leaf case-c-fix-broken-path {
+      type leafref { path "../../config/name"; }
+      description "Case C: old invalid, new valid — RELAXED (BC)";
+    }
+
+    // Case D: old path was valid, new path is broken — NBC
+    leaf case-d-break-valid-path {
+      type leafref { path "../../nonexistent-container/name"; }
+      description "Case D: old valid, new invalid — NARROWED (NBC)";
+    }
+
+    // Case E: both paths invalid — NBC
+    leaf case-e-both-invalid {
+      type leafref { path "../../nonexistent-b/name"; }
+      description "Case E: both invalid — INCOMPARABLE (NBC)";
+    }
+
+    // Leafref → string (type change away from leafref) — BC
+    leaf case-leafref-to-string {
+      type string;
+      description "leafref → string: BC";
+    }
+
+    // string → leafref (type change to leafref) — NBC
+    leaf case-string-to-leafref {
+      type leafref { path "../../config/name"; }
+      description "string → leafref: NBC";
+    }
+  }
+
+  // ═══════════════════════════════════════════════════════════════════════════
+  // CONDITION TESTS (after state)
+  // ═══════════════════════════════════════════════════════════════════════════
+
+  container condition-tests {
+
+    // LHS unchanged — EQUIVALENT (BC)
+    leaf cond-lhs-unchanged {
+      when "../../config/index = 1";
+      type string;
+      description "LHS path unchanged — EQUIVALENT (BC)";
+    }
+
+    // LHS path changes to DIFFERENT node — INCOMPARABLE (NBC)
+    leaf cond-lhs-different-node {
+      when "../../config/protocol-type = 'BGP'";
+      type string;
+      description "LHS changes to different node — INCOMPARABLE (NBC)";
+    }
+
+    // LHS path was invalid, new is valid — RELAXED (BC)
+    leaf cond-lhs-fix-broken {
+      when "../../config/admin-state = 'UP'";
+      type string;
+      description "LHS was invalid, now valid — RELAXED (BC)";
+    }
+
+    // LHS path was valid, new is invalid — NARROWED (NBC)
+    leaf cond-lhs-break-valid {
+      when "../../nonexistent/admin-state = 'DOWN'";
+      type string;
+      description "LHS was valid, now invalid — NARROWED (NBC)";
+    }
+
+    // RHS enum unchanged — EQUIVALENT (BC)
+    leaf cond-rhs-enum-unchanged {
+      when "../../config/protocol-type = 'BGP'";
+      type string;
+      description "RHS enum unchanged — EQUIVALENT (BC)";
+    }
+
+    // RHS enum changes to different valid value — INCOMPARABLE (NBC)
+    leaf cond-rhs-enum-change {
+      when "../../config/protocol-type = 'ISIS'";
+      type string;
+      description "RHS enum changes OSPF→ISIS — INCOMPARABLE (NBC)";
+    }
+
+    // RHS enum was invalid, new is valid — RELAXED (BC)
+    leaf cond-rhs-enum-fix {
+      when "../../config/admin-state = 'UP'";
+      type string;
+      description "RHS enum was invalid, now valid — RELAXED (BC)";
+    }
+
+    // RHS enum was valid, new is invalid — NARROWED (NBC)
+    leaf cond-rhs-enum-break {
+      when "../../config/protocol-type = 'INVALID_PROTO'";
+      type string;
+      description "RHS enum was valid, now invalid — NARROWED (NBC)";
+    }
+
+    // RHS identity unchanged — EQUIVALENT (BC)
+    leaf cond-rhs-identity-unchanged {
+      when "../../config/index = 10";
+      type string;
+      description "RHS identity unchanged — EQUIVALENT (BC)";
+    }
+
+    // RHS identity changes — INCOMPARABLE (NBC)
+    leaf cond-rhs-identity-change {
+      when "../../config/admin-state = 'UP' and ../../config/index = 7";
+      type string;
+      description "RHS identity changes — INCOMPARABLE (NBC)";
+    }
+
+    // RHS unquoted node-location path — EQUIVALENT (BC)
+    leaf cond-rhs-node-unchanged {
+      when "../../config/admin-state";
+      type string;
+      description "RHS unquoted node-location unchanged — EQUIVALENT (BC)";
+    }
+
+    // OR condition: both alternatives equivalent — EQUIVALENT (BC)
+    leaf cond-or-equivalent {
+      when "../../config/admin-state = 'UP' or ../../config/admin-state = 'DOWN'";
+      type string;
+      description "OR condition — both alternatives equivalent (BC)";
+    }
+
+    // OR condition: new alternative added — RELAXED (BC)
+    leaf cond-or-relaxed {
+      when "../../config/index > 0 or ../../config/index < 1000";
+      type string;
+      description "OR condition — new alternative added (RELAXED, BC)";
+    }
+
+    // OR condition: alternative removed — NARROWED (NBC)
+    leaf cond-or-narrowed {
+      when "../../config/index > 0";
+      type string;
+      description "OR condition — alternative removed (NARROWED, NBC)";
+    }
+
+    // AND condition: requirement added — NARROWED (NBC)
+    leaf cond-and-narrowed {
+      when "../../config/index > 0 and ../../config/index < 100 and ../../config/index != 50";
+      type string;
+      description "AND condition — requirement added (NARROWED, NBC)";
+    }
+
+    // AND condition: requirement removed — RELAXED (BC)
+    leaf cond-and-relaxed {
+      when "../../config/index > 0";
+      type string;
+      description "AND condition — requirement removed (RELAXED, BC)";
+    }
+
+    // must unchanged — EQUIVALENT (BC)
+    leaf cond-must-unchanged {
+      type string;
+      must "../../config/index = 42" {
+        error-message "Index must be 42";
+      }
+      description "must condition unchanged — EQUIVALENT (BC)";
+    }
+
+    // must was broken, now valid — RELAXED (BC)
+    leaf cond-must-fix {
+      type string;
+      must "../../config/admin-state = 'UP'" {
+        error-message "Now valid";
+      }
+      description "must condition was broken, now valid — RELAXED (BC)";
+    }
+
+    // must was valid, now broken — NARROWED (NBC)
+    leaf cond-must-break {
+      type string;
+      must "../../nonexistent3/index = 99" {
+        error-message "Now broken";
+      }
+      description "must condition was valid, now broken — NARROWED (NBC)";
+    }
+  }
+
+  // ═══════════════════════════════════════════════════════════════════════════
+  // GROUPING / USES TESTS (after state)
+  // ═══════════════════════════════════════════════════════════════════════════
+
+  grouping condition-grouping {
+    description "Grouping with when conditions";
+
+    leaf grp-cond-unchanged {
+      when "../../config/admin-state = 'UP'";
+      type string;
+      description "Grouping condition unchanged — EQUIVALENT (BC)";
+    }
+
+    leaf grp-cond-fix {
+      when "../../config/admin-state = 'UP'";
+      type string;
+      description "Grouping condition was broken, now valid — RELAXED (BC)";
+    }
+
+    leaf grp-cond-break {
+      when "../../nonexistent/admin-state = 'DOWN'";
+      type string;
+      description "Grouping condition was valid, now broken — NARROWED (NBC)";
+    }
+  }
+
+  grouping leafref-grouping {
+    description "Grouping with leafref";
+
+    leaf grp-lr-unchanged {
+      type leafref { path "../../config/name"; }
+      description "Grouping leafref unchanged — EQUIVALENT (BC)";
+    }
+
+    leaf grp-lr-fix {
+      type leafref { path "../../config/name"; }
+      description "Grouping leafref was broken, now valid — RELAXED (BC)";
+    }
+  }
+
+  container uses-tests {
+    description "Uses instantiation of groupings";
+    uses condition-grouping;
+    uses leafref-grouping;
+  }
+
+  // ── uses-when-tests: when condition on the uses statement itself (after state) ──
+
+  grouping uses-when-grouping {
+    description "Grouping instantiated with when conditions on the uses statement";
+    leaf uses-when-leaf-a { type string; description "Leaf A in grouping"; }
+    leaf uses-when-leaf-b { type string; description "Leaf B in grouping"; }
+    leaf uses-when-leaf-c { type string; description "Leaf C in grouping"; }
+  }
+
+  // Case A: when condition unchanged — EQUIVALENT (BC)
+  container uses-when-tests {
+    description "uses with when — condition unchanged (EQUIVALENT, BC)";
+    uses uses-when-grouping {
+      when "../config/admin-state = 'UP'" {
+        description "Active when admin-state is UP";
+      }
+    }
+  }
+
+  // Case C: old when was broken (nonexistent), new is valid — RELAXED (BC)
+  container uses-when-tests-fix {
+    description "uses with when — old broken (too many ../), new valid (RELAXED, BC)";
+    uses uses-when-grouping {
+      when "../config/protocol-type = 'ISIS'" {
+        description "Now valid — correct depth";
+      }
+    }
+  }
+
+  // Case D: old when was valid, new is broken — NARROWED (NBC)
+  container uses-when-tests-break {
+    description "uses with when — old valid, new broken (NARROWED, NBC)";
+    uses uses-when-grouping {
+      when "../nonexistent-uses-new/admin-state = 'DOWN'" {
+        description "Now broken — nonexistent path";
+      }
+    }
+  }
+
+  // OR condition on uses: new alternative added — RELAXED (BC)
+  container uses-when-tests-or-relaxed {
+    description "uses with OR when — new alternative added (RELAXED, BC)";
+    uses uses-when-grouping {
+      when "../config/protocol-type = 'BGP' or ../config/protocol-type = 'OSPF'" {
+        description "Active when protocol-type is BGP or OSPF";
+      }
+    }
+  }
+
+  // OR condition on uses: alternative removed — NARROWED (NBC)
+  container uses-when-tests-or-narrowed {
+    description "uses with OR when — alternative removed (NARROWED, NBC)";
+    uses uses-when-grouping {
+      when "../config/protocol-type = 'BGP'" {
+        description "Active when protocol-type is BGP only";
+      }
+    }
+  }
+
+  // AND condition on uses: requirement added — NARROWED (NBC)
+  container uses-when-tests-and-narrowed {
+    description "uses with AND when — requirement added (NARROWED, NBC)";
+    uses uses-when-grouping {
+      when "../config/protocol-type = 'BGP' and ../config/admin-state = 'UP'" {
+        description "Active when protocol-type is BGP AND admin-state is UP";
+      }
+    }
+  }
+
+  // Enum fix on uses: old RHS invalid, new valid — RELAXED (BC)
+  container uses-when-tests-enum-fix {
+    description "uses with when — RHS enum was invalid, now valid (RELAXED, BC)";
+    uses uses-when-grouping {
+      when "../config/admin-state = 'UP'" {
+        description "Now valid";
+      }
+    }
+  }
+
+  // Enum break on uses: old RHS valid, new invalid — NARROWED (NBC)
+  container uses-when-tests-enum-break {
+    description "uses with when — RHS enum was valid, now invalid (NARROWED, NBC)";
+    uses uses-when-grouping {
+      when "../config/admin-state = 'INVALID_USES_NEW'" {
+        description "Now broken — invalid enum value";
+      }
+    }
+  }
+
+  // ═══════════════════════════════════════════════════════════════════════════
+  // AUGMENT PATH CASES
+  // ═══════════════════════════════════════════════════════════════════════════
+
+  container augment-target {
+    leaf target-leaf { type string; }
+  }
+
+  augment "/op:augment-target" {
+    description "Augment case A: path unchanged — EQUIVALENT (BC)";
+    leaf augment-case-a { type string; }
+  }
+
+  augment "/op:config" {
+    description "Augment case B: path changes to different target — INCOMPARABLE (NBC)";
+    leaf augment-case-b { type string; }
+  }
+}

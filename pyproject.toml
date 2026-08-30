@@ -1,0 +1,92 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "yang-comparator-pro"
+version = "1.0.0"
+description = "YANG Compatibility Checker with RAG-Powered Phase 2 Self-Learning - RFC 7950 compliant"
+readme = "README.md"
+requires-python = ">=3.9"
+license = "Apache-2.0"
+keywords = ["yang", "rfc7950", "compatibility", "pyang", "networking", "backward-compatibility", "rag", "llm"]
+authors = [
+    {name = "Hesham Elabd", email = "hesham.elabd@queensu.ca"},
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Telecommunications Industry",
+    "Topic :: Software Development :: Testing",
+    "Topic :: System :: Networking",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "pyang>=2.5.0",
+    "lxml>=4.9.0",
+    "rich>=13.0.0",
+    "interegular>=0.3.3",
+    "dspy-ai>=2.5.0; python_version >= '3.9'",
+    "openai>=1.0.0",
+    "deepdiff>=6.0.0",
+    "numpy>=1.24.0",
+    "scikit-learn>=1.0.0",
+    "sentence-transformers>=5.0.0",
+    "prompt-toolkit>=3.0.0",
+    "beautifulsoup4>=4.14.0",
+    "python-docx>=1.2.0",
+    "PyPDF2>=3.0.0",
+    "pandas>=1.5.0",
+    "transformers>=5.0.0",
+    "tokenizers>=0.22.0",
+]
+
+[project.optional-dependencies]
+rag = [
+    "sentence-transformers>=5.0.0",
+    "torch>=2.0.0",
+    "numpy>=1.24.0",
+    "huggingface-hub>=1.0.0",
+    "tokenizers>=0.22.0",
+    "transformers>=5.0.0",
+    "datasets>=2.14.0",
+    "scikit-learn>=1.0.0",
+]
+dev = [
+    "pytest>=7.0.0",
+    "black>=22.0.0",
+    "flake8>=4.0.0",
+]
+
+[project.scripts]
+yang-compare = "yang_rag.comparator.cli:main"
+yang-comparator = "yang_rag.comparator.cli:main"
+yang-propagate-nbc = "yang_rag.comparator.report.propagate_nbc_to_children:main"
+
+[project.entry-points."pyang.plugin"]
+yang_compatibility = "yang_rag.comparator.pyang_plugin:pyang_plugin_init"
+
+[project.urls]
+Homepage = "https://github.com/hesham-elabd/yang-comparator-pro"
+Documentation = "https://github.com/hesham-elabd/yang-comparator-pro#readme"
+Repository = "https://github.com/hesham-elabd/yang-comparator-pro"
+"Bug Tracker" = "https://github.com/hesham-elabd/yang-comparator-pro/issues"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["yang_rag*"]
+exclude = ["yang_rag/comparator/.venv*", "yang_rag/comparator/.venv/**"]
+
+[tool.setuptools.package-data]
+"yang_rag.comparator" = ["*.xml"]
+
+# data_files installs data/ into <prefix>/share/yang-comparator-pro/data/
+# so the wheel ships the pre-built RAG index alongside the Python packages.
+# yang_rag/config.py resolves DATA_DIRECTORY by checking both locations:
+#   1. <project_root>/data/   (development / editable install)
+#   2. <sys.prefix>/share/yang-comparator-pro/data/  (wheel install)

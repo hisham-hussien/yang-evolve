@@ -1,0 +1,66 @@
+module pr-extensions {
+  yang-version 1.1;
+  namespace "urn:example:pr-extensions";
+  prefix "pr";
+
+  organization
+    "Example Organization";
+
+  contact
+    "Example Contact";
+
+  description
+    "Defines the 'pr:privileges' YANG extension introduced in:
+
+       'Model-Driven REST API Generation from YANG Data Models'
+       (https://link.springer.com/article/10.1007/s10270-025-01311-3)
+
+     The extension annotates a YANG schema node with the set of HTTP
+     operations (create, fetch, update, delete) that are permitted on
+     the corresponding REST endpoint.
+
+     Example usage:
+       import pr-extensions { prefix pr; }
+       ...
+       container vpn-services {
+         pr:privileges \"create\";
+         ...
+       }
+       list vpn-service {
+         pr:privileges \"delete update\";
+         ...
+       }";
+
+  revision 2025-01-01 {
+    description
+      "Initial version — defines the pr:privileges extension.";
+    reference
+      "https://link.springer.com/article/10.1007/s10270-025-01311-3";
+  }
+
+  extension privileges {
+    argument operations;
+    description
+      "Annotates a YANG schema node with the set of HTTP operations
+       that are permitted on the corresponding REST endpoint.
+
+       The 'operations' argument is a space-separated list of one or
+       more of the following tokens (case-insensitive):
+
+         create  — HTTP POST   (create a new resource)
+         fetch   — HTTP GET    (retrieve the resource)
+         update  — HTTP PUT / PATCH (modify the resource)
+         delete  — HTTP DELETE (remove the resource)
+
+       Examples:
+         pr:privileges \"create\";
+         pr:privileges \"fetch update\";
+         pr:privileges \"delete update\";
+         pr:privileges \"create fetch update delete\";
+         pr:privileges \"create delete\";
+
+       The extension may appear on the same nodes as ep:endpoint.";
+    reference
+      "Section 3.3 of https://link.springer.com/article/10.1007/s10270-025-01311-3";
+  }
+}

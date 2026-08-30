@@ -1,0 +1,2515 @@
+[
+    {
+        "level": "3.",
+        "path": "vpn-services-old/augment-target/augment-case-b",
+        "keyword": "leaf",
+        "action": "deleted",
+        "tag": "non-backward-compatible",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "line_number": 400,
+        "file": "old-path.yang"
+    },
+    {
+        "level": "4.",
+        "path": "vpn-services-old/augment-target/augment-case-b/type",
+        "keyword": "type",
+        "action": "deleted",
+        "tag": "non-backward-compatible",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "line_number": 400,
+        "file": "old-path.yang"
+    },
+    {
+        "level": "1.",
+        "path": "vpn-services-old/range64",
+        "keyword": "leaf",
+        "action": "deleted",
+        "tag": "non-backward-compatible",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "line_number": 300,
+        "file": "old-types.yang"
+    },
+    {
+        "level": "3.",
+        "path": "vpn-services-old/range64/type",
+        "keyword": "type",
+        "action": "deleted",
+        "tag": "non-backward-compatible",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "line_number": 301,
+        "file": "old-types.yang"
+    },
+    {
+        "level": "4.",
+        "path": "vpn-services-old/uses-when-grouping/grp-cond-break/type",
+        "keyword": "type",
+        "action": "changed",
+        "tag": "non-backward-compatible",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "line_number_old": 300,
+        "line_number_new": 265,
+        "file": "old-path.yang"
+    },
+    {
+        "level": "4.1",
+        "path": "vpn-services-old/uses-when-grouping/grp-cond-break/type",
+        "action": "changed",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "tag": "non-backward-compatible",
+        "attribute": "node-path",
+        "keyword": "type",
+        "line_number_old": 300,
+        "line_number_new": 265,
+        "new_value": "condition-grouping/grp-cond-break/type",
+        "old_value": "uses-when-grouping/grp-cond-break/type"
+    },
+    {
+        "level": "4.",
+        "path": "vpn-services-old/uses-when-grouping/uses-when-leaf-d/type",
+        "keyword": "type",
+        "action": "changed",
+        "tag": "non-backward-compatible",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "line_number_old": 295,
+        "line_number_new": 296,
+        "file": "old-path.yang"
+    },
+    {
+        "level": "4.1",
+        "path": "vpn-services-old/uses-when-grouping/uses-when-leaf-d/type",
+        "action": "changed",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "tag": "non-backward-compatible",
+        "attribute": "node-path",
+        "keyword": "type",
+        "line_number_old": 295,
+        "line_number_new": 296,
+        "new_value": "uses-when-grouping/uses-when-leaf-c/type",
+        "old_value": "uses-when-grouping/uses-when-leaf-d/type"
+    },
+    {
+        "level": "3.",
+        "path": "vpn-services-old/uses-when-tests-and-narrowed/grp-cond-break",
+        "keyword": "leaf",
+        "action": "deleted",
+        "tag": "non-backward-compatible",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "line_number": 298,
+        "file": "old-path.yang"
+    },
+    {
+        "level": "4.",
+        "path": "vpn-services-old/uses-when-tests-and-narrowed/grp-cond-break/type",
+        "keyword": "type",
+        "action": "deleted",
+        "tag": "non-backward-compatible",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "line_number": 300,
+        "file": "old-path.yang"
+    },
+    {
+        "level": "4.",
+        "path": "vpn-services-old/uses-when-tests-and-narrowed/uses-when-leaf-d/type",
+        "keyword": "type",
+        "action": "changed",
+        "tag": "non-backward-compatible",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "line_number_old": 295,
+        "line_number_new": 296,
+        "file": "old-path.yang"
+    },
+    {
+        "level": "4.1",
+        "path": "vpn-services-old/uses-when-tests-and-narrowed/uses-when-leaf-d/type",
+        "action": "changed",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "tag": "non-backward-compatible",
+        "attribute": "node-path",
+        "keyword": "type",
+        "line_number_old": 295,
+        "line_number_new": 296,
+        "new_value": "uses-when-tests-and-narrowed/uses-when-leaf-c/type",
+        "old_value": "uses-when-tests-and-narrowed/uses-when-leaf-d/type"
+    },
+    {
+        "level": "3.",
+        "path": "vpn-services-old/uses-when-tests-break/grp-cond-break",
+        "keyword": "leaf",
+        "action": "deleted",
+        "tag": "non-backward-compatible",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "line_number": 298,
+        "file": "old-path.yang"
+    },
+    {
+        "level": "4.",
+        "path": "vpn-services-old/uses-when-tests-break/grp-cond-break/type",
+        "keyword": "type",
+        "action": "deleted",
+        "tag": "non-backward-compatible",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "line_number": 300,
+        "file": "old-path.yang"
+    },
+    {
+        "level": "4.",
+        "path": "vpn-services-old/uses-when-tests-break/uses-when-leaf-d/type",
+        "keyword": "type",
+        "action": "changed",
+        "tag": "non-backward-compatible",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "line_number_old": 295,
+        "line_number_new": 296,
+        "file": "old-path.yang"
+    },
+    {
+        "level": "4.1",
+        "path": "vpn-services-old/uses-when-tests-break/uses-when-leaf-d/type",
+        "action": "changed",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "tag": "non-backward-compatible",
+        "attribute": "node-path",
+        "keyword": "type",
+        "line_number_old": 295,
+        "line_number_new": 296,
+        "new_value": "uses-when-tests-break/uses-when-leaf-c/type",
+        "old_value": "uses-when-tests-break/uses-when-leaf-d/type"
+    },
+    {
+        "level": "3.",
+        "path": "vpn-services-old/uses-when-tests-enum-break/grp-cond-break",
+        "keyword": "leaf",
+        "action": "deleted",
+        "tag": "non-backward-compatible",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "line_number": 298,
+        "file": "old-path.yang"
+    },
+    {
+        "level": "4.",
+        "path": "vpn-services-old/uses-when-tests-enum-break/grp-cond-break/type",
+        "keyword": "type",
+        "action": "deleted",
+        "tag": "non-backward-compatible",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "line_number": 300,
+        "file": "old-path.yang"
+    },
+    {
+        "level": "4.",
+        "path": "vpn-services-old/uses-when-tests-enum-break/uses-when-leaf-d/type",
+        "keyword": "type",
+        "action": "changed",
+        "tag": "non-backward-compatible",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "line_number_old": 295,
+        "line_number_new": 296,
+        "file": "old-path.yang"
+    },
+    {
+        "level": "4.1",
+        "path": "vpn-services-old/uses-when-tests-enum-break/uses-when-leaf-d/type",
+        "action": "changed",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "tag": "non-backward-compatible",
+        "attribute": "node-path",
+        "keyword": "type",
+        "line_number_old": 295,
+        "line_number_new": 296,
+        "new_value": "uses-when-tests-enum-break/uses-when-leaf-c/type",
+        "old_value": "uses-when-tests-enum-break/uses-when-leaf-d/type"
+    },
+    {
+        "level": "3.",
+        "path": "vpn-services-old/uses-when-tests-enum-fix/grp-cond-break",
+        "keyword": "leaf",
+        "action": "deleted",
+        "tag": "non-backward-compatible",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "line_number": 298,
+        "file": "old-path.yang"
+    },
+    {
+        "level": "4.",
+        "path": "vpn-services-old/uses-when-tests-enum-fix/grp-cond-break/type",
+        "keyword": "type",
+        "action": "deleted",
+        "tag": "non-backward-compatible",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "line_number": 300,
+        "file": "old-path.yang"
+    },
+    {
+        "level": "4.",
+        "path": "vpn-services-old/uses-when-tests-enum-fix/uses-when-leaf-d/type",
+        "keyword": "type",
+        "action": "changed",
+        "tag": "non-backward-compatible",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "line_number_old": 295,
+        "line_number_new": 296,
+        "file": "old-path.yang"
+    },
+    {
+        "level": "4.1",
+        "path": "vpn-services-old/uses-when-tests-enum-fix/uses-when-leaf-d/type",
+        "action": "changed",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "tag": "non-backward-compatible",
+        "attribute": "node-path",
+        "keyword": "type",
+        "line_number_old": 295,
+        "line_number_new": 296,
+        "new_value": "uses-when-tests-enum-fix/uses-when-leaf-c/type",
+        "old_value": "uses-when-tests-enum-fix/uses-when-leaf-d/type"
+    },
+    {
+        "level": "3.",
+        "path": "vpn-services-old/uses-when-tests-fix/grp-cond-break",
+        "keyword": "leaf",
+        "action": "deleted",
+        "tag": "non-backward-compatible",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "line_number": 298,
+        "file": "old-path.yang"
+    },
+    {
+        "level": "4.",
+        "path": "vpn-services-old/uses-when-tests-fix/grp-cond-break/type",
+        "keyword": "type",
+        "action": "deleted",
+        "tag": "non-backward-compatible",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "line_number": 300,
+        "file": "old-path.yang"
+    },
+    {
+        "level": "4.",
+        "path": "vpn-services-old/uses-when-tests-fix/uses-when-leaf-d/type",
+        "keyword": "type",
+        "action": "changed",
+        "tag": "non-backward-compatible",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "line_number_old": 295,
+        "line_number_new": 296,
+        "file": "old-path.yang"
+    },
+    {
+        "level": "4.1",
+        "path": "vpn-services-old/uses-when-tests-fix/uses-when-leaf-d/type",
+        "action": "changed",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "tag": "non-backward-compatible",
+        "attribute": "node-path",
+        "keyword": "type",
+        "line_number_old": 295,
+        "line_number_new": 296,
+        "new_value": "uses-when-tests-fix/uses-when-leaf-c/type",
+        "old_value": "uses-when-tests-fix/uses-when-leaf-d/type"
+    },
+    {
+        "level": "3.",
+        "path": "vpn-services-old/uses-when-tests-or-narrowed/grp-cond-break",
+        "keyword": "leaf",
+        "action": "deleted",
+        "tag": "non-backward-compatible",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "line_number": 298,
+        "file": "old-path.yang"
+    },
+    {
+        "level": "4.",
+        "path": "vpn-services-old/uses-when-tests-or-narrowed/grp-cond-break/type",
+        "keyword": "type",
+        "action": "deleted",
+        "tag": "non-backward-compatible",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "line_number": 300,
+        "file": "old-path.yang"
+    },
+    {
+        "level": "4.",
+        "path": "vpn-services-old/uses-when-tests-or-narrowed/uses-when-leaf-d/type",
+        "keyword": "type",
+        "action": "changed",
+        "tag": "non-backward-compatible",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "line_number_old": 295,
+        "line_number_new": 296,
+        "file": "old-path.yang"
+    },
+    {
+        "level": "4.1",
+        "path": "vpn-services-old/uses-when-tests-or-narrowed/uses-when-leaf-d/type",
+        "action": "changed",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "tag": "non-backward-compatible",
+        "attribute": "node-path",
+        "keyword": "type",
+        "line_number_old": 295,
+        "line_number_new": 296,
+        "new_value": "uses-when-tests-or-narrowed/uses-when-leaf-c/type",
+        "old_value": "uses-when-tests-or-narrowed/uses-when-leaf-d/type"
+    },
+    {
+        "level": "3.",
+        "path": "vpn-services-old/uses-when-tests-or-relaxed/grp-cond-break",
+        "keyword": "leaf",
+        "action": "deleted",
+        "tag": "non-backward-compatible",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "line_number": 298,
+        "file": "old-path.yang"
+    },
+    {
+        "level": "4.",
+        "path": "vpn-services-old/uses-when-tests-or-relaxed/grp-cond-break/type",
+        "keyword": "type",
+        "action": "deleted",
+        "tag": "non-backward-compatible",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "line_number": 300,
+        "file": "old-path.yang"
+    },
+    {
+        "level": "4.",
+        "path": "vpn-services-old/uses-when-tests-or-relaxed/uses-when-leaf-d/type",
+        "keyword": "type",
+        "action": "changed",
+        "tag": "non-backward-compatible",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "line_number_old": 295,
+        "line_number_new": 296,
+        "file": "old-path.yang"
+    },
+    {
+        "level": "4.1",
+        "path": "vpn-services-old/uses-when-tests-or-relaxed/uses-when-leaf-d/type",
+        "action": "changed",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "tag": "non-backward-compatible",
+        "attribute": "node-path",
+        "keyword": "type",
+        "line_number_old": 295,
+        "line_number_new": 296,
+        "new_value": "uses-when-tests-or-relaxed/uses-when-leaf-c/type",
+        "old_value": "uses-when-tests-or-relaxed/uses-when-leaf-d/type"
+    },
+    {
+        "level": "4.",
+        "path": "vpn-services-old/uses-when-tests/grp-cond-break/type",
+        "keyword": "type",
+        "action": "changed",
+        "tag": "non-backward-compatible",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "line_number_old": 300,
+        "line_number_new": 265,
+        "file": "old-path.yang"
+    },
+    {
+        "level": "4.1",
+        "path": "vpn-services-old/uses-when-tests/grp-cond-break/type",
+        "action": "changed",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "tag": "non-backward-compatible",
+        "attribute": "node-path",
+        "keyword": "type",
+        "line_number_old": 300,
+        "line_number_new": 265,
+        "new_value": "uses-tests/grp-cond-break/type",
+        "old_value": "uses-when-tests/grp-cond-break/type"
+    },
+    {
+        "level": "4.",
+        "path": "vpn-services-old/uses-when-tests/uses-when-leaf-d/type",
+        "keyword": "type",
+        "action": "changed",
+        "tag": "non-backward-compatible",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "line_number_old": 295,
+        "line_number_new": 296,
+        "file": "old-path.yang"
+    },
+    {
+        "level": "4.1",
+        "path": "vpn-services-old/uses-when-tests/uses-when-leaf-d/type",
+        "action": "changed",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "tag": "non-backward-compatible",
+        "attribute": "node-path",
+        "keyword": "type",
+        "line_number_old": 295,
+        "line_number_new": 296,
+        "new_value": "uses-when-tests/uses-when-leaf-c/type",
+        "old_value": "uses-when-tests/uses-when-leaf-d/type"
+    },
+    {
+        "level": "3.",
+        "path": "vpn-services-old/condition-tests/cond-and-narrowed",
+        "keyword": "leaf",
+        "action": "changed",
+        "tag": "non-backward-compatible",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "line_number_old": 215,
+        "line_number_new": 203,
+        "file": "old-path.yang"
+    },
+    {
+        "level": "3.",
+        "path": "vpn-services-old/condition-tests/cond-lhs-break-valid",
+        "keyword": "leaf",
+        "action": "changed",
+        "tag": "non-backward-compatible",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "line_number_old": 138,
+        "line_number_new": 126,
+        "file": "old-path.yang"
+    },
+    {
+        "level": "3.1",
+        "path": "vpn-services-old/condition-tests/cond-lhs-break-valid",
+        "action": "changed",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "tag": "non-backward-compatible",
+        "constraint": "when",
+        "keyword": "leaf",
+        "file": "old-path.yang",
+        "line_number_old": 138,
+        "line_number_new": 126,
+        "new_value": "../../nonexistent/admin-state = 'DOWN'",
+        "old_value": "../../config/admin-state = 'DOWN'"
+    },
+    {
+        "level": "3.",
+        "path": "vpn-services-old/condition-tests/cond-lhs-different-node",
+        "keyword": "leaf",
+        "action": "changed",
+        "tag": "non-backward-compatible",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "line_number_old": 124,
+        "line_number_new": 112,
+        "file": "old-path.yang"
+    },
+    {
+        "level": "3.1",
+        "path": "vpn-services-old/condition-tests/cond-lhs-different-node",
+        "action": "changed",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "tag": "non-backward-compatible",
+        "constraint": "when",
+        "keyword": "leaf",
+        "file": "old-path.yang",
+        "line_number_old": 124,
+        "line_number_new": 112,
+        "new_value": "../../config/protocol-type = 'BGP'",
+        "old_value": "../../config/admin-state = 'UP'"
+    },
+    {
+        "level": "3.",
+        "path": "vpn-services-old/condition-tests/cond-must-break",
+        "keyword": "leaf",
+        "action": "changed",
+        "tag": "non-backward-compatible",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "line_number_old": 247,
+        "line_number_new": 235,
+        "file": "old-path.yang"
+    },
+    {
+        "level": "3.1",
+        "path": "vpn-services-old/condition-tests/cond-must-break",
+        "action": "changed",
+        "all_tags": [
+            "non-backward-compatible",
+            "needs-deep-analysis"
+        ],
+        "tag": "non-backward-compatible",
+        "constraint": "must",
+        "keyword": "leaf",
+        "file": "old-path.yang",
+        "line_number_old": 247,
+        "line_number_new": 235,
+        "new_value": "../../nonexistent3/index = 99",
+        "old_value": "../../config/index = 99"
+    },
+    {
+        "level": "3.",
+        "path": "vpn-services-old/condition-tests/cond-or-narrowed",
+        "keyword": "leaf",
+        "action": "changed",
+        "tag": "non-backward-compatible",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "line_number_old": 208,
+        "line_number_new": 196,
+        "file": "old-path.yang"
+    },
+    {
+        "level": "3.",
+        "path": "vpn-services-old/condition-tests/cond-rhs-enum-break",
+        "keyword": "leaf",
+        "action": "changed",
+        "tag": "non-backward-compatible",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "line_number_old": 166,
+        "line_number_new": 154,
+        "file": "old-path.yang"
+    },
+    {
+        "level": "3.1",
+        "path": "vpn-services-old/condition-tests/cond-rhs-enum-break",
+        "action": "changed",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "tag": "non-backward-compatible",
+        "constraint": "when",
+        "keyword": "leaf",
+        "file": "old-path.yang",
+        "line_number_old": 166,
+        "line_number_new": 154,
+        "new_value": "../../config/protocol-type = 'INVALID_PROTO'",
+        "old_value": "../../config/protocol-type = 'ISIS'"
+    },
+    {
+        "level": "3.",
+        "path": "vpn-services-old/condition-tests/cond-rhs-enum-change",
+        "keyword": "leaf",
+        "action": "changed",
+        "tag": "non-backward-compatible",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "line_number_old": 152,
+        "line_number_new": 140,
+        "file": "old-path.yang"
+    },
+    {
+        "level": "3.1",
+        "path": "vpn-services-old/condition-tests/cond-rhs-enum-change",
+        "action": "changed",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "tag": "non-backward-compatible",
+        "constraint": "when",
+        "keyword": "leaf",
+        "file": "old-path.yang",
+        "line_number_old": 152,
+        "line_number_new": 140,
+        "new_value": "../../config/protocol-type = 'ISIS'",
+        "old_value": "../../config/protocol-type = 'OSPF'"
+    },
+    {
+        "level": "3.",
+        "path": "vpn-services-old/condition-tests/cond-rhs-identity-change",
+        "keyword": "leaf",
+        "action": "changed",
+        "tag": "non-backward-compatible",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "line_number_old": 180,
+        "line_number_new": 168,
+        "file": "old-path.yang"
+    },
+    {
+        "level": "3.1",
+        "path": "vpn-services-old/condition-tests/cond-rhs-identity-change",
+        "action": "changed",
+        "all_tags": [
+            "non-backward-compatible",
+            "needs-deep-analysis"
+        ],
+        "tag": "non-backward-compatible",
+        "constraint": "when",
+        "keyword": "leaf",
+        "file": "old-path.yang",
+        "line_number_old": 180,
+        "line_number_new": 168,
+        "new_value": "../../config/admin-state = 'UP' and ../../config/index = 7",
+        "old_value": "../../config/admin-state = 'UP' and ../../config/index = 5"
+    },
+    {
+        "level": "2.",
+        "path": "vpn-services-old/config",
+        "keyword": "container",
+        "action": "deleted",
+        "tag": "non-backward-compatible",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "line_number": 19,
+        "file": "old-path.yang"
+    },
+    {
+        "level": "2.",
+        "path": "vpn-services-old/config-narrowed",
+        "keyword": "container",
+        "action": "changed",
+        "tag": "non-backward-compatible",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "line_number_old": 167,
+        "line_number_new": 170,
+        "file": "old-types.yang"
+    },
+    {
+        "level": "2.1",
+        "path": "vpn-services-old/config-narrowed",
+        "action": "changed",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "tag": "non-backward-compatible",
+        "constraint": "config",
+        "keyword": "container",
+        "file": "old-types.yang",
+        "line_number_old": 167,
+        "line_number_new": 170,
+        "new_value": "false",
+        "old_value": "true"
+    },
+    {
+        "level": "4.",
+        "path": "vpn-services-old/enum-checks/type/GAMMA",
+        "keyword": "enum",
+        "action": "changed",
+        "tag": "non-backward-compatible",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "line_number_old": 295,
+        "line_number_new": 300,
+        "file": "old-types.yang"
+    },
+    {
+        "level": "4.1",
+        "path": "vpn-services-old/enum-checks/type/GAMMA",
+        "action": "changed",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "tag": "non-backward-compatible",
+        "attribute": "value",
+        "keyword": "enum",
+        "line_number_old": 295,
+        "line_number_new": 300,
+        "new_value": "1",
+        "old_value": "2"
+    },
+    {
+        "level": "5.",
+        "path": "vpn-services-old/enum-checks/type/enum/CETA",
+        "keyword": "enum",
+        "action": "changed",
+        "tag": "non-backward-compatible",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "line_number_old": 294,
+        "line_number_new": 301,
+        "file": "old-types.yang"
+    },
+    {
+        "level": "5.1",
+        "path": "vpn-services-old/enum-checks/type/enum/CETA",
+        "action": "changed",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "tag": "non-backward-compatible",
+        "attribute": "name",
+        "keyword": "enum",
+        "line_number_old": 294,
+        "line_number_new": 301,
+        "new_value": "CETA",
+        "old_value": "BETA"
+    },
+    {
+        "level": "5.2",
+        "path": "vpn-services-old/enum-checks/type/enum/CETA",
+        "action": "changed",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "tag": "non-backward-compatible",
+        "attribute": "value",
+        "keyword": "enum",
+        "line_number_old": 294,
+        "line_number_new": 301,
+        "new_value": "2",
+        "old_value": "1"
+    },
+    {
+        "level": "3.",
+        "path": "vpn-services-old/fraction-digits-changed/type",
+        "keyword": "type",
+        "action": "changed",
+        "tag": "non-backward-compatible",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "line_number_old": 105,
+        "line_number_new": 107,
+        "file": "old-types.yang"
+    },
+    {
+        "level": "3.1",
+        "path": "vpn-services-old/fraction-digits-changed/type",
+        "action": "changed",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "tag": "non-backward-compatible",
+        "constraint": "fraction-digits",
+        "keyword": "type",
+        "file": "old-types.yang",
+        "line_number_old": 105,
+        "line_number_new": 107,
+        "new_value": "4",
+        "old_value": "2"
+    },
+    {
+        "level": "3.",
+        "path": "vpn-services-old/fraction-digits-decreased/type",
+        "keyword": "type",
+        "action": "changed",
+        "tag": "non-backward-compatible",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "line_number_old": 175,
+        "line_number_new": 178,
+        "file": "old-types.yang"
+    },
+    {
+        "level": "3.1",
+        "path": "vpn-services-old/fraction-digits-decreased/type",
+        "action": "changed",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "tag": "non-backward-compatible",
+        "constraint": "fraction-digits",
+        "keyword": "type",
+        "file": "old-types.yang",
+        "line_number_old": 175,
+        "line_number_new": 178,
+        "new_value": "1",
+        "old_value": "18"
+    },
+    {
+        "level": "2.",
+        "path": "vpn-services-old/if-feature-added",
+        "keyword": "leaf",
+        "action": "changed",
+        "tag": "non-backward-compatible",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "line_number_old": 154,
+        "line_number_new": 156,
+        "file": "old-types.yang"
+    },
+    {
+        "level": "2.1",
+        "path": "vpn-services-old/if-feature-added",
+        "action": "added",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "tag": "non-backward-compatible",
+        "constraint": "if-feature",
+        "keyword": "leaf",
+        "file": "old-types.yang",
+        "line_number": 156,
+        "value": "my-feature"
+    },
+    {
+        "level": "2.",
+        "path": "vpn-services-old/ifMtu",
+        "keyword": "leaf",
+        "action": "changed",
+        "tag": "non-backward-compatible",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "line_number": 11,
+        "file": "demo-defval.yang"
+    },
+    {
+        "level": "2.1",
+        "path": "vpn-services-old/ifMtu",
+        "action": "changed",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "tag": "non-backward-compatible",
+        "attribute": "defval",
+        "keyword": "leaf",
+        "line_number": 11,
+        "new_value": "9000",
+        "old_value": "1500"
+    },
+    {
+        "level": "2.2",
+        "path": "vpn-services-old/ifMtu",
+        "action": "changed",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "tag": "non-backward-compatible",
+        "tag_inherited": true,
+        "attribute": "max-access",
+        "keyword": "leaf",
+        "line_number": 11,
+        "new_value": "read-only",
+        "old_value": "read-write"
+    },
+    {
+        "level": "4.",
+        "path": "vpn-services-old/int32-to-int8/type/int8",
+        "keyword": "type",
+        "action": "changed",
+        "tag": "non-backward-compatible",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "line_number_old": 37,
+        "line_number_new": 41,
+        "file": "old-types.yang"
+    },
+    {
+        "level": "4.1",
+        "path": "vpn-services-old/int32-to-int8/type/int8",
+        "action": "changed",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "tag": "non-backward-compatible",
+        "attribute": "name",
+        "keyword": "type",
+        "line_number_old": 37,
+        "line_number_new": 41,
+        "new_value": "int8",
+        "old_value": "int32"
+    },
+    {
+        "level": "4.",
+        "path": "vpn-services-old/int8-to-int16/type/int16",
+        "keyword": "type",
+        "action": "changed",
+        "tag": "non-backward-compatible",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "line_number_old": 31,
+        "line_number_new": 35,
+        "file": "old-types.yang"
+    },
+    {
+        "level": "4.1",
+        "path": "vpn-services-old/int8-to-int16/type/int16",
+        "action": "changed",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "tag": "non-backward-compatible",
+        "attribute": "name",
+        "keyword": "type",
+        "line_number_old": 31,
+        "line_number_new": 35,
+        "new_value": "int16",
+        "old_value": "int8"
+    },
+    {
+        "level": "4.",
+        "path": "vpn-services-old/int8-to-string/type/string",
+        "keyword": "type",
+        "action": "changed",
+        "tag": "non-backward-compatible",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "line_number_old": 43,
+        "line_number_new": 47,
+        "file": "old-types.yang"
+    },
+    {
+        "level": "4.1",
+        "path": "vpn-services-old/int8-to-string/type/string",
+        "action": "changed",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "tag": "non-backward-compatible",
+        "attribute": "name",
+        "keyword": "type",
+        "line_number_old": 43,
+        "line_number_new": 47,
+        "new_value": "string",
+        "old_value": "int8"
+    },
+    {
+        "level": "4.",
+        "path": "vpn-services-old/leafref-tests/case-b-different-container/type",
+        "keyword": "type",
+        "action": "changed",
+        "tag": "non-backward-compatible",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "line_number_old": 70,
+        "line_number_new": 63,
+        "file": "old-path.yang"
+    },
+    {
+        "level": "4.1",
+        "path": "vpn-services-old/leafref-tests/case-b-different-container/type",
+        "action": "changed",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "tag": "non-backward-compatible",
+        "attribute": "path",
+        "keyword": "type",
+        "line_number_old": 70,
+        "line_number_new": 63,
+        "new_value": "../../state/name",
+        "old_value": "../../config/name"
+    },
+    {
+        "level": "4.",
+        "path": "vpn-services-old/leafref-tests/case-b-different-target/type",
+        "keyword": "type",
+        "action": "changed",
+        "tag": "non-backward-compatible",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "line_number_old": 64,
+        "line_number_new": 57,
+        "file": "old-path.yang"
+    },
+    {
+        "level": "4.1",
+        "path": "vpn-services-old/leafref-tests/case-b-different-target/type",
+        "action": "changed",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "tag": "non-backward-compatible",
+        "attribute": "path",
+        "keyword": "type",
+        "line_number_old": 64,
+        "line_number_new": 57,
+        "new_value": "../../config/index",
+        "old_value": "../../config/name"
+    },
+    {
+        "level": "4.",
+        "path": "vpn-services-old/leafref-tests/case-d-break-valid-path/type",
+        "keyword": "type",
+        "action": "changed",
+        "tag": "non-backward-compatible",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "line_number_old": 82,
+        "line_number_new": 75,
+        "file": "old-path.yang"
+    },
+    {
+        "level": "4.1",
+        "path": "vpn-services-old/leafref-tests/case-d-break-valid-path/type",
+        "action": "changed",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "tag": "non-backward-compatible",
+        "attribute": "path",
+        "keyword": "type",
+        "line_number_old": 82,
+        "line_number_new": 75,
+        "new_value": "../../nonexistent-container/name",
+        "old_value": "../../config/name"
+    },
+    {
+        "level": "4.",
+        "path": "vpn-services-old/leafref-tests/case-e-both-invalid/type",
+        "keyword": "type",
+        "action": "changed",
+        "tag": "non-backward-compatible",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "line_number_old": 88,
+        "line_number_new": 81,
+        "file": "old-path.yang"
+    },
+    {
+        "level": "4.1",
+        "path": "vpn-services-old/leafref-tests/case-e-both-invalid/type",
+        "action": "changed",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "tag": "non-backward-compatible",
+        "attribute": "path",
+        "keyword": "type",
+        "line_number_old": 88,
+        "line_number_new": 81,
+        "new_value": "../../nonexistent-b/name",
+        "old_value": "../../nonexistent-a/name"
+    },
+    {
+        "level": "5.",
+        "path": "vpn-services-old/leafref-tests/case-leafref-to-string/type/string",
+        "keyword": "type",
+        "action": "changed",
+        "tag": "non-backward-compatible",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "line_number_old": 94,
+        "line_number_new": 87,
+        "file": "old-path.yang"
+    },
+    {
+        "level": "5.1",
+        "path": "vpn-services-old/leafref-tests/case-leafref-to-string/type/string",
+        "action": "changed",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "tag": "non-backward-compatible",
+        "attribute": "name",
+        "keyword": "type",
+        "line_number_old": 94,
+        "line_number_new": 87,
+        "new_value": "string",
+        "old_value": "leafref"
+    },
+    {
+        "level": "5.",
+        "path": "vpn-services-old/leafref-tests/case-string-to-leafref/type/leafref",
+        "keyword": "type",
+        "action": "changed",
+        "tag": "non-backward-compatible",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "line_number_old": 100,
+        "line_number_new": 93,
+        "file": "old-path.yang"
+    },
+    {
+        "level": "5.1",
+        "path": "vpn-services-old/leafref-tests/case-string-to-leafref/type/leafref",
+        "action": "changed",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "tag": "non-backward-compatible",
+        "attribute": "name",
+        "keyword": "type",
+        "line_number_old": 100,
+        "line_number_new": 93,
+        "new_value": "leafref",
+        "old_value": "string"
+    },
+    {
+        "level": "4.",
+        "path": "vpn-services-old/leafref-to-int/type/int32",
+        "keyword": "type",
+        "action": "changed",
+        "tag": "non-backward-compatible",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "line_number_old": 49,
+        "line_number_new": 53,
+        "file": "old-types.yang"
+    },
+    {
+        "level": "4.1",
+        "path": "vpn-services-old/leafref-to-int/type/int32",
+        "action": "changed",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "tag": "non-backward-compatible",
+        "attribute": "name",
+        "keyword": "type",
+        "line_number_old": 49,
+        "line_number_new": 53,
+        "new_value": "int32",
+        "old_value": "leafref"
+    },
+    {
+        "level": "3.",
+        "path": "vpn-services-old/leafref-to-leafref-incompatible/type",
+        "keyword": "type",
+        "action": "changed",
+        "tag": "non-backward-compatible",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "line_number_old": 262,
+        "line_number_new": 266,
+        "file": "old-types.yang"
+    },
+    {
+        "level": "3.1",
+        "path": "vpn-services-old/leafref-to-leafref-incompatible/type",
+        "action": "changed",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "tag": "non-backward-compatible",
+        "attribute": "path",
+        "keyword": "type",
+        "line_number_old": 262,
+        "line_number_new": 266,
+        "new_value": "/ref-string",
+        "old_value": "/ref-int8"
+    },
+    {
+        "level": "3.",
+        "path": "vpn-services-old/leafref-to-leafref-narrower/type",
+        "keyword": "type",
+        "action": "changed",
+        "tag": "non-backward-compatible",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "line_number_old": 253,
+        "line_number_new": 257,
+        "file": "old-types.yang"
+    },
+    {
+        "level": "3.1",
+        "path": "vpn-services-old/leafref-to-leafref-narrower/type",
+        "action": "changed",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "tag": "non-backward-compatible",
+        "attribute": "path",
+        "keyword": "type",
+        "line_number_old": 253,
+        "line_number_new": 257,
+        "new_value": "/ref-int8",
+        "old_value": "/ref-int32"
+    },
+    {
+        "level": "3.",
+        "path": "vpn-services-old/leafref-to-leafref-wider/type",
+        "keyword": "type",
+        "action": "changed",
+        "tag": "non-backward-compatible",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "line_number_old": 244,
+        "line_number_new": 248,
+        "file": "old-types.yang"
+    },
+    {
+        "level": "3.1",
+        "path": "vpn-services-old/leafref-to-leafref-wider/type",
+        "action": "changed",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "tag": "non-backward-compatible",
+        "attribute": "path",
+        "keyword": "type",
+        "line_number_old": 244,
+        "line_number_new": 248,
+        "new_value": "/ref-int32",
+        "old_value": "/ref-int8"
+    },
+    {
+        "level": "4.",
+        "path": "vpn-services-old/leafref-to-string/type/string",
+        "keyword": "type",
+        "action": "changed",
+        "tag": "non-backward-compatible",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "line_number_old": 57,
+        "line_number_new": 59,
+        "file": "old-types.yang"
+    },
+    {
+        "level": "4.1",
+        "path": "vpn-services-old/leafref-to-string/type/string",
+        "action": "changed",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "tag": "non-backward-compatible",
+        "attribute": "name",
+        "keyword": "type",
+        "line_number_old": 57,
+        "line_number_new": 59,
+        "new_value": "string",
+        "old_value": "leafref"
+    },
+    {
+        "level": "3.",
+        "path": "vpn-services-old/length-narrowed/type",
+        "keyword": "type",
+        "action": "changed",
+        "tag": "non-backward-compatible",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "line_number_old": 97,
+        "line_number_new": 99,
+        "file": "old-types.yang"
+    },
+    {
+        "level": "3.1",
+        "path": "vpn-services-old/length-narrowed/type",
+        "action": "changed",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "tag": "non-backward-compatible",
+        "constraint": "length",
+        "keyword": "type",
+        "file": "old-types.yang",
+        "line_number_new": 126,
+        "new_value": "1..10",
+        "old_value": "1..20"
+    },
+    {
+        "level": "2.",
+        "path": "vpn-services-old/mandatory-false-to-true",
+        "keyword": "leaf",
+        "action": "changed",
+        "tag": "non-backward-compatible",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "line_number_old": 233,
+        "line_number_new": 237,
+        "file": "old-types.yang"
+    },
+    {
+        "level": "2.1",
+        "path": "vpn-services-old/mandatory-false-to-true",
+        "action": "changed",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "tag": "non-backward-compatible",
+        "constraint": "mandatory",
+        "keyword": "leaf",
+        "file": "old-types.yang",
+        "line_number_old": 233,
+        "line_number_new": 237,
+        "new_value": "true",
+        "old_value": "false"
+    },
+    {
+        "level": "2.",
+        "path": "vpn-services-old/mandatory-true-added",
+        "keyword": "leaf",
+        "action": "changed",
+        "tag": "non-backward-compatible",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "line_number_old": 213,
+        "line_number_new": 217,
+        "file": "old-types.yang"
+    },
+    {
+        "level": "2.1",
+        "path": "vpn-services-old/mandatory-true-added",
+        "action": "added",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "tag": "non-backward-compatible",
+        "constraint": "mandatory",
+        "keyword": "leaf",
+        "file": "old-types.yang",
+        "line_number": 217,
+        "value": "true"
+    },
+    {
+        "level": "2.",
+        "path": "vpn-services-old/max-elements-narrowed",
+        "keyword": "list",
+        "action": "changed",
+        "tag": "non-backward-compatible",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "line_number_old": 128,
+        "line_number_new": 130,
+        "file": "old-types.yang"
+    },
+    {
+        "level": "2.1",
+        "path": "vpn-services-old/max-elements-narrowed",
+        "action": "changed",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "tag": "non-backward-compatible",
+        "constraint": "max-elements",
+        "keyword": "list",
+        "file": "old-types.yang",
+        "line_number_old": 128,
+        "line_number_new": 130,
+        "new_value": "10",
+        "old_value": "20"
+    },
+    {
+        "level": "3.",
+        "path": "vpn-services-old/pattern-narrowed/type",
+        "keyword": "type",
+        "action": "changed",
+        "tag": "non-backward-compatible",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "line_number_old": 145,
+        "line_number_new": 147,
+        "file": "old-types.yang"
+    },
+    {
+        "level": "3.1",
+        "path": "vpn-services-old/pattern-narrowed/type",
+        "action": "changed",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "tag": "non-backward-compatible",
+        "constraint": "pattern",
+        "keyword": "type",
+        "file": "old-types.yang",
+        "line_number_old": 145,
+        "line_number_new": 147,
+        "new_value": "[0-9]+",
+        "old_value": "[a-zA-Z0-9]+"
+    },
+    {
+        "level": "3.",
+        "path": "vpn-services-old/range-narrowed/type",
+        "keyword": "type",
+        "action": "changed",
+        "tag": "non-backward-compatible",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "line_number_old": 81,
+        "line_number_new": 83,
+        "file": "old-types.yang"
+    },
+    {
+        "level": "3.1",
+        "path": "vpn-services-old/range-narrowed/type",
+        "action": "changed",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "tag": "non-backward-compatible",
+        "constraint": "range",
+        "keyword": "type",
+        "file": "old-types.yang",
+        "line_number_old": 81,
+        "line_number_new": 83,
+        "new_value": "0..100",
+        "old_value": "0..200"
+    },
+    {
+        "level": "2.",
+        "path": "vpn-services-old/status-current-to-obsolete",
+        "keyword": "leaf",
+        "action": "changed",
+        "tag": "non-backward-compatible",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "line_number_old": 191,
+        "line_number_new": 194,
+        "file": "old-types.yang"
+    },
+    {
+        "level": "2.1",
+        "path": "vpn-services-old/status-current-to-obsolete",
+        "action": "changed",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "tag": "non-backward-compatible",
+        "constraint": "status",
+        "keyword": "leaf",
+        "file": "old-types.yang",
+        "line_number_old": 191,
+        "line_number_new": 194,
+        "new_value": "obsolete",
+        "old_value": "current"
+    },
+    {
+        "level": "2.",
+        "path": "vpn-services-old/status-deprecated-to-obsolete",
+        "keyword": "leaf",
+        "action": "changed",
+        "tag": "non-backward-compatible",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "line_number_old": 198,
+        "line_number_new": 201,
+        "file": "old-types.yang"
+    },
+    {
+        "level": "2.1",
+        "path": "vpn-services-old/status-deprecated-to-obsolete",
+        "action": "changed",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "tag": "non-backward-compatible",
+        "constraint": "status",
+        "keyword": "leaf",
+        "file": "old-types.yang",
+        "line_number_old": 198,
+        "line_number_new": 201,
+        "new_value": "obsolete",
+        "old_value": "deprecated"
+    },
+    {
+        "level": "4.",
+        "path": "vpn-services-old/string-to-leafref/type/leafref",
+        "keyword": "type",
+        "action": "changed",
+        "tag": "non-backward-compatible",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "line_number": 65,
+        "file": "old-types.yang"
+    },
+    {
+        "level": "4.1",
+        "path": "vpn-services-old/string-to-leafref/type/leafref",
+        "action": "changed",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "tag": "non-backward-compatible",
+        "attribute": "name",
+        "keyword": "type",
+        "line_number": 65,
+        "new_value": "leafref",
+        "old_value": "string"
+    },
+    {
+        "level": "5.",
+        "path": "vpn-services-old/union-member-added/type/union/boolean",
+        "keyword": "type",
+        "action": "added",
+        "tag": "non-backward-compatible",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "line_number": 279,
+        "file": "old-types.yang"
+    },
+    {
+        "level": "5.1.1",
+        "path": "vpn-services-old/union-member-added/type/union/boolean",
+        "action": "added",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "tag": "non-backward-compatible",
+        "attribute": "name",
+        "keyword": "type",
+        "line_number": 279,
+        "value": "boolean"
+    },
+    {
+        "level": "5.",
+        "path": "vpn-services-old/union-member-added/type/type/boolean",
+        "keyword": "type",
+        "action": "changed",
+        "tag": "non-backward-compatible",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "line_number_old": 274,
+        "line_number_new": 279,
+        "file": "old-types.yang"
+    },
+    {
+        "level": "5.1",
+        "path": "vpn-services-old/union-member-added/type/type/boolean",
+        "action": "changed",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "tag": "non-backward-compatible",
+        "attribute": "name",
+        "keyword": "type",
+        "line_number_old": 274,
+        "line_number_new": 279,
+        "new_value": "boolean",
+        "old_value": "string"
+    },
+    {
+        "level": "5.",
+        "path": "vpn-services-old/union-member-deleted/type/union/string",
+        "keyword": "type",
+        "action": "deleted",
+        "tag": "non-backward-compatible",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "line_number": 283,
+        "file": "old-types.yang"
+    },
+    {
+        "level": "5.1.1",
+        "path": "vpn-services-old/union-member-deleted/type/union/string",
+        "action": "deleted",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "tag": "non-backward-compatible",
+        "attribute": "name",
+        "keyword": "type",
+        "line_number": 283,
+        "value": "string"
+    },
+    {
+        "level": "5.",
+        "path": "vpn-services-old/union-member-deleted/type/type/int8",
+        "keyword": "type",
+        "action": "changed",
+        "tag": "non-backward-compatible",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "line_number_old": 283,
+        "line_number_new": 287,
+        "file": "old-types.yang"
+    },
+    {
+        "level": "5.1",
+        "path": "vpn-services-old/union-member-deleted/type/type/int8",
+        "action": "changed",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "tag": "non-backward-compatible",
+        "attribute": "name",
+        "keyword": "type",
+        "line_number_old": 283,
+        "line_number_new": 287,
+        "new_value": "int8",
+        "old_value": "string"
+    },
+    {
+        "level": "3.",
+        "path": "vpn-services-old/uses-when-grouping/grp-cond-break",
+        "keyword": "leaf",
+        "action": "changed",
+        "tag": "non-backward-compatible",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "line_number_old": 298,
+        "line_number_new": 263,
+        "file": "old-path.yang"
+    },
+    {
+        "level": "3.1",
+        "path": "vpn-services-old/uses-when-grouping/grp-cond-break",
+        "action": "changed",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "tag": "non-backward-compatible",
+        "attribute": "node-path",
+        "keyword": "leaf",
+        "line_number_old": 298,
+        "line_number_new": 263,
+        "new_value": "condition-grouping/grp-cond-break",
+        "old_value": "uses-when-grouping/grp-cond-break"
+    },
+    {
+        "level": "3.2",
+        "path": "vpn-services-old/uses-when-grouping/grp-cond-break",
+        "action": "changed",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "tag": "non-backward-compatible",
+        "constraint": "when",
+        "keyword": "leaf",
+        "file": "old-path.yang",
+        "line_number_old": 298,
+        "line_number_new": 263,
+        "new_value": "../../nonexistent/admin-state = 'DOWN'",
+        "old_value": "../../config/admin-state = 'DOWN'"
+    },
+    {
+        "level": "4.",
+        "path": "vpn-services-old/uses-when-grouping/leaf/uses-when-leaf-c",
+        "keyword": "leaf",
+        "action": "changed",
+        "tag": "non-backward-compatible",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "line_number_old": 295,
+        "line_number_new": 296,
+        "file": "old-path.yang"
+    },
+    {
+        "level": "4.2",
+        "path": "vpn-services-old/uses-when-grouping/leaf/uses-when-leaf-c",
+        "action": "changed",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "tag": "non-backward-compatible",
+        "attribute": "name",
+        "keyword": "leaf",
+        "line_number_old": 295,
+        "line_number_new": 296,
+        "new_value": "uses-when-leaf-c",
+        "old_value": "uses-when-leaf-d"
+    },
+    {
+        "level": "4.",
+        "path": "vpn-services-old/uses-when-tests-and-narrowed/leaf/uses-when-leaf-c",
+        "keyword": "leaf",
+        "action": "changed",
+        "tag": "non-backward-compatible",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "line_number_old": 295,
+        "line_number_new": 296,
+        "file": "old-path.yang"
+    },
+    {
+        "level": "4.2",
+        "path": "vpn-services-old/uses-when-tests-and-narrowed/leaf/uses-when-leaf-c",
+        "action": "changed",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "tag": "non-backward-compatible",
+        "attribute": "name",
+        "keyword": "leaf",
+        "line_number_old": 295,
+        "line_number_new": 296,
+        "new_value": "uses-when-leaf-c",
+        "old_value": "uses-when-leaf-d"
+    },
+    {
+        "level": "4.3",
+        "path": "vpn-services-old/uses-when-tests-and-narrowed/leaf/uses-when-leaf-c",
+        "action": "changed",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "tag": "non-backward-compatible",
+        "constraint": "when",
+        "keyword": "leaf",
+        "file": "old-path.yang",
+        "line_number_old": 295,
+        "line_number_new": 296,
+        "new_value": "../config/protocol-type = 'BGP' and ../config/admin-state = 'UP'",
+        "old_value": "../config/protocol-type = 'BGP'"
+    },
+    {
+        "level": "3.",
+        "path": "vpn-services-old/uses-when-tests-and-narrowed/uses-when-leaf-a",
+        "keyword": "leaf",
+        "action": "changed",
+        "tag": "non-backward-compatible",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "line_number_old": 293,
+        "line_number_new": 294,
+        "file": "old-path.yang"
+    },
+    {
+        "level": "3.1",
+        "path": "vpn-services-old/uses-when-tests-and-narrowed/uses-when-leaf-a",
+        "action": "changed",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "tag": "non-backward-compatible",
+        "constraint": "when",
+        "keyword": "leaf",
+        "file": "old-path.yang",
+        "line_number_old": 293,
+        "line_number_new": 294,
+        "new_value": "../config/protocol-type = 'BGP' and ../config/admin-state = 'UP'",
+        "old_value": "../config/protocol-type = 'BGP'"
+    },
+    {
+        "level": "3.",
+        "path": "vpn-services-old/uses-when-tests-and-narrowed/uses-when-leaf-b",
+        "keyword": "leaf",
+        "action": "changed",
+        "tag": "non-backward-compatible",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "line_number_old": 294,
+        "line_number_new": 295,
+        "file": "old-path.yang"
+    },
+    {
+        "level": "3.1",
+        "path": "vpn-services-old/uses-when-tests-and-narrowed/uses-when-leaf-b",
+        "action": "changed",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "tag": "non-backward-compatible",
+        "constraint": "when",
+        "keyword": "leaf",
+        "file": "old-path.yang",
+        "line_number_old": 294,
+        "line_number_new": 295,
+        "new_value": "../config/protocol-type = 'BGP' and ../config/admin-state = 'UP'",
+        "old_value": "../config/protocol-type = 'BGP'"
+    },
+    {
+        "level": "4.",
+        "path": "vpn-services-old/uses-when-tests-break/leaf/uses-when-leaf-c",
+        "keyword": "leaf",
+        "action": "changed",
+        "tag": "non-backward-compatible",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "line_number_old": 295,
+        "line_number_new": 296,
+        "file": "old-path.yang"
+    },
+    {
+        "level": "4.2",
+        "path": "vpn-services-old/uses-when-tests-break/leaf/uses-when-leaf-c",
+        "action": "changed",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "tag": "non-backward-compatible",
+        "attribute": "name",
+        "keyword": "leaf",
+        "line_number_old": 295,
+        "line_number_new": 296,
+        "new_value": "uses-when-leaf-c",
+        "old_value": "uses-when-leaf-d"
+    },
+    {
+        "level": "4.3",
+        "path": "vpn-services-old/uses-when-tests-break/leaf/uses-when-leaf-c",
+        "action": "changed",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "tag": "non-backward-compatible",
+        "constraint": "when",
+        "keyword": "leaf",
+        "file": "old-path.yang",
+        "line_number_old": 295,
+        "line_number_new": 296,
+        "new_value": "../nonexistent-uses-new/admin-state = 'DOWN'",
+        "old_value": "../config/admin-state = 'DOWN'"
+    },
+    {
+        "level": "3.",
+        "path": "vpn-services-old/uses-when-tests-break/uses-when-leaf-a",
+        "keyword": "leaf",
+        "action": "changed",
+        "tag": "non-backward-compatible",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "line_number_old": 293,
+        "line_number_new": 294,
+        "file": "old-path.yang"
+    },
+    {
+        "level": "3.1",
+        "path": "vpn-services-old/uses-when-tests-break/uses-when-leaf-a",
+        "action": "changed",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "tag": "non-backward-compatible",
+        "constraint": "when",
+        "keyword": "leaf",
+        "file": "old-path.yang",
+        "line_number_old": 293,
+        "line_number_new": 294,
+        "new_value": "../nonexistent-uses-new/admin-state = 'DOWN'",
+        "old_value": "../config/admin-state = 'DOWN'"
+    },
+    {
+        "level": "3.",
+        "path": "vpn-services-old/uses-when-tests-break/uses-when-leaf-b",
+        "keyword": "leaf",
+        "action": "changed",
+        "tag": "non-backward-compatible",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "line_number_old": 294,
+        "line_number_new": 295,
+        "file": "old-path.yang"
+    },
+    {
+        "level": "3.1",
+        "path": "vpn-services-old/uses-when-tests-break/uses-when-leaf-b",
+        "action": "changed",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "tag": "non-backward-compatible",
+        "constraint": "when",
+        "keyword": "leaf",
+        "file": "old-path.yang",
+        "line_number_old": 294,
+        "line_number_new": 295,
+        "new_value": "../nonexistent-uses-new/admin-state = 'DOWN'",
+        "old_value": "../config/admin-state = 'DOWN'"
+    },
+    {
+        "level": "4.",
+        "path": "vpn-services-old/uses-when-tests-enum-break/leaf/uses-when-leaf-c",
+        "keyword": "leaf",
+        "action": "changed",
+        "tag": "non-backward-compatible",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "line_number_old": 295,
+        "line_number_new": 296,
+        "file": "old-path.yang"
+    },
+    {
+        "level": "4.2",
+        "path": "vpn-services-old/uses-when-tests-enum-break/leaf/uses-when-leaf-c",
+        "action": "changed",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "tag": "non-backward-compatible",
+        "attribute": "name",
+        "keyword": "leaf",
+        "line_number_old": 295,
+        "line_number_new": 296,
+        "new_value": "uses-when-leaf-c",
+        "old_value": "uses-when-leaf-d"
+    },
+    {
+        "level": "4.3",
+        "path": "vpn-services-old/uses-when-tests-enum-break/leaf/uses-when-leaf-c",
+        "action": "changed",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "tag": "non-backward-compatible",
+        "constraint": "when",
+        "keyword": "leaf",
+        "file": "old-path.yang",
+        "line_number_old": 295,
+        "line_number_new": 296,
+        "new_value": "../config/admin-state = 'INVALID_USES_NEW'",
+        "old_value": "../config/admin-state = 'UP'"
+    },
+    {
+        "level": "3.",
+        "path": "vpn-services-old/uses-when-tests-enum-break/uses-when-leaf-a",
+        "keyword": "leaf",
+        "action": "changed",
+        "tag": "non-backward-compatible",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "line_number_old": 293,
+        "line_number_new": 294,
+        "file": "old-path.yang"
+    },
+    {
+        "level": "3.1",
+        "path": "vpn-services-old/uses-when-tests-enum-break/uses-when-leaf-a",
+        "action": "changed",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "tag": "non-backward-compatible",
+        "constraint": "when",
+        "keyword": "leaf",
+        "file": "old-path.yang",
+        "line_number_old": 293,
+        "line_number_new": 294,
+        "new_value": "../config/admin-state = 'INVALID_USES_NEW'",
+        "old_value": "../config/admin-state = 'UP'"
+    },
+    {
+        "level": "3.",
+        "path": "vpn-services-old/uses-when-tests-enum-break/uses-when-leaf-b",
+        "keyword": "leaf",
+        "action": "changed",
+        "tag": "non-backward-compatible",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "line_number_old": 294,
+        "line_number_new": 295,
+        "file": "old-path.yang"
+    },
+    {
+        "level": "3.1",
+        "path": "vpn-services-old/uses-when-tests-enum-break/uses-when-leaf-b",
+        "action": "changed",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "tag": "non-backward-compatible",
+        "constraint": "when",
+        "keyword": "leaf",
+        "file": "old-path.yang",
+        "line_number_old": 294,
+        "line_number_new": 295,
+        "new_value": "../config/admin-state = 'INVALID_USES_NEW'",
+        "old_value": "../config/admin-state = 'UP'"
+    },
+    {
+        "level": "4.",
+        "path": "vpn-services-old/uses-when-tests-enum-fix/leaf/uses-when-leaf-c",
+        "keyword": "leaf",
+        "action": "changed",
+        "tag": "non-backward-compatible",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "line_number_old": 295,
+        "line_number_new": 296,
+        "file": "old-path.yang"
+    },
+    {
+        "level": "4.2",
+        "path": "vpn-services-old/uses-when-tests-enum-fix/leaf/uses-when-leaf-c",
+        "action": "changed",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "tag": "non-backward-compatible",
+        "attribute": "name",
+        "keyword": "leaf",
+        "line_number_old": 295,
+        "line_number_new": 296,
+        "new_value": "uses-when-leaf-c",
+        "old_value": "uses-when-leaf-d"
+    },
+    {
+        "level": "4.",
+        "path": "vpn-services-old/uses-when-tests-fix/leaf/uses-when-leaf-c",
+        "keyword": "leaf",
+        "action": "changed",
+        "tag": "non-backward-compatible",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "line_number_old": 295,
+        "line_number_new": 296,
+        "file": "old-path.yang"
+    },
+    {
+        "level": "4.2",
+        "path": "vpn-services-old/uses-when-tests-fix/leaf/uses-when-leaf-c",
+        "action": "changed",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "tag": "non-backward-compatible",
+        "attribute": "name",
+        "keyword": "leaf",
+        "line_number_old": 295,
+        "line_number_new": 296,
+        "new_value": "uses-when-leaf-c",
+        "old_value": "uses-when-leaf-d"
+    },
+    {
+        "level": "4.",
+        "path": "vpn-services-old/uses-when-tests-or-narrowed/leaf/uses-when-leaf-c",
+        "keyword": "leaf",
+        "action": "changed",
+        "tag": "non-backward-compatible",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "line_number_old": 295,
+        "line_number_new": 296,
+        "file": "old-path.yang"
+    },
+    {
+        "level": "4.2",
+        "path": "vpn-services-old/uses-when-tests-or-narrowed/leaf/uses-when-leaf-c",
+        "action": "changed",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "tag": "non-backward-compatible",
+        "attribute": "name",
+        "keyword": "leaf",
+        "line_number_old": 295,
+        "line_number_new": 296,
+        "new_value": "uses-when-leaf-c",
+        "old_value": "uses-when-leaf-d"
+    },
+    {
+        "level": "4.3",
+        "path": "vpn-services-old/uses-when-tests-or-narrowed/leaf/uses-when-leaf-c",
+        "action": "changed",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "tag": "non-backward-compatible",
+        "constraint": "when",
+        "keyword": "leaf",
+        "file": "old-path.yang",
+        "line_number_old": 295,
+        "line_number_new": 296,
+        "new_value": "../config/protocol-type = 'BGP'",
+        "old_value": "../config/protocol-type = 'BGP' or ../config/protocol-type = 'OSPF'"
+    },
+    {
+        "level": "3.",
+        "path": "vpn-services-old/uses-when-tests-or-narrowed/uses-when-leaf-a",
+        "keyword": "leaf",
+        "action": "changed",
+        "tag": "non-backward-compatible",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "line_number_old": 293,
+        "line_number_new": 294,
+        "file": "old-path.yang"
+    },
+    {
+        "level": "3.1",
+        "path": "vpn-services-old/uses-when-tests-or-narrowed/uses-when-leaf-a",
+        "action": "changed",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "tag": "non-backward-compatible",
+        "constraint": "when",
+        "keyword": "leaf",
+        "file": "old-path.yang",
+        "line_number_old": 293,
+        "line_number_new": 294,
+        "new_value": "../config/protocol-type = 'BGP'",
+        "old_value": "../config/protocol-type = 'BGP' or ../config/protocol-type = 'OSPF'"
+    },
+    {
+        "level": "3.",
+        "path": "vpn-services-old/uses-when-tests-or-narrowed/uses-when-leaf-b",
+        "keyword": "leaf",
+        "action": "changed",
+        "tag": "non-backward-compatible",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "line_number_old": 294,
+        "line_number_new": 295,
+        "file": "old-path.yang"
+    },
+    {
+        "level": "3.1",
+        "path": "vpn-services-old/uses-when-tests-or-narrowed/uses-when-leaf-b",
+        "action": "changed",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "tag": "non-backward-compatible",
+        "constraint": "when",
+        "keyword": "leaf",
+        "file": "old-path.yang",
+        "line_number_old": 294,
+        "line_number_new": 295,
+        "new_value": "../config/protocol-type = 'BGP'",
+        "old_value": "../config/protocol-type = 'BGP' or ../config/protocol-type = 'OSPF'"
+    },
+    {
+        "level": "4.",
+        "path": "vpn-services-old/uses-when-tests-or-relaxed/leaf/uses-when-leaf-c",
+        "keyword": "leaf",
+        "action": "changed",
+        "tag": "non-backward-compatible",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "line_number_old": 295,
+        "line_number_new": 296,
+        "file": "old-path.yang"
+    },
+    {
+        "level": "4.2",
+        "path": "vpn-services-old/uses-when-tests-or-relaxed/leaf/uses-when-leaf-c",
+        "action": "changed",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "tag": "non-backward-compatible",
+        "attribute": "name",
+        "keyword": "leaf",
+        "line_number_old": 295,
+        "line_number_new": 296,
+        "new_value": "uses-when-leaf-c",
+        "old_value": "uses-when-leaf-d"
+    },
+    {
+        "level": "3.",
+        "path": "vpn-services-old/uses-when-tests/grp-cond-break",
+        "keyword": "leaf",
+        "action": "changed",
+        "tag": "non-backward-compatible",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "line_number_old": 298,
+        "line_number_new": 263,
+        "file": "old-path.yang"
+    },
+    {
+        "level": "3.1",
+        "path": "vpn-services-old/uses-when-tests/grp-cond-break",
+        "action": "changed",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "tag": "non-backward-compatible",
+        "attribute": "node-path",
+        "keyword": "leaf",
+        "line_number_old": 298,
+        "line_number_new": 263,
+        "new_value": "uses-tests/grp-cond-break",
+        "old_value": "uses-when-tests/grp-cond-break"
+    },
+    {
+        "level": "3.2",
+        "path": "vpn-services-old/uses-when-tests/grp-cond-break",
+        "action": "changed",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "tag": "non-backward-compatible",
+        "constraint": "when",
+        "keyword": "leaf",
+        "file": "old-path.yang",
+        "line_number_old": 298,
+        "line_number_new": 263,
+        "new_value": "../../nonexistent/admin-state = 'DOWN'",
+        "old_value": "../config/admin-state = 'UP'"
+    },
+    {
+        "level": "4.",
+        "path": "vpn-services-old/uses-when-tests/leaf/uses-when-leaf-c",
+        "keyword": "leaf",
+        "action": "changed",
+        "tag": "non-backward-compatible",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "line_number_old": 295,
+        "line_number_new": 296,
+        "file": "old-path.yang"
+    },
+    {
+        "level": "4.2",
+        "path": "vpn-services-old/uses-when-tests/leaf/uses-when-leaf-c",
+        "action": "changed",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "tag": "non-backward-compatible",
+        "attribute": "name",
+        "keyword": "leaf",
+        "line_number_old": 295,
+        "line_number_new": 296,
+        "new_value": "uses-when-leaf-c",
+        "old_value": "uses-when-leaf-d"
+    },
+    {
+        "level": "2.",
+        "path": "vpn-services-old/vpn-services",
+        "keyword": "container",
+        "action": "changed",
+        "tag": "non-backward-compatible",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "line_number_old": 171,
+        "line_number_new": 181,
+        "old_file": "vpn-services-old.yang",
+        "new_file": "vpn-services-new.yang"
+    },
+    {
+        "level": "2.1",
+        "path": "vpn-services-old/vpn-services",
+        "action": "changed",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "tag": "non-backward-compatible",
+        "attribute": "endpoint",
+        "keyword": "container",
+        "old_file": "vpn-services-old.yang",
+        "new_file": "vpn-services-new.yang",
+        "line_number_old": 171,
+        "line_number_new": 181,
+        "new_value": "/api/v1/vpn_services",
+        "old_value": "/vpn_services"
+    },
+    {
+        "level": "2.2",
+        "path": "vpn-services-old/vpn-services",
+        "action": "changed",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "tag": "non-backward-compatible",
+        "tag_inherited": true,
+        "constraint": "privileges",
+        "keyword": "container",
+        "old_file": "vpn-services-old.yang",
+        "new_file": "vpn-services-new.yang",
+        "line_number_old": 171,
+        "line_number_new": 181,
+        "new_value": "delete create",
+        "old_value": "create"
+    },
+    {
+        "level": "3.",
+        "path": "vpn-services-old/vpn-services/vpn-service",
+        "keyword": "list",
+        "action": "changed",
+        "tag": "non-backward-compatible",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "line_number_old": 180,
+        "line_number_new": 190,
+        "old_file": "vpn-services-old.yang",
+        "new_file": "vpn-services-new.yang"
+    },
+    {
+        "level": "3.1",
+        "path": "vpn-services-old/vpn-services/vpn-service",
+        "action": "changed",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "tag": "non-backward-compatible",
+        "attribute": "endpoint",
+        "keyword": "list",
+        "old_file": "vpn-services-old.yang",
+        "new_file": "vpn-services-new.yang",
+        "line_number_old": 180,
+        "line_number_new": 190,
+        "new_value": "/api/v1/vpn_services/{vpn_service_vpn_id}",
+        "old_value": "/vpn_services/{vpn_service_vpn_id}"
+    },
+    {
+        "level": "4.",
+        "path": "vpn-services-old/vpn-services/vpn-service/vpn-nodes",
+        "keyword": "container",
+        "action": "changed",
+        "tag": "non-backward-compatible",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "line_number_old": 287,
+        "line_number_new": 297,
+        "old_file": "vpn-services-old.yang",
+        "new_file": "vpn-services-new.yang"
+    },
+    {
+        "level": "4.1",
+        "path": "vpn-services-old/vpn-services/vpn-service/vpn-nodes",
+        "action": "changed",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "tag": "non-backward-compatible",
+        "attribute": "endpoint",
+        "keyword": "container",
+        "old_file": "vpn-services-old.yang",
+        "new_file": "vpn-services-new.yang",
+        "line_number_old": 287,
+        "line_number_new": 297,
+        "new_value": "/api/v1/vpn_services/{vpn_service_vpn_id}/vpn-nodes",
+        "old_value": "/vpn_services/{vpn_service_vpn_id}/vpn-nodes"
+    },
+    {
+        "level": "4.2",
+        "path": "vpn-services-old/vpn-services/vpn-service/vpn-nodes",
+        "action": "changed",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "tag": "non-backward-compatible",
+        "tag_inherited": true,
+        "constraint": "privileges",
+        "keyword": "container",
+        "old_file": "vpn-services-old.yang",
+        "new_file": "vpn-services-new.yang",
+        "line_number_old": 287,
+        "line_number_new": 297,
+        "new_value": "create",
+        "old_value": "create update"
+    },
+    {
+        "level": "5.",
+        "path": "vpn-services-old/vpn-services/vpn-service/vpn-nodes/vpn-node",
+        "keyword": "list",
+        "action": "changed",
+        "tag": "non-backward-compatible",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "line_number_old": 297,
+        "line_number_new": 307,
+        "old_file": "vpn-services-old.yang",
+        "new_file": "vpn-services-new.yang"
+    },
+    {
+        "level": "5.1",
+        "path": "vpn-services-old/vpn-services/vpn-service/vpn-nodes/vpn-node",
+        "action": "changed",
+        "all_tags": [
+            "non-backward-compatible"
+        ],
+        "tag": "non-backward-compatible",
+        "attribute": "endpoint",
+        "keyword": "list",
+        "old_file": "vpn-services-old.yang",
+        "new_file": "vpn-services-new.yang",
+        "line_number_old": 297,
+        "line_number_new": 307,
+        "new_value": "/api/v1/vpn_services/{vpn_service_vpn_id}/vpn-nodes/{vpn_node_vpn_node_id}",
+        "old_value": "/vpn_services/{vpn_service_vpn_id}/vpn-nodes/{vpn_node_vpn_node_id}"
+    }
+]

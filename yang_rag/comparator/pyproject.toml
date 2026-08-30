@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "yang-comparator"
+version = "0.1.0"
+description = "Compare two YANG modules/trees and produce enriched compatibility reports"
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "Proprietary" }
+authors = [
+  { name = "YANG Comparator" }
+]
+dependencies = [
+  "pyang>=2.5.0",
+  "deepdiff>=6.0.0",
+]
+
+#[project.urls]
+#Homepage = "https://example.com/yang-comparator"
+
+[project.scripts]
+yang-comparator = "yang_comparator.cli:main"
+
+[tool.setuptools]
+include-package-data = true
+packages = ["yang_comparator"]
+
+[tool.setuptools.package-data]
+yang_comparator = ["*.xml"]
+
+[tool.setuptools.package-dir]
+yang_comparator = "."

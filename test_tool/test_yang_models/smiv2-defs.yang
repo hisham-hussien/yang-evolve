@@ -1,0 +1,14 @@
+module smiv2-defs {
+  yang-version 1.1;
+  namespace "urn:demo:smiv2";
+  prefix smiv2;
+
+  // Structural
+  extension alias           { argument name; }
+  // Value
+  extension oid             { argument value; }
+  extension max-access      { argument value; }
+  extension defval          { argument value; }
+  extension display-hint    { argument text; }
+  extension implied         { argument value; }
+}

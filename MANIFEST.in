@@ -1,0 +1,55 @@
+# YANG Comparator Pro — source distribution manifest
+#
+# NOTE: The wheel (pip install) only contains Python packages.
+# The data/ directory (RAG index + extracted corpus) is included in the
+# sdist (python -m build --sdist) so that developers who clone the repo
+# or download the source tarball get the pre-built index.
+# When installing from a wheel on a new machine, run:
+#   python -m yang_rag.parsing.pyang_extractor
+#   python -m yang_rag.rag.indexer --use-gpu --model all-MiniLM-L6-v2 --batch-size 256
+
+# Documentation & licence
+include README.md
+include LICENSE
+
+# Core package: all Python source + XML rules
+recursive-include yang_rag *.py
+recursive-include yang_rag/comparator *.xml
+
+
+# Pre-built RAG index and extracted corpus (sdist only — not in wheel)
+recursive-include data *.json
+recursive-include data *.jsonl
+recursive-include data *.npz
+recursive-include data *.txt
+include data/index/index_stats.json
+
+# Exclude virtual environments inside the source tree
+prune yang_rag/comparator/.venv
+prune yang_rag/comparator/venv
+
+# Exclude large/irrelevant directories
+prune yang_data
+prune workspace
+prune output
+prune comparison_results
+prune yang_comparator_reports
+prune yang_comparator_reports_flag
+prune build
+prune dist
+prune docs
+prune .venv
+prune venv
+prune exp2_extension_reports
+prune extension_reports
+prune workspace_extensions
+
+# Exclude generated/cache files
+global-exclude *.pyc
+global-exclude *.pyo
+global-exclude *.so
+global-exclude *.dylib
+global-exclude __pycache__
+global-exclude .DS_Store
+global-exclude .git*
+global-exclude *.ipynb

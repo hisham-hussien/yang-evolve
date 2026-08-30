@@ -1,0 +1,306 @@
+submodule old-types {
+  yang-version 1.1;
+  belongs-to vpn-services { prefix main; }
+  namespace "urn:test:old-types";
+  prefix ot;
+
+  revision 2024-01-01 {
+    description "Old version";
+  }
+
+  // ── Type change test cases ──────────────────────────────────────────────
+
+  // Reference nodes for leafref tests (type unchanged between old and new)
+  leaf ref-int8 {
+    type int8;
+    description "Reference node with int8 type (unchanged)";
+  }
+
+  leaf ref-int32 {
+    type int32;
+    description "Reference node with int32 type (unchanged)";
+  }
+
+  leaf ref-string {
+    type string;
+    description "Reference node with string type (unchanged)";
+  }
+
+  // 1) int8 -> int16 (relaxed: BC in default, NBC in rfc7950)
+  leaf int8-to-int16 {
+    type int8;
+    description "Will change to int16";
+  }
+
+  // 2) int32 -> int8 (narrowed: NBC in both modes)
+  leaf int32-to-int8 {
+    type int32;
+    description "Will change to int8";
+  }
+
+  // 3) int8 -> string (relaxed: BC in default, NBC in rfc7950)
+  leaf int8-to-string {
+    type int8;
+    description "Will change to string";
+  }
+
+  // 4) leafref -> int (NBC in both modes)
+  leaf leafref-to-int {
+    type leafref {
+      path "/int8-to-int16";
+    }
+    description "Will change to int32";
+  }
+
+  // 5) leafref -> string (relaxed: BC in default, NBC in rfc7950)
+  leaf leafref-to-string {
+    type leafref {
+      path "/int8-to-int16";
+    }
+    description "Will change to string";
+  }
+
+  // 6) string -> leafref (NBC in both modes)
+  leaf string-to-leafref {
+    type string;
+    description "Will change to leafref";
+  }
+
+  // ── Constraint change test cases ────────────────────────────────────────
+
+  // 7) range: relaxed (BC in default)
+  leaf range-relaxed {
+    type int32 {
+      range "0..100";
+    }
+    description "Range will be relaxed to 0..200";
+  }
+
+  // 8) range: narrowed (NBC)
+  leaf range-narrowed {
+    type int32 {
+      range "0..200";
+    }
+    description "Range will be narrowed to 0..100";
+  }
+
+  // 9) length: relaxed (BC in default)
+  leaf length-relaxed {
+    type string {
+      length "1..10";
+    }
+    description "Length will be relaxed to 1..20";
+  }
+
+  // 10) length: narrowed (NBC)
+  leaf length-narrowed {
+    type string {
+      length "1..20";
+    }
+    description "Length will be narrowed to 1..10";
+  }
+
+  // 11) fraction-digits: changed (NBC in both directions)
+  leaf fraction-digits-changed {
+    type decimal64 {
+      fraction-digits 2;
+    }
+    description "fraction-digits will change to 4";
+  }
+
+  // 12) min-elements: relaxed (BC)
+  list min-elements-relaxed {
+    key "id";
+    min-elements 5;
+    leaf id { type string; }
+    description "min-elements will decrease to 2";
+  }
+
+  // 13) max-elements: relaxed (BC)
+  list max-elements-relaxed {
+    key "id";
+    max-elements 10;
+    leaf id { type string; }
+    description "max-elements will increase to 20";
+  }
+
+  // 14) max-elements: narrowed (NBC)
+  list max-elements-narrowed {
+    key "id";
+    max-elements 20;
+    leaf id { type string; }
+    description "max-elements will decrease to 10";
+  }
+
+  // 15) pattern: relaxed (BC in default)
+  leaf pattern-relaxed {
+    type string {
+      pattern "[0-9]+";
+    }
+    description "Pattern will be relaxed";
+  }
+
+  // 16) pattern: narrowed (NBC)
+  leaf pattern-narrowed {
+    type string {
+      pattern "[a-zA-Z0-9]+";
+    }
+    description "Pattern will be narrowed";
+  }
+
+  // 17) if-feature: added (NBC - adds restriction)
+  feature my-feature;
+
+  leaf if-feature-added {
+    type string;
+    description "if-feature will be added";
+  }
+
+  // 18) config: changed false->true (relaxed, BC)
+  container config-relaxed {
+    config false;
+    leaf value { type string; }
+    description "config will change from false to true";
+  }
+
+  // 19) config: changed true->false (narrowed, NBC)
+  container config-narrowed {
+    config true;
+    leaf value { type string; }
+    description "config will change from true to false";
+  }
+
+  // 20) fraction-digits: decreased (NBC)
+  leaf fraction-digits-decreased {
+    type decimal64 {
+      fraction-digits 18;
+    }
+    description "fraction-digits will decrease to 1";
+  }
+
+  // ── Status change test cases ────────────────────────────────────────────
+
+  // 21) status: current -> deprecated (BC soft change)
+  leaf status-current-to-deprecated {
+    type string;
+    status current;
+    description "Status will change from current to deprecated";
+  }
+
+  // 22) status: current -> obsolete (NBC hard change)
+  leaf status-current-to-obsolete {
+    type string;
+    status current;
+    description "Status will change from current to obsolete";
+  }
+
+  // 23) status: deprecated -> obsolete (NBC hard change)
+  leaf status-deprecated-to-obsolete {
+    type string;
+    status deprecated;
+    description "Status will change from deprecated to obsolete";
+  }
+
+  // ── Mandatory change test cases ─────────────────────────────────────────
+
+  // 24) mandatory false added (BC)
+  leaf mandatory-false-added {
+    type string;
+    description "mandatory false will be added";
+  }
+
+  // 25) mandatory true added (NBC)
+  leaf mandatory-true-added {
+    type string;
+    description "mandatory true will be added";
+  }
+
+  // 26) mandatory deleted (BC)
+  leaf mandatory-deleted {
+    type string;
+    mandatory false;
+    description "mandatory will be deleted";
+  }
+
+  // 27) mandatory true -> false (BC: relaxing a restriction)
+  leaf mandatory-true-to-false {
+    type string;
+    mandatory true;
+    description "mandatory will change from true to false";
+  }
+
+  // 28) mandatory false -> true (NBC: adding a restriction)
+  leaf mandatory-false-to-true {
+    type string;
+    mandatory false;
+    description "mandatory will change from false to true";
+  }
+
+  // ── Leafref -> Leafref test cases ────────────────────────────────────────
+
+  // 29) leafref(->int8) -> leafref(->int32): BC (wider target type)
+  //     old: points to /ref-int8 (int8), new: points to /ref-int32 (int32)
+  leaf leafref-to-leafref-wider {
+    type leafref {
+      path "/ref-int8";
+    }
+    description "leafref path will change to point to int32 node";
+  }
+
+  // 30) leafref(->int32) -> leafref(->int8): NBC (narrower target type)
+  //     old: points to /ref-int32 (int32), new: points to /ref-int8 (int8)
+  leaf leafref-to-leafref-narrower {
+    type leafref {
+      path "/ref-int32";
+    }
+    description "leafref path will change to point to int8 node";
+  }
+
+  // 31) leafref(->int8) -> leafref(->string): NBC (incompatible target families)
+  //     old: points to /ref-int8 (int8), new: points to /ref-string (string)
+  leaf leafref-to-leafref-incompatible {
+    type leafref {
+      path "/ref-int8";
+    }
+    description "leafref path will change to point to string node";
+  }
+
+  // ── Union test cases ─────────────────────────────────────────────────────
+
+  // 32) union: member type added (BC in default, NBC in rfc7950)
+  leaf union-member-added {
+    type union {
+      type int8;
+      type string;
+    }
+    description "union member will be added";
+  }
+
+  // 33) union: member type deleted (NBC in both modes)
+  leaf union-member-deleted {
+    type union {
+      type int8;
+      type string;
+    }
+    description "union member will be deleted";
+  }
+
+  // ── Enum test cases ────────────────────────────────────────────────────
+
+  // 35) enum: value deleted (NBC)
+  leaf enum-checks {
+    type enumeration {
+      enum ALPHA;
+      enum BETA;
+      enum GAMMA;
+    }
+    description "enum value will be deleted";
+  }
+
+  leaf range64 {
+    type int64 {
+      range "0..100";
+    }
+    description "Range will be relaxed to 0..200";
+  }
+}
