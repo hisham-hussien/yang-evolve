@@ -1,6 +1,6 @@
-# YANG Comparator Pro
+# YANG-Evolve
 
-**Production-Grade YANG Schema Compatibility Checker with RAG-Powered Self-Learning**
+> Production-Grade YANG Schema Compatibility Checker with RAG-Powered Self-Learning
 
 > **Status**: ✅ Production Ready
 > **Version**: 1.0.0
@@ -11,7 +11,7 @@
 
 ## 🎯 Overview
 
-**YANG Comparator Pro** analyzes YANG schema changes between two versions and determines backward compatibility using a two-layer architecture:
+**YANG-Evolve** is a plugin for [Pyang](https://github.com/mbj4668/pyang) that provides semantic backward compatibility verification for evolving YANG models. It combines deterministic compatibility analysis with a RAG-powered self-learning pipeline for handling previously unseen vendor-specific YANG extensions.
 
 1. **Deterministic Layer (Phase 1)** — Rule-based comparator applies XML compatibility rules (RFC 7950) to classify every detected diff as Backward-Compatible (BC) or Non-Backward-Compatible (NBC).
 2. **RAG-Based Self-Learning Layer (Phase 2)** — When the rule engine encounters `[UNMARKED]` statements it cannot classify, it automatically triggers a RAG (Retrieval-Augmented Generation) search that finds the top-K semantically similar known YANG statements from a pre-built embedding index (~50K statements) and uses an LLM (via DSPy) to generate new compatibility rules on the fly.
@@ -665,26 +665,35 @@ pyang --check-compatibility \
 
 ## 🤝 Contributing
 
-Contributions are welcome! Areas for improvement:
+Contributions are welcome and encouraged. Please review [CONTRIBUTING.md](CONTRIBUTING.md) for the full contribution workflow, coding expectations, testing guidance, and pull request process.
 
-1. **Additional Rules**: Expand `compatibility_rules.xml` with new YANG extension keywords
-2. **Testing**: Add more test cases and YANG module pairs
-3. **Documentation**: Improve examples and use cases
-4. **Performance**: Optimize comparison algorithms
-5. **Features**: New output formats, CI/CD integrations
+Keep contributions focused and reasonably small, as smaller updates are easier to review and integrate. Changes addressing existing issues will generally receive review priority.
 
 ---
 
 ## 📄 License
 
-Copyright (c) 2026 Hesham Elabd, Queen's University
-Supported by NSERC, Mitacs, and TELUS Communications Inc.
+Copyright 2026 Hesham Elabd
 
-This project is licensed under the **Apache License, Version 2.0** — see the [`LICENSE`](LICENSE) file for details.
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at:
+
+[http://www.apache.org/licenses/LICENSE-2.0](http://www.apache.org/licenses/LICENSE-2.0)
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+
+### Acknowledgements
+
+Development of YANG-Evolve was conducted in collaboration with TELUS Communications Inc., with support from Queen's University, NSERC, and Mitacs.
 
 ---
 
 **Last Updated**: June 2026
-**Version**: 1.0.0 (YANG Comparator Pro)
+**Version**: 1.0.0 (YANG-Evolve)
